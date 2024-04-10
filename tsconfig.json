@@ -24,6 +24,9 @@
       "@assets/*":["./src/assets/*"],
       "@app/*":["./src/app/*"],
       "@components/*":["./src/app/components/*"],
+      "@atoms/*":["./src/app/components/atoms/*"],
+      "@molecules/*":["./src/app/components/molecules/*"],
+      "@organisms/*":["./src/app/components/organisms/*"],
       "@hooks/*":["./src/app/hooks/*"],
     }
   },
