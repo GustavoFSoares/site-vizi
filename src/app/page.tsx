@@ -1,6 +1,17 @@
-import style from '@/app/style.module.scss';
-import Image from 'next/image';
+'use client';
+
+import style from '@app/style.module.scss';
+
+import { useBreakpoints } from '@hooks/useBreakpoints';
 
 export default function Home() {
-  return <h1 className={style.teste}>1234</h1>;
+  const { isDesktop, isMobile, isTablet } = useBreakpoints();
+
+  return (
+    <div>
+      <p className={style.teste}>isMobile: {isMobile.toString()}</p>
+      <p className={style.teste}>isTablet: {isTablet.toString()}</p>
+      <p className={style.teste}>isDesktop: {isDesktop.toString()}</p>
+    </div>
+  );
 }

@@ -3,4 +3,8 @@
   background: red;
 
   @apply bg-blue-500 text-white;
+
+  @apply mobile:text-red-500;
+  @apply tablet:text-green-500;
+  @apply desktop:text-yellow-500;
 }

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig, { ScreenOptions } from '@/../tailwind.config';
+import tailwindConfig, { ScreenOptions } from '@root/tailwind.config';
 
 interface IBreakpoints {
   isMobile: boolean;
