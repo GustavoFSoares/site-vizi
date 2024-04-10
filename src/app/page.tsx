@@ -8,7 +8,7 @@ export default function Home() {
   const { isDesktop, isMobile, isTablet } = useBreakpoints();
 
   return (
-    <div>
+    <div className={style.page}>
       <p className={style.teste}>isMobile: {isMobile.toString()}</p>
       <p className={style.teste}>isTablet: {isTablet.toString()}</p>
       <p className={style.teste}>isDesktop: {isDesktop.toString()}</p>
