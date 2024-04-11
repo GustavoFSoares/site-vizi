@@ -1,11 +1,11 @@
 .navbar {
-  @apply h-[62px] w-full px-[20px] py-[5px];
+  @apply h-16 w-full px-5 py-1.5;
   @apply fixed top-0 overflow-auto;
 
-  @apply md:px-[50px];
+  @apply md:px-14;
 
-  @apply lg:px-[50px];
-  @apply lg:h-[94px];
+  @apply lg:px-14;
+  @apply lg:h-24;
 
   background: #df763e;
 
@@ -14,9 +14,9 @@
   }
 
   &__logo {
-    @apply h-[22px];
+    @apply h-6;
 
-    @apply lg:h-[32px];
+    @apply lg:h-8;
   }
 }
 
@@ -27,7 +27,7 @@
   line-height: 14.72px;
   text-align: center;
 
-  @apply flex h-full items-center bg-red-500 px-[40px];
+  @apply flex h-full items-center bg-red-500 px-10;
 
   &__wrapper {
     @apply flex h-full;
