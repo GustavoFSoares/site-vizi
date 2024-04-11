@@ -1,4 +1,8 @@
 {
   "css.lint.unknownAtRules": "ignore",
-  "files.associations": { "*.scss": "postcss" }
+  "files.associations": {
+    "*.scss": "postcss"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

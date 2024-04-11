@@ -1,22 +1,22 @@
 .navbar {
-  @apply w-full h-[62px] px-[20px] py-[5px];
+  @apply h-[62px] w-full px-[20px] py-[5px];
   @apply fixed top-0 overflow-auto;
-  
-  @apply tablet:px-[50px];
-  
-  @apply desktop:px-[50px];
-  @apply desktop:h-[94px];
 
-  background: #DF763E;
+  @apply md:px-[50px];
+
+  @apply lg:px-[50px];
+  @apply lg:h-[94px];
+
+  background: #df763e;
 
   &__content {
-    @apply w-full h-full flex items-center justify-between;
+    @apply flex h-full w-full items-center justify-between;
   }
 
   &__logo {
     @apply h-[22px];
-    
-    @apply desktop:h-[32px];
+
+    @apply lg:h-[32px];
   }
 }
 
@@ -27,9 +27,10 @@
   line-height: 14.72px;
   text-align: center;
 
-  @apply h-full px-[40px] flex items-center bg-red-500;
+  @apply flex h-full items-center bg-red-500 px-[40px];
 
   &__wrapper {
-    @apply h-full flex;
+    @apply flex h-full;
+    @apply sm:hidden;
   }
 }

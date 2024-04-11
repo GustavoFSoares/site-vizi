@@ -14,9 +14,10 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       screens: {
-        mobile: { max: '425px' },
-        tablet: { min: '426px', max: '768px' },
-        desktop: { min: '769px' },
+        xs: { max: '425px' },
+        sm: { max: '765px' },
+        md: { min: '766px', max: '890px' },
+        lg: { min: '891px' },
       },
     },
   },
@@ -26,7 +27,8 @@ const config: Config = {
 export default config;
 
 export type ScreenOptions = {
-  mobile: { max: string };
-  tablet: { min: string; max: string };
-  desktop: { min: string };
+  xs: { max: string };
+  sm: { max: string };
+  md: { min: string; max: string };
+  lg: { min: string };
 };

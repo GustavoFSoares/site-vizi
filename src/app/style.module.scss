@@ -1,6 +1,6 @@
 .layout {
   @apply mt-[62px];
-  @apply desktop:mt-[94px];
+  @apply lg:mt-[94px];
 }
 
 .page {
@@ -14,7 +14,7 @@
 
   @apply bg-blue-500 text-white;
 
-  @apply mobile:text-red-500;
-  @apply tablet:text-green-500;
-  @apply desktop:text-yellow-500;
+  @apply xs:text-red-500;
+  @apply md:text-green-500;
+  @apply lg:text-yellow-500;
 }

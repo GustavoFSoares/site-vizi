@@ -5,13 +5,14 @@ import style from '@app/style.module.scss';
 import { useBreakpoints } from '@hooks/useBreakpoints';
 
 export default function Home() {
-  const { isDesktop, isMobile, isTablet } = useBreakpoints();
+  const { isXs, isSm, isMd, isLg } = useBreakpoints();
 
   return (
     <div className={style.page}>
-      <p className={style.teste}>isMobile: {isMobile.toString()}</p>
-      <p className={style.teste}>isTablet: {isTablet.toString()}</p>
-      <p className={style.teste}>isDesktop: {isDesktop.toString()}</p>
+      <p className={style.teste}>isXs: {isXs.toString()}</p>
+      <p className={style.teste}>isSm: {isSm.toString()}</p>
+      <p className={style.teste}>isMd: {isMd.toString()}</p>
+      <p className={style.teste}>isLg: {isLg.toString()}</p>
     </div>
   );
 }

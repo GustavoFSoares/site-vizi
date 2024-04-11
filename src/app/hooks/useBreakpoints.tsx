@@ -5,20 +5,24 @@ import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig, { ScreenOptions } from '@root/tailwind.config';
 
 interface IBreakpoints {
-  isMobile: boolean;
-  isTablet: boolean;
-  isDesktop: boolean;
+  isXs: boolean;
+  isSm: boolean;
+  isMd: boolean;
+  isLg: boolean;
 }
 
 interface IScreenOptionsWidth {
-  mobile: {
+  xs: {
     max: number;
   };
-  tablet: {
+  sm: {
+    max: number;
+  };
+  md: {
     min: number;
     max: number;
   };
-  desktop: {
+  lg: {
     min: number;
   };
 }
@@ -34,15 +38,18 @@ export function useBreakpoints(): IBreakpoints {
   }
 
   const [screensWidth] = useState<IScreenOptionsWidth>({
-    mobile: {
-      max: prepareScreenSize(screens.mobile.max),
+    xs: {
+      max: prepareScreenSize(screens.xs.max),
     },
-    tablet: {
-      min: prepareScreenSize(screens.tablet.min),
-      max: prepareScreenSize(screens.tablet.max),
+    sm: {
+      max: prepareScreenSize(screens.sm.max),
     },
-    desktop: {
-      min: prepareScreenSize(screens.desktop.min),
+    md: {
+      min: prepareScreenSize(screens.md.min),
+      max: prepareScreenSize(screens.md.max),
+    },
+    lg: {
+      min: prepareScreenSize(screens.lg.min),
     },
   });
 
@@ -62,17 +69,18 @@ export function useBreakpoints(): IBreakpoints {
 
   const breakpoints = useMemo<IBreakpoints>(() => {
     return {
-      isMobile: screensWidth.mobile.max >= pageWidth,
-      isTablet:
-        screensWidth.tablet.max >= pageWidth &&
-        screensWidth.tablet.min <= pageWidth,
-      isDesktop: screensWidth.desktop.min <= pageWidth,
+      isXs: screensWidth.xs.max >= pageWidth,
+      isSm: screensWidth.sm.max >= pageWidth,
+      isMd:
+        screensWidth.md.max >= pageWidth && screensWidth.md.min <= pageWidth,
+      isLg: screensWidth.lg.min <= pageWidth,
     };
   }, [pageWidth, screensWidth]);
 
   return {
-    isDesktop: breakpoints.isDesktop,
-    isMobile: breakpoints.isMobile,
-    isTablet: breakpoints.isTablet,
+    isXs: breakpoints.isXs,
+    isSm: breakpoints.isSm,
+    isMd: breakpoints.isMd,
+    isLg: breakpoints.isLg,
   };
 }
