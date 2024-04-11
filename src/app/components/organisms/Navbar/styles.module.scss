@@ -1,6 +1,6 @@
 .navbar {
   @apply h-16 w-full px-5 py-1.5;
-  @apply fixed top-0 overflow-auto;
+  @apply fixed top-0;
 
   @apply md:px-14;
 
@@ -21,16 +21,23 @@
 }
 
 .nav-options {
-  font-family: Mulish;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 14.72px;
-  text-align: center;
+  @apply text-xs font-normal text-white opacity-40;
+  @apply flex h-9 w-full items-center justify-center px-10;
 
-  @apply flex h-full items-center bg-red-500 px-10;
+  &--active {
+    @apply opacity-100;
+  }
 
   &__wrapper {
-    @apply flex h-full;
-    @apply sm:hidden;
+    background: #df763e;
+
+    @apply flex flex-col rounded-bl-xl p-2.5;
+
+    @apply absolute right-0 top-16;
+    @apply translate-x-[101%] transition-transform duration-200 ease-in;
+
+    &--active {
+      @apply translate-x-0;
+    }
   }
 }
