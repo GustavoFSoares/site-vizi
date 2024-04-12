@@ -24,6 +24,7 @@
       "@molecules/*":["./src/app/components/molecules/*"],
       "@organisms/*":["./src/app/components/organisms/*"],
       "@components/*":["./src/app/components/*"],
+      "@helpers/*":["./src/app/helpers/*"],
       "@hooks/*":["./src/app/hooks/*"],
       "@app/*":["./src/app/*"],
       "@src/*": ["./src/*"],

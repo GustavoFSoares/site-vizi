@@ -19,6 +19,11 @@ const config: Config = {
         md: { min: '766px', max: '890px' },
         lg: { min: '891px' },
       },
+      colors: {
+        'vizi-laranja': {
+          100: '#DF763E',
+        },
+      },
     },
   },
   plugins: [],

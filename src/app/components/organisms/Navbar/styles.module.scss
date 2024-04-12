@@ -1,13 +1,11 @@
 .navbar {
-  @apply h-16 w-full px-5 py-1.5;
+  @apply bg-vizi-laranja-100 h-16 w-full px-5 py-1.5;
   @apply fixed top-0;
 
   @apply md:px-14;
 
   @apply lg:px-14;
   @apply lg:h-24;
-
-  background: #df763e;
 
   &__content {
     @apply flex h-full w-full items-center justify-between;
@@ -21,20 +19,24 @@
 }
 
 .nav-options {
-  @apply text-xs font-normal text-white opacity-40;
-  @apply flex h-9 w-full items-center justify-center px-10;
+  @apply h-full text-xs font-normal text-white opacity-40;
+  @apply flex w-full items-center justify-center px-10;
+
+  @apply sm:h-9;
 
   &--active {
     @apply opacity-100;
   }
 
   &__wrapper {
-    background: #df763e;
+    @apply bg-vizi-laranja-100 flex max-w-[90vw] rounded-bl-xl;
 
-    @apply flex flex-col rounded-bl-xl p-2.5;
+    @apply md:h-full md:items-center;
+    @apply lg:h-full lg:items-center;
 
-    @apply absolute right-0 top-16;
-    @apply translate-x-[101%] transition-transform duration-200 ease-in;
+    @apply sm:flex-col sm:p-2.5;
+    @apply sm:absolute sm:right-0 sm:top-16;
+    @apply sm:translate-x-[101%] sm:transition-transform sm:duration-200 sm:ease-in;
 
     &--active {
       @apply translate-x-0;

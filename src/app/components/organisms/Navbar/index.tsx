@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Logo from '@assets/vizi-logo.svg';
+import bindClass from '@helpers/bindClass';
 
 import NavbarButton from './NavbarButton';
 import styles from './styles.module.scss';
@@ -22,7 +23,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const { isSm } = useBreakpoints();
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const navOptions: INavOption[] = [
     { label: 'Home', route: '/' },
@@ -43,18 +44,18 @@ export default function Navbar() {
         {isSm && <NavbarButton isOpen={isOpen} onClick={handleToggle} />}
 
         <div
-          className={[
+          className={bindClass(
             styles['nav-options__wrapper'],
-            isOpen && styles['nav-options__wrapper--active'],
-          ].join(' ')}
+            isOpen && styles['nav-options__wrapper--active']
+          )}
         >
           {navOptions.map((routeOption) => (
             <Link
               key={routeOption.route}
-              className={[
+              className={bindClass(
                 styles['nav-options'],
-                pathname === routeOption.route && styles['nav-options--active'],
-              ].join(' ')}
+                pathname === routeOption.route && styles['nav-options--active']
+              )}
               href={routeOption.route}
             >
               {routeOption.label}
