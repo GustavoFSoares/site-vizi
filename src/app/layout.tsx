@@ -8,7 +8,7 @@ import styles from './style.module.scss';
 import Navbar from '@organisms/Navbar';
 
 const mulish = Mulish({
-  weight: ['400'],
+  weight: ['400', '800'],
   subsets: ['latin'],
 });
 
