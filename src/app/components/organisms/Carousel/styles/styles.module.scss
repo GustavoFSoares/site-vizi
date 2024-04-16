@@ -1,0 +1,11 @@
+.embla {
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+  }
+
+  &__slide {
+    @apply min-h-14 flex-shrink-0 flex-grow-0 basis-full;
+  }
+}
