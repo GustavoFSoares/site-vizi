@@ -1,0 +1,30 @@
+.carousel-item {
+  @apply relative h-full w-full;
+
+  &__background-image {
+    @apply h-full max-h-[70vh];
+  }
+
+  &__container {
+    @apply absolute left-0 top-0 h-full w-full;
+
+    @apply flex flex-col items-center justify-center gap-3;
+  }
+
+  &__title {
+    @apply text-4xl font-extrabold;
+  }
+
+  &__description {
+    @apply max-w-[480px] text-center text-base font-normal opacity-75;
+    /* @apply max-w- */
+  }
+
+  &__location {
+    @apply text-xs font-normal opacity-75;
+  }
+
+  &__cta {
+    @apply mt-4;
+  }
+}
