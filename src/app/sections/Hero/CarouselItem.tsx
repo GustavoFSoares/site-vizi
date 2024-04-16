@@ -18,8 +18,6 @@ export default function CarouselItem({
   location,
   backgroundImage,
 }: Props) {
-  console.log(styles);
-
   return (
     <section className={styles['carousel-item']}>
       <div className={styles['carousel-item__background-image']}>
@@ -34,6 +32,8 @@ export default function CarouselItem({
         <h1 className={styles['carousel-item__title']}>{title}</h1>
 
         <h2 className={styles['carousel-item__description']}>{description}</h2>
+
+        <button className={styles['carousel-item__cta']}>Conheça</button>
       </div>
     </section>
   );
