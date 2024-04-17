@@ -11,6 +11,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "embla-carousel-autoplay": "^8.0.2",
     "embla-carousel-react": "^8.0.2",
     "next": "14.1.4",
     "prettier": "^3.2.5",
