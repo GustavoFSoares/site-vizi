@@ -1,6 +1,6 @@
 'use client';
 
-import useEmblaCarousel from 'embla-carousel-react';
+import useCarouselController from './hooks/useCarouselController';
 
 import styles from './styles/styles.module.scss';
 import NavigationButtons from './partials/NavigationButtons';
@@ -11,7 +11,7 @@ export type Props = {
 };
 
 export default function Carousel({ children, navigation }: Props) {
-  const [emblaRef] = useEmblaCarousel();
+  const { emblaRef } = useCarouselController();
 
   return (
     <div className={styles['embla']} ref={emblaRef}>

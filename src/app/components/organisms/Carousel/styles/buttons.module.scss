@@ -1,35 +1,26 @@
 .embla-button {
-  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  touch-action: manipulation;
-  display: inline-flex;
-  text-decoration: none;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 3.6rem;
-  height: 3.6rem;
-  z-index: 1;
-  border-radius: 50%;
-  color: var(--text-body);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @apply absolute top-0 z-10 mx-12 flex h-full items-center;
 
-  background: red;
+  &__container {
+  }
 
   &--prev {
+    @apply left-0 justify-start;
   }
 
   &--next {
+    @apply right-0 justify-end;
+  }
+
+  &--disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  &__content {
+    @apply flex size-10 items-center justify-center rounded-xl border border-[#ffffff4d] px-2 py-2;
   }
 
   &__svg {
-    width: 35%;
-    height: 35%;
+    @apply size-full;
   }
 }
