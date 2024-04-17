@@ -1,5 +1,5 @@
 import Carousel, { Props as CaroulelProps } from './Carousel';
-import CarouselSlide, { SlideProps } from './partials/Slide';
+import CarouselSlide, { SlideProps } from './Slide';
 
 interface ICarouselComponents extends React.FC<CaroulelProps> {
   Slide: React.FC<SlideProps>;

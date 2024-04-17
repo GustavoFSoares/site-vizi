@@ -1,15 +1,20 @@
 'use client';
 
+import Image from 'next/image';
+
+import BackgroundImage from '@assets/hero-carousel.png';
+
 import Carousel from '@organisms/Carousel';
 import CarouselItem from './CarouselItem';
 
-import BackgroundImage from '@assets/hero-carousel.png';
-import Image from 'next/image';
+import { useBreakpoints } from '@hooks/useBreakpoints';
 
 export default function Hero() {
+  const { isXs } = useBreakpoints();
+
   return (
     <div>
-      <Carousel navigation>
+      <Carousel navigation dotsNavigation={!isXs}>
         <Carousel.Slide>
           <CarouselItem
             title='Complexo La Bella Toscana'

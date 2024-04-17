@@ -1,5 +1,5 @@
 .embla {
-  @apply relative z-10 overflow-hidden;
+  @apply relative z-10 overflow-hidden bg-red-200;
 
   &__container {
     @apply flex;

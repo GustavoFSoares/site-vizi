@@ -1,0 +1,11 @@
+.dots-navigation {
+  @apply absolute bottom-8 flex w-full justify-center gap-3;
+
+  &__item {
+    @apply size-2 rounded-xl bg-[#ffffff66];
+
+    &--selected {
+      @apply bg-white;
+    }
+  }
+}
