@@ -20,7 +20,7 @@
   }
 
   &__content {
-    @apply flex items-center justify-center rounded-xl border border-[#ffffff4d];
+    @apply border-vizi-white-30 flex items-center justify-center rounded-xl border;
 
     @apply size-4 p-[3px];
 

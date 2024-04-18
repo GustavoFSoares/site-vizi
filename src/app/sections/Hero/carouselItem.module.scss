@@ -18,7 +18,7 @@
     @apply text-2xl font-extrabold leading-7;
 
     @apply sm:max-w-[200px];
-    @apply lg:text-4xl lg:leading-10;
+    @apply lg:text-5xl lg:leading-10;
   }
 
   &__description {
@@ -33,13 +33,14 @@
     @apply font-normal leading-3 opacity-75;
 
     @apply text-[9px];
-    @apply md:text-xs;
+    @apply lg:text-xs;
   }
 
   &__cta {
     @apply border font-bold;
 
     @apply mt-3 rounded-lg border-vizi-laranja-100 bg-vizi-laranja-100 px-3 py-3 text-sm;
-    @apply md:mt-3 md:rounded-2xl md:border-[#ffffff40] md:px-12 md:py-5 md:text-xl;
+    @apply md:border-vizi-white-25 md:mt-3 md:rounded-2xl md:bg-transparent md:px-12 md:py-5 md:text-xl;
+    @apply lg:border-vizi-white-25 lg:mt-3 lg:rounded-2xl lg:bg-transparent lg:px-12 lg:py-5 lg:text-xl;
   }
 }

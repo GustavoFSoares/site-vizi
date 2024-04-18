@@ -19,13 +19,13 @@
 }
 
 .nav-options {
-  @apply h-full text-xs font-normal text-white opacity-40;
+  @apply text-vizi-white-50 h-full text-xs font-normal;
   @apply flex w-full items-center justify-center px-10;
 
   @apply sm:h-9;
 
   &--active {
-    @apply opacity-100;
+    @apply text-vizi-white-100;
   }
 
   &__wrapper {
