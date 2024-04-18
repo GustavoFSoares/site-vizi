@@ -1,5 +1,8 @@
 .embla-button {
-  @apply absolute top-0 z-10 mx-12 flex h-full items-center;
+  @apply absolute top-0 z-10 flex h-full items-center;
+
+  @apply mx-5;
+  @apply lg:mx-12;
 
   &__container {
   }
@@ -17,7 +20,11 @@
   }
 
   &__content {
-    @apply flex size-10 items-center justify-center rounded-xl border border-[#ffffff4d] px-2 py-2;
+    @apply flex items-center justify-center rounded-xl border border-[#ffffff4d];
+
+    @apply size-4 p-[3px];
+
+    @apply lg:size-10 lg:px-2 lg:py-2;
   }
 
   &__svg {
