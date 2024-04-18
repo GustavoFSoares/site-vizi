@@ -26,7 +26,8 @@ export default function RootLayout({
       <body className={mulish.className}>
         <main className={styles['layout']}>
           <Navbar />
-          {children}
+
+          <div className={styles['layout__container']}>{children}</div>
         </main>
       </body>
     </html>

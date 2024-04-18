@@ -3,9 +3,11 @@
 import Image from 'next/image';
 
 import BackgroundImage from '@assets/hero-carousel.png';
+import WhatsappLogo from '@assets/whatsapp-logo.svg';
 
 import Carousel from '@organisms/Carousel';
 import CarouselItem from './CarouselItem';
+import style from './hero.module.scss';
 
 import { useBreakpoints } from '@hooks/useBreakpoints';
 
@@ -19,13 +21,7 @@ export default function Hero() {
         'Complexo de condomínios com mais de 10 espaços de lazer. Lotes a partir de 128m² em uma excelente localização na região metropolitana de Curitiba',
       location: { city: 'São José dos Pinhais', state: 'PR' },
       url: '/#cta/',
-      backgroundImage: (
-        <Image
-          className='h-full'
-          src={BackgroundImage}
-          alt={'Complexo La Bella Toscana'}
-        />
-      ),
+      backgroundImage: BackgroundImage,
     },
     {
       title: 'Complexo 2',
@@ -33,14 +29,12 @@ export default function Hero() {
         'Complexo 2. Lotes a partir de 128m² em uma excelente localização na região metropolitana de Curitiba',
       location: { city: 'São José dos Pinhais', state: 'PR' },
       url: '/#cta2/',
-      backgroundImage: (
-        <Image className='h-full' src={BackgroundImage} alt={'Complexo 2'} />
-      ),
+      backgroundImage: BackgroundImage,
     },
   ];
 
   return (
-    <div>
+    <div className={style['hero']}>
       <Carousel navigation dotsNavigation={!isXs}>
         {carouselData.map((item, itemIndex) => (
           <Carousel.Slide key={itemIndex}>
@@ -49,11 +43,25 @@ export default function Hero() {
               description={item.description}
               location={item.location}
               url={item.url}
-              backgroundImage={item.backgroundImage}
+              backgroundImage={
+                <Image
+                  className='h-full'
+                  src={item.backgroundImage}
+                  alt={item.title}
+                />
+              }
             />
           </Carousel.Slide>
         ))}
       </Carousel>
+
+      <button className={style['hero__whatsapp-button']}>
+        <Image
+          src={WhatsappLogo}
+          alt='Whatsapp Logo'
+          className={style['hero__whatsapp-button-content']}
+        />
+      </button>
     </div>
   );
 }

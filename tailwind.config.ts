@@ -23,6 +23,9 @@ const config: Config = {
         'vizi-laranja': {
           100: '#DF763E',
         },
+        'vizi-whatsapp': {
+          100: '#1FAF38',
+        },
       },
     },
   },

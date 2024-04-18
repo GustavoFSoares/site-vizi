@@ -1,20 +1,6 @@
 .layout {
-  @apply mt-16;
-  @apply lg:mt-24;
-}
-
-.page {
-  min-height: 200vh;
-  background: red;
-}
-
-.teste {
-  font-size: 50px;
-  background: red;
-
-  @apply bg-blue-500 text-white;
-
-  @apply xs:text-red-500;
-  @apply md:text-green-500;
-  @apply lg:text-yellow-500;
+  &__container {
+    @apply mt-16;
+    @apply lg:mt-24;
+  }
 }

@@ -1,8 +1,8 @@
 .embla {
-  @apply relative z-10 overflow-hidden bg-red-200;
+  @apply relative z-10 h-full overflow-hidden bg-red-200;
 
   &__container {
-    @apply flex;
+    @apply flex h-full;
   }
 
   &__slide {
