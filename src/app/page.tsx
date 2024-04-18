@@ -1,17 +1,9 @@
-'use client';
-
-import style from '@app/style.module.scss';
-
-import { useBreakpoints } from '@hooks/useBreakpoints';
+import Hero from './sections/Hero';
 
 export default function Home() {
-  const { isDesktop, isMobile, isTablet } = useBreakpoints();
-
   return (
-    <div>
-      <p className={style.teste}>isMobile: {isMobile.toString()}</p>
-      <p className={style.teste}>isTablet: {isTablet.toString()}</p>
-      <p className={style.teste}>isDesktop: {isDesktop.toString()}</p>
+    <div className='h-[10000px] bg-red-200'>
+      <Hero />
     </div>
   );
 }

@@ -14,9 +14,25 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       screens: {
-        mobile: { max: '425px' },
-        tablet: { min: '426px', max: '768px' },
-        desktop: { min: '769px' },
+        xs: { max: '425px' },
+        sm: { max: '765px' },
+        md: { min: '766px', max: '890px' },
+        lg: { min: '891px' },
+      },
+      colors: {
+        'vizi-laranja': {
+          100: '#DF763E',
+        },
+        'vizi-whatsapp': {
+          100: '#1FAF38',
+        },
+        'vizi-white': {
+          25: '#ffffff40',
+          30: '#ffffff4d',
+          40: '#ffffff66',
+          50: '#ffffff80',
+          100: '#ffffff',
+        },
       },
     },
   },
@@ -26,7 +42,8 @@ const config: Config = {
 export default config;
 
 export type ScreenOptions = {
-  mobile: { max: string };
-  tablet: { min: string; max: string };
-  desktop: { min: string };
+  xs: { max: string };
+  sm: { max: string };
+  md: { min: string; max: string };
+  lg: { min: string };
 };

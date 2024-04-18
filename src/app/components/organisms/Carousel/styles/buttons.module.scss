@@ -1,0 +1,33 @@
+.embla-button {
+  @apply absolute top-0 z-10 flex h-full items-center;
+
+  @apply mx-5;
+  @apply lg:mx-12;
+
+  &__container {
+  }
+
+  &--prev {
+    @apply left-0 justify-start;
+  }
+
+  &--next {
+    @apply right-0 justify-end;
+  }
+
+  &--disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  &__content {
+    @apply border-vizi-white-30 flex items-center justify-center rounded-xl border;
+
+    @apply size-4 p-[3px];
+
+    @apply lg:size-10 lg:px-2 lg:py-2;
+  }
+
+  &__svg {
+    @apply size-full;
+  }
+}

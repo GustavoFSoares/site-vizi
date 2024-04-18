@@ -18,13 +18,17 @@
       }
     ],
     "paths": {
-      "@src/*": ["./src/*"],
-      "@root/*":["./*"],
       "@public/*":["./public/*"],
       "@assets/*":["./src/assets/*"],
-      "@app/*":["./src/app/*"],
+      "@atoms/*":["./src/app/components/atoms/*"],
+      "@molecules/*":["./src/app/components/molecules/*"],
+      "@organisms/*":["./src/app/components/organisms/*"],
       "@components/*":["./src/app/components/*"],
+      "@helpers/*":["./src/app/helpers/*"],
       "@hooks/*":["./src/app/hooks/*"],
+      "@app/*":["./src/app/*"],
+      "@src/*": ["./src/*"],
+      "@root/*":["./*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

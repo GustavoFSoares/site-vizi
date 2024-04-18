@@ -1,0 +1,11 @@
+.dots-navigation {
+  @apply absolute bottom-8 flex w-full justify-center gap-3;
+
+  &__item {
+    @apply bg-vizi-white-40 size-2 rounded-xl;
+
+    &--selected {
+      @apply bg-vizi-white-100;
+    }
+  }
+}

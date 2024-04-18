@@ -1,0 +1,11 @@
+.embla {
+  @apply relative z-10 h-full overflow-hidden bg-red-200;
+
+  &__container {
+    @apply flex h-full;
+  }
+
+  &__slide {
+    @apply min-h-14 flex-shrink-0 flex-grow-0 basis-full;
+  }
+}
