@@ -1,6 +1,6 @@
 .layout {
   &__container {
-    @apply mt-16;
+    @apply mx-auto mt-16 max-w-[1730px];
     @apply lg:mt-24;
   }
 }
