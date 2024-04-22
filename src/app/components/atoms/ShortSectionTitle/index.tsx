@@ -1,14 +1,10 @@
 import styles from './shortSectionTitle.module.scss';
 
 type Props = {
-  title: string;
+  children: string;
   align?: 'left' | 'center';
 };
 
-export default function ShortSectionTitle({ title, align = 'left' }: Props) {
-  return (
-    <div className={styles['short-section-title']}>
-      <h1 className={styles['short-section-title__text']}>{title}</h1>
-    </div>
-  );
+export default function ShortSectionTitle({ children, align = 'left' }: Props) {
+  return <h1 className={styles['short-section-title']}>{children}</h1>;
 }
