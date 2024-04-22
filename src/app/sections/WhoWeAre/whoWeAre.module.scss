@@ -25,6 +25,14 @@
     }
   }
 
-  &__cta {
+  &__delivered {
+    @apply bg-vizi-azul-100;
+
+    &-content {
+      @apply grid max-w-[1326px];
+      @apply grid-cols-1 gap-5;
+      @apply md:grid-cols-2 md:gap-x-7 md:gap-y-14;
+      @apply lg:grid-cols-4;
+    }
   }
 }
