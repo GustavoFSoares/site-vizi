@@ -22,6 +22,7 @@ const config: Config = {
       colors: {
         'vizi-laranja': {
           100: '#DF763E',
+          30: '#EA74324D',
         },
         'vizi-whatsapp': {
           100: '#1FAF38',

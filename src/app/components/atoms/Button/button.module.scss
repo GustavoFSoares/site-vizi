@@ -1,0 +1,7 @@
+.button {
+  @apply w-fit rounded-lg border border-solid;
+  @apply border-vizi-laranja-100 bg-vizi-laranja-100 text-vizi-white-100;
+  @apply border-vizi-laranja-30 lg:bg-transparent lg:text-vizi-laranja-100;
+
+  @apply px-6 py-2 text-sm leading-6;
+}
