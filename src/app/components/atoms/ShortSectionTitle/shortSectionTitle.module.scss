@@ -1,0 +1,11 @@
+.short-section-title {
+  @apply flex flex-col gap-[10px];
+
+  &__text {
+    @apply text-vizi-text-1 text-[9px] font-normal uppercase leading-[10px];
+  }
+
+  &::after {
+    @apply h-[5px] w-[86px] rounded-lg bg-vizi-laranja-100 content-[''];
+  }
+}

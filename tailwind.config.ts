@@ -33,6 +33,9 @@ const config: Config = {
           50: '#ffffff80',
           100: '#ffffff',
         },
+        'vizi-text': {
+          1: '#3C3C3C',
+        },
       },
     },
   },
