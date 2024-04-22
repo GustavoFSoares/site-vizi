@@ -1,0 +1,30 @@
+.who-we-are {
+  @apply flex justify-between;
+
+  @apply flex-col gap-5;
+  @apply md:flex-col md:gap-7;
+
+  @apply lg:flex-row;
+
+  &__header {
+    @apply flex flex-col gap-6;
+
+    @apply max-w-[650px];
+  }
+
+  &__content {
+    @apply flex flex-col gap-6;
+
+    @apply lg:max-w-[598px];
+
+    p {
+      @apply text-vizi-text-1 font-normal;
+
+      @apply text-xs;
+      @apply text-base;
+    }
+  }
+
+  &__cta {
+  }
+}
