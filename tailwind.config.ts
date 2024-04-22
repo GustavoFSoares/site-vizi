@@ -31,6 +31,7 @@ const config: Config = {
           100: '#4B40C5',
         },
         'vizi-white': {
+          10: '#FFFFFF1A',
           25: '#ffffff40',
           30: '#ffffff4d',
           40: '#ffffff66',

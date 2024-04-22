@@ -1,0 +1,18 @@
+.delivered-item {
+  @apply flex max-w-[297px] flex-col gap-2;
+
+  &__of {
+    @apply flex gap-3;
+
+    &-label {
+      @apply border-vizi-white-10 flex size-11 items-center justify-center rounded-sm border border-solid text-xs;
+    }
+
+    &-value {
+    }
+  }
+
+  &__cta {
+    @apply w-full;
+  }
+}
