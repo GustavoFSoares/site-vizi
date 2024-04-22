@@ -26,6 +26,9 @@ const config: Config = {
         'vizi-whatsapp': {
           100: '#1FAF38',
         },
+        'vizi-azul': {
+          100: '#4B40C5',
+        },
         'vizi-white': {
           25: '#ffffff40',
           30: '#ffffff4d',
