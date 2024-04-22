@@ -34,7 +34,7 @@ export default function Hero() {
   ];
 
   return (
-    <div className={style['hero']}>
+    <section className={style['hero']}>
       <Carousel navigation dotsNavigation={!isXs}>
         {carouselData.map((item, itemIndex) => (
           <Carousel.Slide key={itemIndex}>
@@ -62,6 +62,6 @@ export default function Hero() {
           className={style['hero__whatsapp-button-content']}
         />
       </button>
-    </div>
+    </section>
   );
 }

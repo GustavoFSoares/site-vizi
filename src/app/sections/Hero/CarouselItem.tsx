@@ -20,9 +20,9 @@ export default function CarouselItem({
 }: Props) {
   return (
     <section className={styles['carousel-item']}>
-      <div className={styles['carousel-item__background-image']}>
+      <figure className={styles['carousel-item__background-image']}>
         {backgroundImage}
-      </div>
+      </figure>
 
       <div className={styles['carousel-item__container']}>
         <p className={styles['carousel-item__location']}>
