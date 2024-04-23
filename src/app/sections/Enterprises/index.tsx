@@ -1,6 +1,8 @@
 import PageSection from '@atoms/PageSection';
 import SectionTitle from '@atoms/SectionTitle';
 
+import EnterprisesHeader from '@molecules/EnterprisesHeader';
+
 import styles from './enterprises.module.scss';
 
 export default function Enterprises() {
@@ -13,6 +15,10 @@ export default function Enterprises() {
           Confira os empreendimentos disponíveis no site da Vizi Lotes e
           encontre, aqui, seu próximo endereço ou investimento
         </p>
+      </div>
+
+      <div className={styles['enterprises__content']}>
+        <EnterprisesHeader />
       </div>
     </PageSection>
   );

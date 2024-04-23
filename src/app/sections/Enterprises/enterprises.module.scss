@@ -14,4 +14,10 @@
       @apply lg:max-w-[660px] lg:text-center lg:text-base;
     }
   }
+
+  &__content {
+    @apply mt-2;
+    @apply md:mt-5;
+    @apply lg:mt-12;
+  }
 }
