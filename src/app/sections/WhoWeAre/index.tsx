@@ -33,7 +33,7 @@ export default function WhoWeAre() {
         </div>
       </PageSection>
 
-      <PageSection className={style['who-we-are__delivered']}>
+      <PageSection containerClassName={style['who-we-are__delivered']}>
         <DeliveredList className={style['who-we-are__delivered-content']} />
       </PageSection>
     </>

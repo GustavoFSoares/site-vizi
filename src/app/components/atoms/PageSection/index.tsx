@@ -7,26 +7,24 @@ type Prop = {
   children: ReactNode;
   isHero?: boolean;
   className?: string;
-  contentClassName?: string;
+  containerClassName?: string;
 };
 
 export default function PageSection({
   children,
   isHero,
   className,
-  contentClassName,
+  containerClassName,
 }: Prop) {
   return (
     <section
       className={bindClass(
         style['page-section'],
         isHero && style['page-section--is-hero'],
-        className
+        containerClassName
       )}
     >
-      <div
-        className={bindClass(style['page-section__content'], contentClassName)}
-      >
+      <div className={bindClass(style['page-section__content'], className)}>
         {children}
       </div>
     </section>
