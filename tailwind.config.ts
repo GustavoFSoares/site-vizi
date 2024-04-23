@@ -40,6 +40,7 @@ const config: Config = {
         },
         'vizi-text': {
           1: '#3C3C3C',
+          70: '#000000B2',
         },
       },
     },

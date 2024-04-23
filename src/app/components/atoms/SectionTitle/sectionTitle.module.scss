@@ -1,0 +1,21 @@
+.section-title {
+  @apply text-vizi-text-70 flex w-full flex-col;
+
+  &::before {
+    @apply h-[5px] w-[86px] rounded-lg  content-[''];
+  }
+
+  &--decorator {
+    &-blue::before {
+      @apply bg-vizi-azul-100;
+    }
+
+    &-orange::before {
+      @apply bg-vizi-laranja-100;
+    }
+  }
+
+  @apply items-start gap-3 text-[26px] font-extrabold  leading-[26px];
+  @apply md:items-center md:gap-5;
+  @apply lg:items-center lg:gap-3 lg:text-[40px] lg:font-normal lg:leading-[47px];
+}
