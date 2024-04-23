@@ -2,4 +2,10 @@
   @apply px-5 py-6;
   @apply md:px-9 md:py-14;
   @apply lg:px-12 lg:py-14;
+
+  @apply bg-vizi-white-100;
+
+  &__content {
+    @apply mx-auto max-w-[1730px];
+  }
 }

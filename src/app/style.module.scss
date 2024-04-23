@@ -2,7 +2,7 @@
   @apply bg-vizi-laranja-100;
 
   &__container {
-    @apply mx-auto mt-16 max-w-[1730px] bg-vizi-white-100;
-    @apply lg:mt-24;
+    @apply mt-16;
+    @apply bg-vizi-white-100 lg:mt-24;
   }
 }
