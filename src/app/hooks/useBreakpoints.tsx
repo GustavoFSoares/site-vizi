@@ -11,6 +11,10 @@ interface IBreakpoints {
   isLg: boolean;
 }
 
+interface IUseBrekpoints extends IBreakpoints {
+  pageWidth: number;
+}
+
 interface IScreenOptionsWidth {
   xs: {
     max: number;
@@ -27,7 +31,7 @@ interface IScreenOptionsWidth {
   };
 }
 
-export function useBreakpoints(): IBreakpoints {
+export function useBreakpoints(): IUseBrekpoints {
   const { theme } = resolveConfig(tailwindConfig);
   const screens = theme.screens as any as ScreenOptions;
 
@@ -78,6 +82,7 @@ export function useBreakpoints(): IBreakpoints {
   }, [pageWidth, screensWidth]);
 
   return {
+    pageWidth,
     isXs: breakpoints.isXs,
     isSm: breakpoints.isSm,
     isMd: breakpoints.isMd,

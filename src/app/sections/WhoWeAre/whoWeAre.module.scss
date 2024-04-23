@@ -18,7 +18,7 @@
     @apply lg:max-w-[598px];
 
     p {
-      @apply text-vizi-text-1 font-normal;
+      @apply font-normal text-vizi-text-1;
 
       @apply text-xs;
       @apply text-base;
@@ -29,10 +29,19 @@
     @apply bg-vizi-azul-100;
 
     &-content {
-      @apply grid max-w-[1326px];
-      @apply grid-cols-1 gap-5;
-      @apply md:grid-cols-2 md:gap-x-7 md:gap-y-14;
-      @apply lg:grid-cols-4;
+      @apply grid max-w-[1326px] justify-between;
+
+      @apply gap-5;
+      grid-template-columns: repeat(1, min-content);
+
+      @media (min-width: 575px) and (max-width: 1330px) {
+        @apply justify-center gap-x-7 gap-y-14;
+        grid-template-columns: repeat(2, min-content);
+      }
+
+      @media (min-width: 1331px) {
+        grid-template-columns: repeat(4, min-content);
+      }
     }
   }
 }

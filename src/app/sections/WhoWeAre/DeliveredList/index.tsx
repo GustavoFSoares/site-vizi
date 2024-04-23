@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function DeliveredList({ className }: Props) {
-  const { isLg } = useBreakpoints();
+  const { pageWidth } = useBreakpoints();
 
   const [deliveredItens] = useState([
     { value: '29', label: 'cidades presentes' },
@@ -20,12 +20,12 @@ export default function DeliveredList({ className }: Props) {
   ]);
 
   const orderedDeliveredItens = useMemo(() => {
-    if (isLg) {
+    if (pageWidth > 1330) {
       return [0, 2, 1, 3].map((index) => deliveredItens[index]);
     }
 
     return deliveredItens;
-  }, [isLg, deliveredItens]);
+  }, [pageWidth, deliveredItens]);
 
   return (
     <div className={className}>

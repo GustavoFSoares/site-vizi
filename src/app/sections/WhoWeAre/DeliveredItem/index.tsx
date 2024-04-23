@@ -15,7 +15,9 @@ export default function DeliveredItem({ value, label }: Props) {
         <span className={style['delivered-item__of-value']}>{value}</span>
       </div>
 
-      <Button className={style['delivered-item__cta']}>{label}</Button>
+      <Button uppercase type='solid' className={style['delivered-item__cta']}>
+        {label}
+      </Button>
     </div>
   );
 }
