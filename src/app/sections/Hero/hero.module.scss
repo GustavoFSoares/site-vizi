@@ -1,13 +1,10 @@
 .hero {
-  @apply flex h-full flex-col items-end;
-
-  max-height: calc(100vh - 64px);
-  @media (min-width: 891px) {
-    max-height: calc(100vh - 96px);
+  &__content {
+    @apply flex h-full flex-col items-end;
   }
 
   &__whatsapp-button {
-    @apply bg-vizi-whatsapp-100 z-10 flex items-center justify-center rounded-lg;
+    @apply z-10 flex items-center justify-center rounded-lg bg-vizi-whatsapp-100;
 
     @apply mx-10 -mt-[14px] size-7;
     @apply md:mx-12 md:-mt-5 md:size-10;

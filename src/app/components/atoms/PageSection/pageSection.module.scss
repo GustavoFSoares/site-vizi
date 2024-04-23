@@ -5,6 +5,15 @@
 
   @apply bg-vizi-white-100;
 
+  &--is-hero {
+    @apply h-full px-0 py-0;
+
+    max-height: calc(100vh - 64px);
+    @screen lg {
+      max-height: calc(100vh - 96px);
+    }
+  }
+
   &__content {
     @apply mx-auto max-w-[1730px];
   }
