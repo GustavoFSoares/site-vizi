@@ -1,22 +1,30 @@
 'use client';
+import { useState } from 'react';
 
 import { useBreakpoints } from '@hooks/useBreakpoints';
 
-import EnterpriseButton from '@atoms/EnterpriseButton';
+import EnterprisesButtonsGroup from '@molecules/EnterprisesButtonsGroup';
+
+import styles from './enterprisesHeader.module.scss';
 
 export default function EnterprisesHeader() {
   const { isLg, isSm } = useBreakpoints();
 
-  const statesButtons = ['sp', 'pr', 'sc', 'rs'];
+  const [statesButtons] = useState([
+    { label: 'sp', value: 'sp' },
+    { label: 'pr', value: 'pr' },
+    { label: 'sc', value: 'sc' },
+    { label: 'rs', value: 'rs' },
+  ]);
 
   return (
-    <div>
-      <div className='states-buttons'>
-        {isLg &&
-          statesButtons.map((stateButton) => (
-            <EnterpriseButton key={stateButton}>{stateButton}</EnterpriseButton>
-          ))}
-      </div>
+    <div className={styles['enterprises-header']}>
+      {isLg && (
+        <EnterprisesButtonsGroup
+          options={statesButtons}
+          onSelectionChange={(d) => console.log(d)}
+        />
+      )}
     </div>
   );
 }
