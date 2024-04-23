@@ -1,7 +1,8 @@
 'use client';
 
 import { useBreakpoints } from '@hooks/useBreakpoints';
-import EnterpriseButton from './partials/EnterpriseButton';
+
+import EnterpriseButton from '@atoms/EnterpriseButton';
 
 export default function EnterprisesHeader() {
   const { isLg, isSm } = useBreakpoints();
