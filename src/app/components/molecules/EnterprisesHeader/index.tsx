@@ -18,16 +18,27 @@ export default function EnterprisesHeader() {
     { label: 'rs', value: 'rs' },
   ]);
 
+  const [cities] = useState([
+    { label: 'Canoas', value: 'canoas' },
+    { label: 'Porto Alegre', value: 'porto-alegre' },
+    { label: 'Pelotas', value: 'pelotas' },
+  ]);
+
   return (
     <div className={styles['enterprises-header']}>
       {isLg && (
         <EnterprisesButtonsGroup
           options={statesButtons}
-          onSelectionChange={(d) => console.log(d)}
+          // onSelectionChange={(d) => {}}
         />
       )}
 
-      <Select />
+      <Select
+        className='w-[244px]'
+        label='Cidades'
+        options={cities}
+        onSelect={(d) => console.log(d)}
+      />
     </div>
   );
 }

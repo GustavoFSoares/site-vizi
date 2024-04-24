@@ -1,0 +1,27 @@
+.select {
+  @apply relative;
+
+  &__button {
+    &-content {
+      @apply flex justify-between;
+    }
+
+    &-label {
+      @apply text-base font-normal text-vizi-white-40;
+    }
+
+    &-arrow {
+      @apply transition;
+
+      &--open {
+        @apply rotate-180;
+      }
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+}

@@ -1,0 +1,33 @@
+.select-list {
+  @apply absolute w-full translate-y-5 rounded-b-lg bg-vizi-azul-100;
+
+  @apply invisible opacity-0 transition duration-500;
+
+  &--is-open {
+    @apply visible opacity-100;
+  }
+
+  &__item {
+    @apply w-full cursor-pointer;
+
+    @apply hover:bg-vizi-white-10;
+
+    &:first-child label {
+      @apply flex italic text-vizi-white-40 before:content-['--'] after:content-['--'];
+    }
+
+    input {
+      @apply hidden;
+    }
+
+    label {
+      @apply block w-full px-4 py-3;
+
+      @apply text-vizi-white-40;
+    }
+
+    &--selected label {
+      @apply text-vizi-white-100;
+    }
+  }
+}

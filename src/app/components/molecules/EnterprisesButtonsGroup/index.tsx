@@ -40,6 +40,7 @@ export default function EnterprisesButtonsGroup({
       {options.map((optionItem) => (
         <EnterpriseButton
           onClick={() => handleSelectItem(optionItem.value)}
+          uppercase
           selected={optionItem.value === selected}
           key={optionItem.value}
         >
