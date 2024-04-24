@@ -11,20 +11,22 @@ type Props = {
     label: string;
     value: string;
   }[];
-  onSelectionChange?: (selection: string | null) => void;
+  uppercase?: boolean;
+  onSelect?: (selection: string | null) => void;
 };
 
 export default function EnterprisesButtonsGroup({
   options,
-  onSelectionChange,
+  onSelect,
+  uppercase,
 }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
 
   useEffect(() => {
-    if (onSelectionChange) {
-      onSelectionChange(selected);
+    if (onSelect) {
+      onSelect(selected);
     }
-  }, [selected, onSelectionChange]);
+  }, [selected, onSelect]);
 
   function handleSelectItem(optionItem: string) {
     if (optionItem === selected) {
@@ -40,7 +42,7 @@ export default function EnterprisesButtonsGroup({
       {options.map((optionItem) => (
         <EnterpriseButton
           onClick={() => handleSelectItem(optionItem.value)}
-          uppercase
+          uppercase={uppercase}
           selected={optionItem.value === selected}
           key={optionItem.value}
         >

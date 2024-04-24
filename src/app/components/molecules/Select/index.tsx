@@ -1,3 +1,5 @@
+'use client';
+
 import { useMemo, useState } from 'react';
 
 import bindClass from '@helpers/bindClass';
@@ -21,7 +23,7 @@ export default function Select({
   options = [],
   onSelect,
 }: Props) {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selected, setSelected] = useState<OptionType | null>(null);
 
   function handleToggle() {

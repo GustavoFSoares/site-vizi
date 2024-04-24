@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+
+import React, { useState } from 'react';
 
 import { useBreakpoints } from '@hooks/useBreakpoints';
 
@@ -24,21 +25,44 @@ export default function EnterprisesHeader() {
     { label: 'Pelotas', value: 'pelotas' },
   ]);
 
+  const [businessStatus] = useState([
+    { label: 'Pre-lançamento', value: 'Pre-lançamento' },
+    { label: 'Lançamento', value: 'Lançamento' },
+    { label: 'Em obra', value: 'Em obra' },
+    { label: 'Pronto para morar', value: 'Pronto para morar' },
+    { label: 'Pronto para construir', value: 'Pronto para construir' },
+  ]);
+
+  function handleSelectStatus(item: string | null) {
+    console.log('status', item);
+  }
+
   return (
     <div className={styles['enterprises-header']}>
-      {isLg && (
-        <EnterprisesButtonsGroup
-          options={statesButtons}
-          // onSelectionChange={(d) => {}}
-        />
-      )}
+      <div className={styles['enterprises-header__cities-wrapper']}>
+        {isLg && <EnterprisesButtonsGroup uppercase options={statesButtons} />}
 
-      <Select
-        className='w-[244px]'
-        label='Cidades'
-        options={cities}
-        onSelect={(d) => console.log(d)}
-      />
+        <Select className='w-[244px]' label='Cidades' options={cities} />
+      </div>
+
+      <div className={styles['enterprises-header__business-status']}>
+        {!isLg && (
+          <Select
+            label='Status'
+            options={businessStatus}
+            onSelect={handleSelectStatus}
+          />
+        )}
+
+        {isLg && (
+          <EnterprisesButtonsGroup
+            options={businessStatus}
+            onSelect={handleSelectStatus}
+          />
+        )}
+      </div>
+
+      <div className={styles['enterprises-header__contact-button']}></div>
     </div>
   );
 }

@@ -1,3 +1,7 @@
 .enterprises-header {
-  @apply flex gap-9 rounded-xl bg-vizi-azul-100 px-9 py-5;
+  @apply flex justify-between gap-2 rounded-xl bg-vizi-azul-100 px-9 py-5;
+
+  &__cities-wrapper {
+    @apply flex gap-4;
+  }
 }
