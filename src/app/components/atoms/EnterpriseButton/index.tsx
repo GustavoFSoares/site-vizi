@@ -1,8 +1,10 @@
+import { ReactNode } from 'react';
+
 import bindClass from '@helpers/bindClass';
 import style from './enterpriseButton.module.scss';
 
 type Props = {
-  children: String;
+  children: String | ReactNode;
   selected?: boolean;
   onClick?: () => void;
 };

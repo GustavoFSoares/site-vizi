@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import { useBreakpoints } from '@hooks/useBreakpoints';
 
+import Select from '@molecules/Select';
 import EnterprisesButtonsGroup from '@molecules/EnterprisesButtonsGroup';
 
 import styles from './enterprisesHeader.module.scss';
@@ -25,6 +26,8 @@ export default function EnterprisesHeader() {
           onSelectionChange={(d) => console.log(d)}
         />
       )}
+
+      <Select />
     </div>
   );
 }
