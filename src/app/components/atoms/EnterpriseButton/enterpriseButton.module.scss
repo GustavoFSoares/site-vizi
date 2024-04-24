@@ -1,5 +1,9 @@
 .enterprise-button {
-  @apply rounded-xl border border-solid border-vizi-white-25 p-[17px] text-base font-normal text-vizi-white-25;
+  @apply w-full rounded-xl border border-solid border-vizi-white-25 p-[17px] text-base font-normal text-vizi-white-25;
+
+  &--uppercase {
+    @apply uppercase;
+  }
 
   &--selected {
     @apply border-vizi-white-100 text-vizi-white-100;
