@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { useBreakpoints } from '@hooks/useBreakpoints';
 
@@ -9,8 +9,12 @@ import EnterprisesButtonsGroup from '@molecules/EnterprisesButtonsGroup';
 
 import styles from './enterprisesHeader.module.scss';
 
-export default function EnterprisesHeader() {
-  const { isLg, isSm } = useBreakpoints();
+type Props = {
+  children?: JSX.Element;
+};
+
+export default function EnterprisesHeader({ children }: Props) {
+  const { isXl, isLg, isSm } = useBreakpoints();
 
   const [statesButtons] = useState([
     { label: 'sp', value: 'sp' },
@@ -40,13 +44,14 @@ export default function EnterprisesHeader() {
   return (
     <div className={styles['enterprises-header']}>
       <div className={styles['enterprises-header__cities-wrapper']}>
+        {!isLg && <Select label='Estados' options={statesButtons} />}
         {isLg && <EnterprisesButtonsGroup uppercase options={statesButtons} />}
 
-        <Select className='w-[244px]' label='Cidades' options={cities} />
+        <Select className='' label='Cidades' options={cities} />
       </div>
 
       <div className={styles['enterprises-header__business-status']}>
-        {!isLg && (
+        {!isXl && (
           <Select
             label='Status'
             options={businessStatus}
@@ -54,7 +59,7 @@ export default function EnterprisesHeader() {
           />
         )}
 
-        {isLg && (
+        {isXl && (
           <EnterprisesButtonsGroup
             options={businessStatus}
             onSelect={handleSelectStatus}
@@ -62,7 +67,11 @@ export default function EnterprisesHeader() {
         )}
       </div>
 
-      <div className={styles['enterprises-header__contact-button']}></div>
+      {!isSm && (
+        <div className={styles['enterprises-header__contact-button']}>
+          {children}
+        </div>
+      )}
     </div>
   );
 }

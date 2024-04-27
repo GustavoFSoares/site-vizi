@@ -1,5 +1,5 @@
 .select-list {
-  @apply absolute w-full translate-y-5 rounded-b-lg bg-vizi-azul-100;
+  @apply absolute w-full translate-y-[18px] rounded-b-lg bg-vizi-azul-100;
 
   @apply invisible opacity-0 transition duration-500;
 
@@ -13,7 +13,7 @@
     @apply hover:bg-vizi-white-10;
 
     &:first-child label {
-      @apply flex italic text-vizi-white-40 before:content-['--'] after:content-['--'];
+      @apply flex italic text-vizi-white-40 before:content-['-'] after:content-['-'];
     }
 
     input {
