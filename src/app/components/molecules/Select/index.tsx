@@ -30,6 +30,10 @@ export default function Select({
     setIsOpen((state) => !state);
   }
 
+  function handleLeave() {
+    setIsOpen(false);
+  }
+
   function handleSelect(option: OptionType) {
     setIsOpen(false);
     setSelected(option);
@@ -52,7 +56,10 @@ export default function Select({
   }, [options, label]);
 
   return (
-    <div className={bindClass(style['select'], className)}>
+    <div
+      className={bindClass(style['select'], className)}
+      onMouseLeave={handleLeave}
+    >
       <EnterpriseButton onClick={handleToggle}>
         <div className={style['select__button-content']}>
           <span className={style['select__button-label']}>{buttonContent}</span>

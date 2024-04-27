@@ -8,6 +8,8 @@
 
     &-label {
       @apply text-base font-normal text-vizi-white-40;
+
+      @apply sm:text-[9px];
     }
 
     &-arrow {
