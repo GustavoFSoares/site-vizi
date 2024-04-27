@@ -18,6 +18,7 @@ const config: Config = {
         sm: { max: '765px' },
         md: { min: '766px', max: '890px' },
         lg: { min: '891px' },
+        xl: { min: '1440px' },
       },
       colors: {
         'vizi-laranja': {
@@ -55,4 +56,5 @@ export type ScreenOptions = {
   sm: { max: string };
   md: { min: string; max: string };
   lg: { min: string };
+  xl: { min: string };
 };
