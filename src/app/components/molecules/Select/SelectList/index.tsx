@@ -26,34 +26,38 @@ export default function SelectList({
   }
 
   return (
-    <ul
-      className={bindClass(
-        style['select-list'],
-        isOpen && style['select-list--is-open']
-      )}
-      role='listbox'
-      id='select-dropdown'
-    >
-      {options.map((item, index) => (
-        <li
-          key={index}
+    <>
+      {isOpen && (
+        <ul
           className={bindClass(
-            style['select-list__item'],
-            item.value === selected?.value &&
-              style['select-list__item--selected']
+            style['select-list'],
+            isOpen && style['select-list--is-open']
           )}
+          role='listbox'
+          id='select-dropdown'
         >
-          <label>
-            <input
-              name='teste'
-              type='radio'
-              defaultChecked={item.value === selected?.value}
-              onChange={() => handleSelect(item)}
-            />
-            {item.label}
-          </label>
-        </li>
-      ))}
-    </ul>
+          {options.map((item, index) => (
+            <li
+              key={index}
+              className={bindClass(
+                style['select-list__item'],
+                item.value === selected?.value &&
+                  style['select-list__item--selected']
+              )}
+            >
+              <label>
+                <input
+                  name='teste'
+                  type='radio'
+                  defaultChecked={item.value === selected?.value}
+                  onChange={() => handleSelect(item)}
+                />
+                {item.label}
+              </label>
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
   );
 }

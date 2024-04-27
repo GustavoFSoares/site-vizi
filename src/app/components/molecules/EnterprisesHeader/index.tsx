@@ -37,9 +37,7 @@ export default function EnterprisesHeader({ children }: Props) {
     { label: 'Pronto para construir', value: 'Pronto para construir' },
   ]);
 
-  function handleSelectStatus(item: string | null) {
-    console.log('status', item);
-  }
+  function handleSelectStatus(item: string | null) {}
 
   return (
     <div className={styles['enterprises-header']}>

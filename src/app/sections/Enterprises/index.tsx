@@ -4,6 +4,7 @@ import SectionTitle from '@atoms/SectionTitle';
 import EnterprisesHeader from '@molecules/EnterprisesHeader';
 
 import styles from './enterprises.module.scss';
+import SeeMoreButton from './SeeMoreButton';
 
 export default function Enterprises() {
   return (
@@ -18,7 +19,9 @@ export default function Enterprises() {
       </div>
 
       <div className={styles['enterprises__content']}>
-        <EnterprisesHeader />
+        <EnterprisesHeader>
+          <SeeMoreButton />
+        </EnterprisesHeader>
       </div>
     </PageSection>
   );

@@ -1,9 +1,9 @@
 .select {
-  @apply relative;
+  @apply relative h-full w-full;
 
   &__button {
     &-content {
-      @apply flex justify-between;
+      @apply flex items-center justify-between;
     }
 
     &-label {
@@ -15,15 +15,16 @@
     &-arrow {
       @apply transition;
 
+      @apply size-4;
+      @apply lg:size-[26px];
+
+      svg {
+        @apply h-full w-full;
+      }
+
       &--open {
         @apply rotate-180;
       }
     }
-  }
-
-  &__list {
-  }
-
-  &__item {
   }
 }
