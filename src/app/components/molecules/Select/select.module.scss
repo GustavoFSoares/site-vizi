@@ -7,9 +7,11 @@
     }
 
     &-label {
-      @apply text-base font-normal text-vizi-white-40;
+      @apply font-normal text-vizi-white-40;
 
-      @apply sm:text-[9px];
+      @apply text-[9px];
+      @apply md:text-xs;
+      @apply lg:text-base;
     }
 
     &-arrow {

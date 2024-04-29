@@ -41,11 +41,28 @@ export default function EnterprisesHeader({ children }: Props) {
 
   return (
     <div className={styles['enterprises-header']}>
-      <div className={styles['enterprises-header__cities-wrapper']}>
-        {!isLg && <Select label='Estados' options={statesButtons} />}
-        {isLg && <EnterprisesButtonsGroup uppercase options={statesButtons} />}
+      <div className={styles['enterprises-header__location']}>
+        {!isLg && (
+          <Select
+            className={styles['enterprises-header__location-states']}
+            label='Estados'
+            options={statesButtons}
+          />
+        )}
 
-        <Select className='' label='Cidades' options={cities} />
+        {isLg && (
+          <EnterprisesButtonsGroup
+            className={styles['enterprises-header__location-states']}
+            uppercase
+            options={statesButtons}
+          />
+        )}
+
+        <Select
+          className={styles['enterprises-header__location-cities']}
+          label='Cidades'
+          options={cities}
+        />
       </div>
 
       <div className={styles['enterprises-header__business-status']}>

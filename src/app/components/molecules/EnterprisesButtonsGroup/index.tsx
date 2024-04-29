@@ -5,8 +5,10 @@ import { useEffect, useState } from 'react';
 import EnterpriseButton from '@atoms/EnterpriseButton';
 
 import styles from './enterprisesButtonsGroup.module.scss';
+import bindClass from '@helpers/bindClass';
 
 type Props = {
+  className?: string;
   options: {
     label: string;
     value: string;
@@ -16,6 +18,7 @@ type Props = {
 };
 
 export default function EnterprisesButtonsGroup({
+  className,
   options,
   onSelect,
   uppercase,
@@ -38,7 +41,7 @@ export default function EnterprisesButtonsGroup({
   }
 
   return (
-    <div className={styles['enterprises-buttons-group']}>
+    <div className={bindClass(styles['enterprises-buttons-group'], className)}>
       {options.map((optionItem) => (
         <EnterpriseButton
           onClick={() => handleSelectItem(optionItem.value)}

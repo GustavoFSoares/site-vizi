@@ -1,5 +1,5 @@
 .select-list {
-  @apply absolute w-full translate-y-[18px] rounded-b-lg bg-vizi-azul-100;
+  @apply absolute w-full rounded-b-lg bg-vizi-azul-100 pt-[18px];
 
   @apply invisible opacity-0 transition duration-500;
 
@@ -21,7 +21,7 @@
     }
 
     label {
-      @apply block w-full px-4 py-3;
+      @apply block w-full overflow-hidden text-ellipsis text-nowrap px-4 py-3;
 
       @apply text-vizi-white-40;
     }
