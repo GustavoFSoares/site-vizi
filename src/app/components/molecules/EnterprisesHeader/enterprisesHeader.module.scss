@@ -4,7 +4,7 @@
   @apply gap-[5px] px-5;
   @apply md:gap-[15px] md:px-9;
   @apply lg:gap-9 lg:px-9;
-  @apply xl:gap-6;
+  @apply xl:gap-5;
 
   @apply sm:absolute sm:left-0 sm:w-full sm:rounded-none;
 
@@ -43,5 +43,6 @@
 
   &__contact-button {
     @apply w-24;
+    @apply lg:w-fit;
   }
 }

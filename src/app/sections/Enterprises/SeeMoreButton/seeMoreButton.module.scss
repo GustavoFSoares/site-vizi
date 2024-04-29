@@ -1,3 +1,8 @@
 .see-more-button {
-  @apply h-full w-full rounded-2xl border-vizi-white-100 bg-vizi-white-100 px-5 text-xs text-vizi-azul-100;
+  @apply h-full w-full rounded-2xl;
+
+  @apply rounded-[10px] border-vizi-azul-100 bg-vizi-azul-100 text-xs text-vizi-white-100;
+  @apply md:border-vizi-white-100 md:bg-vizi-white-100 md:px-4 md:text-sm md:font-normal md:text-vizi-azul-100;
+  @apply lg:border-vizi-white-25 lg:bg-transparent lg:px-3 lg:py-3 lg:text-base lg:font-bold lg:leading-[26px] lg:text-vizi-white-100;
+  @apply xl:px-2;
 }

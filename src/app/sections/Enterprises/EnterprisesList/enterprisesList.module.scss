@@ -1,0 +1,7 @@
+.enterprises-list {
+  content: '';
+
+  &__see-more {
+    @apply mb-[18px] w-fit;
+  }
+}

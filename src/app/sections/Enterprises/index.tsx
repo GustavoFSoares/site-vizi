@@ -1,10 +1,8 @@
 import PageSection from '@atoms/PageSection';
 import SectionTitle from '@atoms/SectionTitle';
 
-import EnterprisesHeader from '@molecules/EnterprisesHeader';
-
 import styles from './enterprises.module.scss';
-import SeeMoreButton from './SeeMoreButton';
+import EnterprisesList from './EnterprisesList';
 
 export default function Enterprises() {
   return (
@@ -18,11 +16,9 @@ export default function Enterprises() {
         </p>
       </div>
 
-      <div className={styles['enterprises__content']}>
-        <EnterprisesHeader>
-          <SeeMoreButton />
-        </EnterprisesHeader>
-      </div>
+      <article className={styles['enterprises__content']}>
+        <EnterprisesList />
+      </article>
     </PageSection>
   );
 }
