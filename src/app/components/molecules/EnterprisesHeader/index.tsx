@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { useBreakpoints } from '@hooks/useBreakpoints';
 
@@ -16,6 +16,7 @@ type Props = {
 export default function EnterprisesHeader({ children }: Props) {
   const { isXl, isLg, isSm } = useBreakpoints();
 
+  const navbarRef = useRef<HTMLDivElement>(null);
   const [statesButtons] = useState([
     { label: 'sp', value: 'sp' },
     { label: 'pr', value: 'pr' },
@@ -40,53 +41,57 @@ export default function EnterprisesHeader({ children }: Props) {
   function handleSelectStatus(item: string | null) {}
 
   return (
-    <div className={styles['enterprises-header']}>
-      <div className={styles['enterprises-header__location']}>
-        {!isLg && (
+    <>
+      <div ref={navbarRef} className={styles['enterprises-header']}>
+        <div className={styles['enterprises-header__location']}>
+          {!isLg && (
+            <Select
+              className={styles['enterprises-header__location-states']}
+              label='Estados'
+              options={statesButtons}
+            />
+          )}
+
+          {isLg && (
+            <EnterprisesButtonsGroup
+              className={styles['enterprises-header__location-states']}
+              uppercase
+              options={statesButtons}
+            />
+          )}
+
           <Select
-            className={styles['enterprises-header__location-states']}
-            label='Estados'
-            options={statesButtons}
+            className={styles['enterprises-header__location-cities']}
+            label='Cidades'
+            options={cities}
           />
-        )}
-
-        {isLg && (
-          <EnterprisesButtonsGroup
-            className={styles['enterprises-header__location-states']}
-            uppercase
-            options={statesButtons}
-          />
-        )}
-
-        <Select
-          className={styles['enterprises-header__location-cities']}
-          label='Cidades'
-          options={cities}
-        />
-      </div>
-
-      <div className={styles['enterprises-header__business-status']}>
-        {!isXl && (
-          <Select
-            label='Status'
-            options={businessStatus}
-            onSelect={handleSelectStatus}
-          />
-        )}
-
-        {isXl && (
-          <EnterprisesButtonsGroup
-            options={businessStatus}
-            onSelect={handleSelectStatus}
-          />
-        )}
-      </div>
-
-      {!isSm && (
-        <div className={styles['enterprises-header__contact-button']}>
-          {children}
         </div>
-      )}
-    </div>
+
+        <div className={styles['enterprises-header__business-status']}>
+          {!isXl && (
+            <Select
+              label='Status'
+              options={businessStatus}
+              onSelect={handleSelectStatus}
+            />
+          )}
+
+          {isXl && (
+            <EnterprisesButtonsGroup
+              options={businessStatus}
+              onSelect={handleSelectStatus}
+            />
+          )}
+        </div>
+
+        {!isSm && (
+          <div className={styles['enterprises-header__contact-button']}>
+            {children}
+          </div>
+        )}
+      </div>
+
+      {isSm && <div style={{ height: navbarRef.current?.clientHeight }}></div>}
+    </>
   );
 }

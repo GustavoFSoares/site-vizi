@@ -4,4 +4,14 @@
   &__see-more {
     @apply mb-[18px] w-fit;
   }
+
+  &__list {
+    @apply flex w-full gap-3 sm:absolute sm:left-5;
+
+    @apply sm:overflow-x-auto;
+  }
+
+  &__item {
+    @apply flex-grow bg-red-500 sm:w-[90%];
+  }
 }
