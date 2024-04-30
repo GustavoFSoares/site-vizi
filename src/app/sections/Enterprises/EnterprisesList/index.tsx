@@ -4,6 +4,7 @@ import { useBreakpoints } from '@hooks/useBreakpoints';
 
 import EnterprisesHeader from '@molecules/EnterprisesHeader';
 import EnterpriseItem, { EnterpriseItemProps } from '@molecules/EnterpriseItem';
+import Carousel from '@organisms/Carousel';
 
 import SeeMoreButton from '../SeeMoreButton';
 
@@ -44,15 +45,23 @@ export default function EnterprisesList() {
         <SeeMoreButton />
       </EnterprisesHeader>
 
-      <ul className={style['enterprises-list__list']}>
-        {enterprisesList.map((item, index) => (
-          <EnterpriseItem
-            className={style['enterprises-list__item']}
-            key={index}
-            {...item}
-          />
-        ))}
-      </ul>
+      <div className={style['enterprises-list__list']}>
+        <Carousel
+          className={style['enterprises-list__list-carousel']}
+          gap={13}
+          cardSize={90}
+        >
+          {enterprisesList.map((item, index) => (
+            <Carousel.Slide key={index}>
+              <EnterpriseItem
+                className={style['enterprises-list__item']}
+                key={index}
+                {...item}
+              />
+            </Carousel.Slide>
+          ))}
+        </Carousel>
+      </div>
 
       <h1>text</h1>
     </div>

@@ -1,6 +1,8 @@
 import Button from '@atoms/Button';
 import bindClass from '@helpers/bindClass';
 
+import style from './enterpriseItem.module.scss';
+
 export type EnterpriseItemProps = {
   background: string;
   title: string;
@@ -26,25 +28,25 @@ export default function EnterpriseItem({
   ctaLink,
 }: Props) {
   return (
-    <li className={bindClass('enterprise-item', className)}>
-      <div className='enterprise-item__background'></div>
+    <div className={bindClass(style['enterprise-item'], className)}>
+      <div className={style['enterprise-item__background']}></div>
 
-      <div className='content'>
-        <h4 className='content__title'>{title}</h4>
-        <h5 className='content__location'>{location}</h5>
-        <h5 className='content__description'>{description}</h5>
-        <figure className='content__logo'>LOGO</figure>
+      <div className={style['content']}>
+        <h4 className={style['content__title']}>{title}</h4>
+        <h5 className={style['content__location']}>{location}</h5>
+        <h5 className={style['content__description']}>{description}</h5>
+        <figure className={style['content__logo']}>LOGO</figure>
       </div>
 
-      <div className='benefits'>
+      <div className={style['benefits']}>
         {benefits.map((benefit, index) => (
-          <p key={index} className='benefits__item'>
+          <p key={index} className={style['benefits__item']}>
             {benefit}
           </p>
         ))}
       </div>
 
       <Button type='solid'>Conheça</Button>
-    </li>
+    </div>
   );
 }
