@@ -2,7 +2,7 @@ import PageSection from '@atoms/PageSection';
 import SectionTitle from '@atoms/SectionTitle';
 
 import styles from './enterprises.module.scss';
-import EnterprisesList from './EnterprisesList';
+import EnterprisesExplorer from './EnterprisesExplorer';
 
 export default function Enterprises() {
   return (
@@ -17,7 +17,7 @@ export default function Enterprises() {
       </div>
 
       <article className={styles['enterprises__content']}>
-        <EnterprisesList />
+        <EnterprisesExplorer />
       </article>
     </PageSection>
   );
