@@ -2,13 +2,14 @@ import Button from '@atoms/Button';
 import bindClass from '@helpers/bindClass';
 
 import style from './enterpriseItem.module.scss';
+import Image, { StaticImageData } from 'next/image';
 
 export type EnterpriseItemProps = {
-  background: string;
+  background: StaticImageData;
   title: string;
   location: string;
   description: string;
-  logo: string;
+  logo: StaticImageData;
   benefits: string[];
   ctaLink: string;
 };
@@ -29,13 +30,21 @@ export default function EnterpriseItem({
 }: Props) {
   return (
     <div className={bindClass(style['enterprise-item'], className)}>
-      <div className={style['enterprise-item__background']}></div>
+      <div
+        className={style['enterprise-item__background']}
+        style={{ backgroundImage: `url(${background.src})` }}
+      />
 
       <div className={style['content']}>
-        <h4 className={style['content__title']}>{title}</h4>
-        <h5 className={style['content__location']}>{location}</h5>
-        <h5 className={style['content__description']}>{description}</h5>
-        <figure className={style['content__logo']}>LOGO</figure>
+        <div className={style['content__header']}>
+          <h4 className={style['content__title']}>{title}</h4>
+          <h5 className={style['content__location']}>{location}</h5>
+          <h5 className={style['content__description']}>{description}</h5>
+        </div>
+
+        <figure className={style['content__logo']}>
+          <Image src={logo} alt={`LOGO ${title}`} />
+        </figure>
       </div>
 
       <div className={style['benefits']}>
@@ -46,7 +55,9 @@ export default function EnterpriseItem({
         ))}
       </div>
 
-      <Button type='solid'>Conheça</Button>
+      <Button className={style['enterprise-item__cta']} type='solid'>
+        Conheça
+      </Button>
     </div>
   );
 }

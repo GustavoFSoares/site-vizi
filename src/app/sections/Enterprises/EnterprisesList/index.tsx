@@ -6,6 +6,9 @@ import EnterprisesHeader from '@molecules/EnterprisesHeader';
 import EnterpriseItem, { EnterpriseItemProps } from '@molecules/EnterpriseItem';
 import Carousel from '@organisms/Carousel';
 
+import EntepriseBackground from '@assets/enterprise-background.png';
+import EntepriseLogo from '@assets/enterprise-logo.png';
+
 import SeeMoreButton from '../SeeMoreButton';
 
 import style from './enterprisesList.module.scss';
@@ -13,20 +16,20 @@ import style from './enterprisesList.module.scss';
 export default function EnterprisesList() {
   const enterprisesList: EnterpriseItemProps[] = [
     {
-      background: '',
+      background: EntepriseBackground,
       title: 'LIFE GARDEN',
       description: 'Lotes a partir de 140,00M²',
       location: 'São José dos Pinhais',
-      logo: '',
+      logo: EntepriseLogo,
       benefits: ['PR', 'Condomínio fechado', 'Pronto para morar'],
       ctaLink: '#',
     },
     {
-      background: '',
+      background: EntepriseBackground,
       title: 'LIFE GARDEN',
       description: 'Lotes a partir de 140,00M²',
       location: 'São José dos Pinhais',
-      logo: '',
+      logo: EntepriseLogo,
       benefits: ['PR', 'Condomínio fechado', 'Pronto para morar'],
       ctaLink: '#',
     },
@@ -50,6 +53,7 @@ export default function EnterprisesList() {
           className={style['enterprises-list__list-carousel']}
           gap={13}
           cardSize={90}
+          autoPlay
         >
           {enterprisesList.map((item, index) => (
             <Carousel.Slide key={index}>

@@ -37,11 +37,16 @@ const config: Config = {
           30: '#ffffff4d',
           40: '#ffffff66',
           50: '#ffffff80',
+          70: '#FFFFFFB2',
           100: '#ffffff',
         },
         'vizi-text': {
           1: '#3C3C3C',
           70: '#000000B2',
+        },
+        'vizi-black': {
+          40: '#00000066',
+          100: '#000000',
         },
       },
     },

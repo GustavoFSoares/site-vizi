@@ -1,22 +1,38 @@
 .enterprise-item {
-  @apply h-[310px] w-full;
+  @apply relative h-[310px] w-full overflow-hidden rounded-[10px];
 
   &__background {
+    @apply absolute left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat;
   }
 
   .content {
+    @apply bg-vizi-black-40 flex w-full gap-[22px] rounded-[10px] pl-[18px] pt-[18px] backdrop-blur;
+
+    &__header {
+      @apply flex flex-grow flex-col gap-[3px];
+    }
+
     &__title {
+      @apply text-xs font-normal;
     }
-    &__location {
-    }
+
+    &__location,
     &__description {
+      @apply text-vizi-white-70 text-[9px] font-normal leading-[10px];
     }
+
     &__logo {
+      @apply -mb-[15px] mr-[23px] h-[77px] w-[73px] overflow-hidden rounded-[10px];
     }
   }
 
   .benefits {
+    @apply sm:hidden;
     &__item {
     }
+  }
+
+  &__cta {
+    @apply absolute bottom-[22px] right-[23px];
   }
 }

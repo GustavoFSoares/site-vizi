@@ -6,7 +6,7 @@
   }
 
   &__list {
-    @apply w-full sm:absolute sm:left-0 sm:right-0;
+    @apply mt-5 w-full sm:absolute sm:left-0 sm:right-0;
 
     &-carousel {
       @apply px-5;
