@@ -1,16 +1,27 @@
 .benefit-item {
-  @apply border-vizi-black-10 mt-5 flex max-w-[131px] flex-col items-center gap-[9px] rounded-[10px] border border-solid bg-vizi-white-100 pb-4;
+  @apply border-vizi-black-10 flex flex-col items-center gap-[9px] rounded-[10px] border border-solid bg-vizi-white-100 pb-4;
+
+  @apply mt-5 max-w-[131px];
+  @apply lg:mt-0 lg:max-w-[181px] lg:px-7 lg:py-[42px];
+
   box-shadow: 0px 4px 56.2px 0px #0000000d;
 
   &__icon {
-    @apply bg-vizi-amarelo-100 -mt-5 rounded-[10px] p-[9px];
+    @apply bg-vizi-amarelo-100;
+
+    @apply -mt-5 rounded-[10px] p-[9px];
+    @apply lg:mt-0 lg:rounded-[15px] lg:p-[15px];
 
     img {
       @apply size-6;
+      @apply lg:size-10;
     }
   }
 
   &__text {
-    @apply px-6 text-center text-xs font-normal text-vizi-text-1;
+    @apply text-center text-vizi-text-1;
+
+    @apply px-4 text-xs font-normal;
+    @apply lg:px-0 lg:text-base lg:font-bold;
   }
 }
