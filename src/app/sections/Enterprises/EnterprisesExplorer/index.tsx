@@ -34,6 +34,24 @@ export default function EnterprisesExplorer() {
       benefits: ['PR', 'Condomínio fechado', 'Pronto para morar'],
       ctaLink: '#',
     },
+    {
+      background: EntepriseBackground,
+      title: 'LIFE GARDEN',
+      description: 'Lotes a partir de 140,00M²',
+      location: 'São José dos Pinhais',
+      logo: EntepriseLogo,
+      benefits: ['PR', 'Condomínio fechado', 'Pronto para morar'],
+      ctaLink: '#',
+    },
+    {
+      background: EntepriseBackground,
+      title: 'LIFE GARDEN',
+      description: 'Lotes a partir de 140,00M²',
+      location: 'São José dos Pinhais',
+      logo: EntepriseLogo,
+      benefits: ['PR', 'Condomínio fechado', 'Pronto para morar'],
+      ctaLink: '#',
+    },
   ];
 
   const { isSm } = useBreakpoints();
@@ -50,8 +68,6 @@ export default function EnterprisesExplorer() {
       </EnterprisesHeader>
 
       <EnterprisesList list={enterprisesList} />
-
-      <h1>text</h1>
     </div>
   );
 }

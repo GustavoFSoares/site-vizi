@@ -1,38 +1,88 @@
 .enterprise-item {
-  @apply relative h-[310px] w-full overflow-hidden rounded-[10px];
+  @apply relative w-full overflow-hidden rounded-[10px];
+
+  @apply h-[310px];
+  @apply md:h-[323px];
+  @apply lg:h-[403px];
 
   &__background {
-    @apply absolute left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat;
+    @apply absolute left-0 top-0 h-full w-full bg-cover bg-center bg-no-repeat;
+
+    &:before {
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.6) 25.84%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      @apply absolute left-0 top-0 h-full w-full content-[''];
+    }
+    @apply sm:-z-10;
   }
 
   .content {
-    @apply bg-vizi-black-40 flex w-full gap-[22px] rounded-[10px] pl-[18px] pt-[18px] backdrop-blur;
+    @apply w-full rounded-[10px] bg-vizi-black-40 backdrop-blur;
+
+    @apply flex gap-[22px] pl-[18px] pt-[18px];
+    @apply md:grid md:h-full md:w-fit md:gap-14 md:pb-[26px] md:pt-[28px];
+    @apply lg:grid lg:h-full lg:w-fit lg:gap-14 lg:bg-transparent lg:pb-[56px] lg:pl-[32px] lg:pt-[35px] lg:backdrop-blur-none;
+
+    @screen md {
+      grid:
+        'header logo'
+        'benefits benefits';
+    }
+
+    @screen lg {
+      grid:
+        'header'
+        'benefits';
+    }
 
     &__header {
+      grid-area: header;
       @apply flex flex-grow flex-col gap-[3px];
     }
 
     &__title {
-      @apply text-xs font-normal;
+      @apply flex text-xs font-normal;
+
+      @apply sm:gap-[0.25em];
+      @apply md:flex-col md:text-xl md:font-bold md:leading-[26px];
+      @apply lg:flex-col lg:text-xl lg:font-bold lg:leading-[26px];
     }
 
     &__location,
     &__description {
-      @apply text-vizi-white-70 text-[9px] font-normal leading-[10px];
+      @apply text-[9px] font-normal leading-[10px] text-vizi-white-70;
+      @apply lg:hidden;
     }
 
     &__logo {
-      @apply -mb-[15px] mr-[23px] h-[77px] w-[73px] overflow-hidden rounded-[10px];
+      grid-area: logo;
+
+      @apply overflow-hidden rounded-[10px];
+
+      @apply -mb-[15px] mr-[23px] h-[77px] w-[73px];
+      @apply md:-mr-[40px] md:mb-0 md:h-[84px] md:w-[80px];
+
+      @apply lg:hidden;
     }
   }
 
   .benefits {
+    grid-area: benefits;
+
     @apply sm:hidden;
+    @apply flex flex-col gap-[5px] self-end;
+
     &__item {
+      @apply w-fit rounded-[10px] bg-vizi-white-25 px-[10px] py-[12px] text-[9px] font-normal leading-[10px];
     }
   }
 
   &__cta {
     @apply absolute bottom-[22px] right-[23px];
+
+    @apply lg:hidden;
   }
 }

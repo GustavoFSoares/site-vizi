@@ -4,7 +4,7 @@ import Enterprises from './sections/Enterprises';
 
 export default function Home() {
   return (
-    <main className='h-[10000px]'>
+    <main>
       <Hero />
       <WhoWeAre />
       <Enterprises />

@@ -37,7 +37,11 @@ export default function EnterpriseItem({
 
       <div className={style['content']}>
         <div className={style['content__header']}>
-          <h4 className={style['content__title']}>{title}</h4>
+          <h4 className={style['content__title']}>
+            {title.split(' ').map((word) => (
+              <span key={word}>{word}</span>
+            ))}
+          </h4>
           <h5 className={style['content__location']}>{location}</h5>
           <h5 className={style['content__description']}>{description}</h5>
         </div>
@@ -45,14 +49,14 @@ export default function EnterpriseItem({
         <figure className={style['content__logo']}>
           <Image src={logo} alt={`LOGO ${title}`} />
         </figure>
-      </div>
 
-      <div className={style['benefits']}>
-        {benefits.map((benefit, index) => (
-          <p key={index} className={style['benefits__item']}>
-            {benefit}
-          </p>
-        ))}
+        <div className={style['benefits']}>
+          {benefits.map((benefit, index) => (
+            <p key={index} className={style['benefits__item']}>
+              {benefit}
+            </p>
+          ))}
+        </div>
       </div>
 
       <Button className={style['enterprise-item__cta']} type='solid'>
