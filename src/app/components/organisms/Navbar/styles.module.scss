@@ -20,8 +20,11 @@
 }
 
 .nav-options {
-  @apply text-vizi-white-50 h-full text-xs font-normal;
+  @apply h-full font-normal text-vizi-white-50;
   @apply flex w-full items-center justify-center px-10;
+
+  @apply text-xs;
+  @apply lg:text-[17px] lg:leading-[14px];
 
   @apply sm:h-9;
 
