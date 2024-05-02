@@ -23,7 +23,10 @@ export default function Benefits() {
   return (
     <PageSection className={style['benefits']}>
       <div className={style['benefits__header']}>
-        <ShortSectionTitle className={style['benefits__title']}>
+        <ShortSectionTitle
+          decoratorColor='yellow'
+          className={style['benefits__title']}
+        >
           Vantagens
         </ShortSectionTitle>
 
