@@ -1,0 +1,25 @@
+.benefits {
+  @apply flex;
+
+  @apply flex-col gap-[38px];
+
+  &__header {
+    @apply flex flex-col items-center;
+  }
+
+  &__title {
+    @apply text-center;
+  }
+
+  &__subtitle {
+    @apply mt-3 max-w-[350px] text-center;
+  }
+
+  &__cta {
+    @apply mt-5;
+  }
+
+  &__list {
+    @apply grid w-fit grid-cols-2 gap-x-[30px] gap-y-[25px] self-center px-4;
+  }
+}

@@ -1,0 +1,16 @@
+.benefit-item {
+  @apply border-vizi-black-10 mt-5 flex max-w-[131px] flex-col items-center gap-[9px] rounded-[10px] border border-solid bg-vizi-white-100 pb-4;
+  box-shadow: 0px 4px 56.2px 0px #0000000d;
+
+  &__icon {
+    @apply -mt-5 rounded-[10px] bg-vizi-laranja-100 p-[9px];
+
+    img {
+      @apply size-6;
+    }
+  }
+
+  &__text {
+    @apply px-6 text-center text-xs font-normal text-vizi-text-1;
+  }
+}

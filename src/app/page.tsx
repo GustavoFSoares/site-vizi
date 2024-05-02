@@ -1,6 +1,8 @@
 import Hero from './sections/Hero';
 import WhoWeAre from './sections/WhoWeAre';
 import Enterprises from './sections/Enterprises';
+import Benefits from './sections/Benefits';
+
 import EmptySection from './sections/EmptySection';
 
 export default function Home() {
@@ -9,6 +11,7 @@ export default function Home() {
       <Hero />
       <WhoWeAre />
       <Enterprises />
+      <Benefits />
       <EmptySection />
     </main>
   );

@@ -1,10 +1,15 @@
+import bindClass from '@helpers/bindClass';
 import styles from './shortSectionTitle.module.scss';
 
 type Props = {
   children: string;
-  align?: 'left' | 'center';
+  className?: string;
 };
 
-export default function ShortSectionTitle({ children, align = 'left' }: Props) {
-  return <h1 className={styles['short-section-title']}>{children}</h1>;
+export default function ShortSectionTitle({ children, className }: Props) {
+  return (
+    <h1 className={bindClass(styles['short-section-title'], className)}>
+      {children}
+    </h1>
+  );
 }
