@@ -14,7 +14,7 @@ export default function EnterprisesListWrapper({
   if (shape === 'carousel') {
     return (
       <div className={className}>
-        <Carousel gap={13} cardSize={90} autoPlay>
+        <Carousel gap={13} cardSize={90} disableLoop>
           {children.map((item, index) => (
             <Carousel.Slide key={index}>{item}</Carousel.Slide>
           ))}
