@@ -1,12 +1,16 @@
 .enterprises-header {
-  @apply flex justify-between rounded-xl bg-vizi-azul-100 py-5;
+  @apply sm:h-[84px];
 
-  @apply gap-[5px] px-5;
-  @apply md:gap-[15px] md:px-9;
-  @apply lg:gap-9 lg:px-9;
-  @apply xl:gap-5;
+  &__content {
+    @apply flex justify-between rounded-xl bg-vizi-azul-100 py-5;
 
-  @apply sm:absolute sm:left-0 sm:w-full sm:rounded-none;
+    @apply gap-[5px] px-5;
+    @apply md:gap-[15px] md:px-9;
+    @apply lg:gap-9 lg:px-9;
+    @apply xl:gap-5;
+
+    @apply sm:absolute sm:left-0 sm:w-full sm:rounded-none;
+  }
 
   &__location {
     @apply flex grow;

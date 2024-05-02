@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 import { useBreakpoints } from '@hooks/useBreakpoints';
 
@@ -16,7 +16,6 @@ type Props = {
 export default function EnterprisesHeader({ children }: Props) {
   const { isXl, isLg, isSm } = useBreakpoints();
 
-  const navbarRef = useRef<HTMLDivElement>(null);
   const [statesButtons] = useState([
     { label: 'sp', value: 'sp' },
     { label: 'pr', value: 'pr' },
@@ -41,8 +40,8 @@ export default function EnterprisesHeader({ children }: Props) {
   function handleSelectStatus(item: string | null) {}
 
   return (
-    <>
-      <div ref={navbarRef} className={styles['enterprises-header']}>
+    <div className={styles['enterprises-header']}>
+      <div className={styles['enterprises-header__content']}>
         <div className={styles['enterprises-header__location']}>
           {!isLg && (
             <Select
@@ -90,8 +89,6 @@ export default function EnterprisesHeader({ children }: Props) {
           </div>
         )}
       </div>
-
-      {isSm && <div style={{ height: navbarRef.current?.clientHeight }}></div>}
-    </>
+    </div>
   );
 }

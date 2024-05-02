@@ -16,6 +16,7 @@
       );
       @apply absolute left-0 top-0 h-full w-full content-[''];
     }
+
     @apply sm:-z-10;
   }
 
@@ -72,8 +73,9 @@
   .benefits {
     grid-area: benefits;
 
-    @apply sm:hidden;
     @apply flex flex-col gap-[5px] self-end;
+
+    @apply sm:hidden;
 
     &__item {
       @apply w-fit rounded-[10px] bg-vizi-white-25 px-[10px] py-[12px] text-[9px] font-normal leading-[10px];
