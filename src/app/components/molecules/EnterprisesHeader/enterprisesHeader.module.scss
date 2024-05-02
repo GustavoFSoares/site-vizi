@@ -1,0 +1,52 @@
+.enterprises-header {
+  @apply sm:h-[84px];
+
+  &__content {
+    @apply flex justify-between rounded-xl bg-vizi-azul-100 py-5;
+
+    @apply gap-[5px] px-5;
+    @apply md:gap-[15px] md:px-9;
+    @apply lg:gap-9 lg:px-9;
+    @apply xl:gap-5;
+
+    @apply sm:absolute sm:left-0 sm:w-full sm:rounded-none;
+  }
+
+  &__location {
+    @apply flex grow;
+
+    @apply gap-[5px];
+    @apply md:gap-[15px];
+    @apply lg:gap-[17px];
+
+    &-states {
+      @apply flex-grow;
+
+      @apply max-w-[112px];
+      @apply md:max-w-[120px];
+      @apply lg:max-w-fit;
+    }
+
+    &-cities {
+      @apply w-full;
+    }
+  }
+
+  &__business-status {
+    @apply w-full flex-grow;
+
+    @apply max-w-[138px];
+    @apply md:max-w-[169px];
+    @apply lg:max-w-60;
+    @apply xl:max-w-fit;
+
+    li label {
+      @apply text-wrap;
+    }
+  }
+
+  &__contact-button {
+    @apply w-24;
+    @apply lg:w-fit;
+  }
+}

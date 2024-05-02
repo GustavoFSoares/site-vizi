@@ -1,0 +1,15 @@
+.enterprise-button {
+  @apply w-full text-nowrap rounded-xl border border-solid border-vizi-white-25 font-normal text-vizi-white-25;
+
+  @apply p-[9px] text-[9px] leading-[10px];
+  @apply text-xs;
+  @apply text-base lg:p-[15px];
+
+  &--uppercase {
+    @apply uppercase;
+  }
+
+  &--selected {
+    @apply border-vizi-white-100 text-vizi-white-100;
+  }
+}

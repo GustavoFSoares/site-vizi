@@ -18,6 +18,7 @@ const config: Config = {
         sm: { max: '765px' },
         md: { min: '766px', max: '890px' },
         lg: { min: '891px' },
+        xl: { min: '1440px' },
       },
       colors: {
         'vizi-laranja': {
@@ -36,10 +37,17 @@ const config: Config = {
           30: '#ffffff4d',
           40: '#ffffff66',
           50: '#ffffff80',
+          70: '#FFFFFFB2',
           100: '#ffffff',
         },
         'vizi-text': {
           1: '#3C3C3C',
+          70: '#000000B2',
+        },
+        'vizi-black': {
+          40: '#00000066',
+          60: '#00000099',
+          100: '#000000',
         },
       },
     },
@@ -54,4 +62,5 @@ export type ScreenOptions = {
   sm: { max: string };
   md: { min: string; max: string };
   lg: { min: string };
+  xl: { min: string };
 };

@@ -7,8 +7,6 @@ type Props = {
   className?: string;
   type?: 'solid' | 'outlined';
   uppercase?: boolean;
-  px?: string;
-  py?: string;
 };
 
 export default function Button({
@@ -16,16 +14,12 @@ export default function Button({
   className,
   type,
   uppercase,
-  px,
-  py,
 }: Props) {
   return (
     <button
       className={bindClass(
         style['button'],
         className,
-        px && `px-${px}`,
-        py && `py-${py}`,
         type && style[`button--${type}`],
         uppercase && 'uppercase'
       )}

@@ -1,0 +1,23 @@
+.enterprises {
+  &__header {
+    @apply flex flex-col;
+
+    @apply items-start gap-2;
+    @apply md:items-center md:gap-4;
+    @apply lg:items-center lg:gap-[10px];
+
+    p {
+      @apply text-vizi-text-70 font-normal;
+
+      @apply text-start text-xs;
+      @apply md:max-w-[350px] md:text-center;
+      @apply lg:max-w-[660px] lg:text-center lg:text-base;
+    }
+  }
+
+  &__content {
+    @apply mt-2;
+    @apply md:mt-5;
+    @apply lg:mt-12;
+  }
+}

@@ -45,13 +45,7 @@ export default function Hero() {
               description={item.description}
               location={item.location}
               url={item.url}
-              backgroundImage={
-                <Image
-                  className='mx-auto h-full'
-                  src={item.backgroundImage}
-                  alt={item.title}
-                />
-              }
+              backgroundImage={item.backgroundImage}
             />
           </Carousel.Slide>
         ))}

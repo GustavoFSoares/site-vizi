@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { StaticImageData } from 'next/image';
 import styles from './carouselItem.module.scss';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
     state: string;
   };
   url: string;
-  backgroundImage: ReactNode;
+  backgroundImage: StaticImageData;
 };
 
 export default function CarouselItem({
@@ -20,9 +20,10 @@ export default function CarouselItem({
 }: Props) {
   return (
     <section className={styles['carousel-item']}>
-      <figure className={styles['carousel-item__background-image']}>
-        {backgroundImage}
-      </figure>
+      <figure
+        className={styles['carousel-item__background-image']}
+        style={{ backgroundImage: `url(${backgroundImage.src})` }}
+      ></figure>
 
       <div className={styles['carousel-item__container']}>
         <p className={styles['carousel-item__location']}>

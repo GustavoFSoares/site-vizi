@@ -1,0 +1,32 @@
+.select {
+  @apply relative h-full w-full;
+
+  &__button {
+    &-content {
+      @apply flex items-center justify-between;
+    }
+
+    &-label {
+      @apply font-normal text-vizi-white-40;
+
+      @apply text-[9px];
+      @apply md:text-xs;
+      @apply lg:text-base;
+    }
+
+    &-arrow {
+      @apply transition;
+
+      @apply size-4;
+      @apply lg:size-[26px];
+
+      svg {
+        @apply h-full w-full;
+      }
+
+      &--open {
+        @apply rotate-180;
+      }
+    }
+  }
+}

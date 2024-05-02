@@ -2,7 +2,7 @@
   @apply relative h-full w-full;
 
   &__background-image {
-    @apply h-full;
+    @apply absolute left-0 top-0 h-full w-full bg-cover bg-center bg-no-repeat;
   }
 
   &__container {

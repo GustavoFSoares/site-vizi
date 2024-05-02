@@ -9,6 +9,7 @@ interface IBreakpoints {
   isSm: boolean;
   isMd: boolean;
   isLg: boolean;
+  isXl: boolean;
 }
 
 interface IUseBrekpoints extends IBreakpoints {
@@ -27,6 +28,9 @@ interface IScreenOptionsWidth {
     max: number;
   };
   lg: {
+    min: number;
+  };
+  xl: {
     min: number;
   };
 }
@@ -55,6 +59,9 @@ export function useBreakpoints(): IUseBrekpoints {
     lg: {
       min: prepareScreenSize(screens.lg.min),
     },
+    xl: {
+      min: prepareScreenSize(screens.xl.min),
+    },
   });
 
   const [pageWidth, setPageWidth] = useState<number>(0);
@@ -78,6 +85,7 @@ export function useBreakpoints(): IUseBrekpoints {
       isMd:
         screensWidth.md.max >= pageWidth && screensWidth.md.min <= pageWidth,
       isLg: screensWidth.lg.min <= pageWidth,
+      isXl: screensWidth.xl.min <= pageWidth,
     };
   }, [pageWidth, screensWidth]);
 
@@ -87,5 +95,6 @@ export function useBreakpoints(): IUseBrekpoints {
     isSm: breakpoints.isSm,
     isMd: breakpoints.isMd,
     isLg: breakpoints.isLg,
+    isXl: breakpoints.isXl,
   };
 }

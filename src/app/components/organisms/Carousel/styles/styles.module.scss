@@ -1,11 +1,14 @@
 .embla {
-  @apply relative z-10 h-full overflow-hidden bg-red-200;
+  @apply relative z-10 h-full w-full overflow-hidden;
 
   &__container {
     @apply flex h-full;
+    gap: var(--gap);
   }
 
   &__slide {
-    @apply min-h-14 flex-shrink-0 flex-grow-0 basis-full;
+    @apply min-h-14 flex-shrink-0 flex-grow-0;
+
+    flex-basis: var(--card-size);
   }
 }

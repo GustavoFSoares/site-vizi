@@ -1,0 +1,13 @@
+.enterprises-explorer {
+  &__see-more {
+    @apply mb-[18px] w-fit;
+  }
+
+  &__list {
+    @apply mt-5 w-full sm:absolute sm:left-0 sm:right-0;
+
+    &-carousel {
+      @apply px-5;
+    }
+  }
+}

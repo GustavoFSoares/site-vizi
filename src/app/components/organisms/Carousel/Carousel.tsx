@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
-
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+
+import bindClass from '@helpers/bindClass';
 
 import styles from './styles/styles.module.scss';
 import NavigationDots from './partials/NavigationDots';
@@ -16,6 +16,9 @@ export type Props = {
   children: JSX.Element | JSX.Element[];
   startIndex?: number;
   autoPlay?: boolean;
+  cardSize?: number;
+  gap?: number;
+  className?: string;
 };
 
 export default function Carousel({
@@ -25,6 +28,9 @@ export default function Carousel({
   disableLoop,
   startIndex = 0,
   autoPlay,
+  cardSize = 100,
+  gap = 0,
+  className,
 }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -34,8 +40,17 @@ export default function Carousel({
     [Autoplay({ playOnInit: autoPlay, delay: 3000 })]
   );
 
+  const cssVariables = {
+    '--card-size': `${cardSize}%`,
+    '--gap': `${gap}px`,
+  } as React.CSSProperties;
+
   return (
-    <div className={styles['embla']} ref={emblaRef}>
+    <div
+      style={cssVariables}
+      className={bindClass(styles['embla'], className)}
+      ref={emblaRef}
+    >
       <div className={styles['embla__container']}>{children}</div>
 
       {navigation && <NavigationButtons emblaApi={emblaApi} />}
