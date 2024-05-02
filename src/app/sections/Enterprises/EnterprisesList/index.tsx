@@ -1,31 +1,38 @@
+'use client';
+
 import EnterpriseItem, { EnterpriseItemProps } from '@molecules/EnterpriseItem';
-import Carousel from '@organisms/Carousel';
+
+import EnterprisesListWrapper from './Wrapper';
 
 import style from './enterprisesList.module.scss';
+import { useBreakpoints } from '@hooks/useBreakpoints';
+import { useMemo } from 'react';
 
 type Props = {
   list: EnterpriseItemProps[];
 };
 
 export default function EnterprisesList({ list }: Props) {
+  const { isSm } = useBreakpoints();
+
+  const cardsWrapper = useMemo(() => {
+    return isSm ? 'carousel' : 'normal';
+  }, [isSm]);
+
   return (
-    <div className={style['enterprises-explorer__list']}>
-      <Carousel
-        className={style['enterprises-explorer__list-carousel']}
-        gap={13}
-        cardSize={90}
-        autoPlay
+    <div className={style['enterprises-list']}>
+      <EnterprisesListWrapper
+        shape={cardsWrapper}
+        className={style['enterprises-list__wrapper']}
       >
         {list.map((item, index) => (
-          <Carousel.Slide key={index}>
-            <EnterpriseItem
-              className={style['enterprises-explorer__item']}
-              key={index}
-              {...item}
-            />
-          </Carousel.Slide>
+          <EnterpriseItem
+            className={style['enterprises-explorer__item']}
+            key={index}
+            {...item}
+          />
         ))}
-      </Carousel>
+      </EnterprisesListWrapper>
     </div>
   );
 }
