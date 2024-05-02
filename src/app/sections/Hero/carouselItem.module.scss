@@ -40,7 +40,7 @@
     @apply border font-bold;
 
     @apply mt-3 rounded-lg border-vizi-laranja-100 bg-vizi-laranja-100 px-3 py-3 text-sm;
-    @apply md:border-vizi-white-25 md:mt-3 md:rounded-2xl md:bg-transparent md:px-12 md:py-5 md:text-xl;
-    @apply lg:border-vizi-white-25 lg:mt-3 lg:rounded-2xl lg:bg-transparent lg:px-12 lg:py-5 lg:text-xl;
+    @apply md:mt-3 md:rounded-2xl md:border-vizi-white-25 md:bg-transparent md:px-12 md:py-5 md:text-xl;
+    @apply lg:mt-3 lg:rounded-2xl lg:border-vizi-white-25 lg:bg-transparent lg:px-12 lg:py-5 lg:text-xl;
   }
 }

@@ -5,7 +5,9 @@ import Image from 'next/image';
 import BackgroundImage from '@assets/hero-carousel.png';
 import WhatsappLogo from '@assets/whatsapp-logo.svg';
 
+import PageSection from '@atoms/PageSection';
 import Carousel from '@organisms/Carousel';
+
 import CarouselItem from './CarouselItem';
 import style from './hero.module.scss';
 
@@ -34,7 +36,7 @@ export default function Hero() {
   ];
 
   return (
-    <div className={style['hero']}>
+    <PageSection isHero className={style['hero__content']}>
       <Carousel navigation dotsNavigation={!isXs}>
         {carouselData.map((item, itemIndex) => (
           <Carousel.Slide key={itemIndex}>
@@ -45,7 +47,7 @@ export default function Hero() {
               url={item.url}
               backgroundImage={
                 <Image
-                  className='h-full'
+                  className='mx-auto h-full'
                   src={item.backgroundImage}
                   alt={item.title}
                 />
@@ -62,6 +64,6 @@ export default function Hero() {
           className={style['hero__whatsapp-button-content']}
         />
       </button>
-    </div>
+    </PageSection>
   );
 }

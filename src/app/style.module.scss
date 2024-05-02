@@ -1,6 +1,8 @@
 .layout {
+  @apply bg-vizi-laranja-100;
+
   &__container {
     @apply mt-16;
-    @apply lg:mt-24;
+    @apply bg-vizi-white-100 lg:mt-24;
   }
 }

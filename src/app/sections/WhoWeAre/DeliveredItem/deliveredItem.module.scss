@@ -1,0 +1,19 @@
+.delivered-item {
+  @apply flex w-fit flex-col gap-2;
+
+  &__of {
+    @apply flex items-center justify-center gap-3;
+
+    &-label {
+      @apply flex size-11 items-center justify-center text-nowrap rounded-sm border border-solid border-vizi-white-10 text-xs;
+    }
+
+    &-value {
+      @apply text-[94px] font-extrabold uppercase;
+    }
+  }
+
+  &__cta {
+    @apply w-auto text-nowrap;
+  }
+}

@@ -6,6 +6,7 @@ import './globals.css';
 import styles from './style.module.scss';
 
 import Navbar from '@organisms/Navbar';
+import bindClass from '@helpers/bindClass';
 
 const mulish = Mulish({
   weight: ['400', '700', '800'],
@@ -23,12 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={mulish.className}>
-        <main className={styles['layout']}>
-          <Navbar />
+      <body className={bindClass(mulish.className, styles['layout'])}>
+        <Navbar />
 
-          <div className={styles['layout__container']}>{children}</div>
-        </main>
+        <div className={styles['layout__container']}>{children}</div>
       </body>
     </html>
   );

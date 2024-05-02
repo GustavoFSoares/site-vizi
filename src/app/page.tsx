@@ -1,9 +1,11 @@
 import Hero from './sections/Hero';
+import WhoWeAre from './sections/WhoWeAre';
 
 export default function Home() {
   return (
-    <div className='h-[10000px] bg-red-200'>
+    <main className='h-[10000px]'>
       <Hero />
-    </div>
+      <WhoWeAre />
+    </main>
   );
 }

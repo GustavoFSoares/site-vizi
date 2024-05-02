@@ -6,5 +6,5 @@ export type SlideProps = {
 };
 
 export default function Slide({ children }: SlideProps) {
-  return <div className={styles['embla__slide']}>{children}</div>;
+  return <article className={styles['embla__slide']}>{children}</article>;
 }

@@ -22,16 +22,24 @@ const config: Config = {
       colors: {
         'vizi-laranja': {
           100: '#DF763E',
+          30: '#EA74324D',
         },
         'vizi-whatsapp': {
           100: '#1FAF38',
         },
+        'vizi-azul': {
+          100: '#4B40C5',
+        },
         'vizi-white': {
+          10: '#FFFFFF1A',
           25: '#ffffff40',
           30: '#ffffff4d',
           40: '#ffffff66',
           50: '#ffffff80',
           100: '#ffffff',
+        },
+        'vizi-text': {
+          1: '#3C3C3C',
         },
       },
     },
