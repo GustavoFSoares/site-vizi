@@ -1,0 +1,38 @@
+.benefits {
+  @apply flex;
+
+  @apply flex-col gap-[38px];
+  @apply md:flex-row md:items-center md:justify-between;
+  @apply lg:flex-row lg:items-center lg:justify-between lg:gap-3;
+
+  &__header {
+    @apply flex flex-col;
+
+    @apply items-center;
+    @apply md:items-start;
+    @apply lg:items-start;
+  }
+
+  &__title {
+    @apply text-center;
+    @apply md:text-start;
+    @apply lg:text-start;
+  }
+
+  &__subtitle {
+    @apply mt-3 max-w-[350px];
+
+    @apply md:text-start;
+    @apply lg:mt-[25px] lg:max-w-[545px] lg:text-start lg:text-[44px] lg:leading-[48px];
+  }
+
+  &__cta {
+    @apply mt-5;
+    @apply lg:mt-[25px];
+  }
+
+  &__list {
+    @apply grid w-fit grid-cols-2 gap-x-[30px] gap-y-[25px] self-center px-4;
+    @apply xl:grid-flow-col-dense;
+  }
+}

@@ -25,6 +25,9 @@ const config: Config = {
           100: '#DF763E',
           30: '#EA74324D',
         },
+        'vizi-amarelo': {
+          100: '#FFB31C',
+        },
         'vizi-whatsapp': {
           100: '#1FAF38',
         },
@@ -45,6 +48,7 @@ const config: Config = {
           70: '#000000B2',
         },
         'vizi-black': {
+          10: '#0000001A',
           40: '#00000066',
           60: '#00000099',
           100: '#000000',
