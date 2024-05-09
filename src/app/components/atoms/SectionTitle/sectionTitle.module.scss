@@ -1,5 +1,5 @@
 .section-title {
-  @apply text-vizi-text-70 flex w-full flex-col;
+  @apply flex w-full flex-col text-vizi-text-70;
 
   &::before {
     @apply h-[5px] w-[86px] rounded-lg  content-[''];
@@ -12,6 +12,10 @@
 
     &-orange::before {
       @apply bg-vizi-laranja-100;
+    }
+
+    &-hide::before {
+      @apply content-none;
     }
   }
 
