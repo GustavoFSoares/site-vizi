@@ -1,10 +1,13 @@
 .time-to-change-is-now {
   @apply md:flex;
+  @apply lg:flex;
 
   &__container {
     @apply bg-vizi-azul-100;
 
     @apply md:py-0 md:pr-0;
+    @apply lg:py-0 lg:pr-0;
+    @apply break:pr-12;
   }
 
   &__content {
@@ -15,14 +18,15 @@
     @apply items-start font-extrabold  text-vizi-white-100;
 
     @apply text-[26px]  leading-[26px];
-    /* @apply items-start text-[44px] font-extrabold leading-[48px] text-vizi-white-100; */
+    @apply lg:text-[38px] lg:leading-[48px];
+    @apply xl:text-[44px] xl:leading-[48px];
   }
 
   &__description {
-    @apply flex flex-col text-base font-normal text-vizi-white-100;
+    @apply flex max-w-[390px] flex-col text-base font-normal text-vizi-white-100;
 
-    @apply max-w-[390px] text-xs;
-    /* @apply flex max-w-[390px] flex-col text-base font-normal leading-[22px] text-vizi-white-100; */
+    @apply text-xs;
+    @apply lg:text-base lg:leading-[22px];
   }
 
   &__items {
@@ -30,30 +34,43 @@
 
     @apply gap-2 pt-5;
     @apply md:gap-[15px] md:pt-[33px];
+    @apply md:pt-14 lg:gap-[60px];
   }
 
   &__figure {
     @apply w-full pt-8;
+
+    @apply h-[177px];
     @apply md:h-[369px] md:w-[40%] md:pt-0;
+    @apply lg:h-[510px] lg:w-[45%] lg:pt-0;
+    @apply xl:h-[798px] xl:w-[52%];
 
     &,
     &-image {
-      @apply sm:h-[177px];
     }
 
     &-image {
       @apply bg-no-repeat;
 
+      @apply h-full w-full;
+      background-position: 72% 100%;
+
       @screen sm {
-        background-size: 165%;
+        @apply absolute left-0 right-0 h-[177px];
         background-position: 85% 60%;
-        @apply absolute left-0 right-0;
+        background-size: 165%;
       }
 
       @screen md {
         background-size: 365%;
-        background-position: 72% 100%;
-        @apply h-full w-full;
+      }
+
+      @screen lg {
+        background-size: 365%;
+      }
+
+      @screen xl {
+        background-size: 350%;
       }
     }
   }
