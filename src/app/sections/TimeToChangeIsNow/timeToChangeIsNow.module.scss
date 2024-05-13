@@ -1,0 +1,42 @@
+.time-to-change-is-now {
+  &__bg-color {
+    @apply bg-vizi-azul-100;
+  }
+
+  &__title {
+    @apply items-start font-extrabold  text-vizi-white-100;
+
+    @apply text-[26px]  leading-[26px];
+    /* @apply items-start text-[44px] font-extrabold leading-[48px] text-vizi-white-100; */
+  }
+
+  &__description {
+    @apply flex flex-col text-base font-normal text-vizi-white-100;
+
+    @apply max-w-[390px] text-xs;
+    /* @apply flex max-w-[390px] flex-col text-base font-normal leading-[22px] text-vizi-white-100; */
+  }
+
+  &__items {
+    @apply flex flex-col;
+
+    @apply gap-2 pt-5;
+  }
+
+  &__figure {
+    @apply w-full pt-8;
+
+    &,
+    &-image {
+      @apply h-[177px];
+    }
+
+    &-image {
+      @apply absolute left-0 right-0;
+
+      @apply bg-no-repeat;
+      background-size: 165%;
+      background-position: 85% 60%;
+    }
+  }
+}
