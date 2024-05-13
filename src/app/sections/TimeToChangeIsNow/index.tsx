@@ -34,24 +34,31 @@ export default function TimeToChangeIsNow() {
   ];
 
   return (
-    <PageSection containerClassName={style['time-to-change-is-now__bg-color']}>
-      <SectionTitle
-        decorator='hide'
-        className={style['time-to-change-is-now__title']}
-      >
-        A hora de mudar é agora
-      </SectionTitle>
+    <PageSection
+      containerClassName={style['time-to-change-is-now__container']}
+      className={style['time-to-change-is-now']}
+    >
+      <div className={style['time-to-change-is-now__content']}>
+        <SectionTitle
+          decorator='hide'
+          className={style['time-to-change-is-now__title']}
+        >
+          A hora de mudar é agora
+        </SectionTitle>
 
-      <SectionSubtitle className={style['time-to-change-is-now__description']}>
-        <span>Mudanças geralmente vêm para o bem. </span>
-        <span>Se acontecerem de maneira mais fácil, melhor.</span>
-      </SectionSubtitle>
+        <SectionSubtitle
+          className={style['time-to-change-is-now__description']}
+        >
+          <span>Mudanças geralmente vêm para o bem. </span>
+          <span>Se acontecerem de maneira mais fácil, melhor.</span>
+        </SectionSubtitle>
 
-      <ul className={style['time-to-change-is-now__items']}>
-        {items.map((item, index) => (
-          <TimeToChangeItem key={index} {...item} />
-        ))}
-      </ul>
+        <ul className={style['time-to-change-is-now__items']}>
+          {items.map((item, index) => (
+            <TimeToChangeItem key={index} {...item} />
+          ))}
+        </ul>
+      </div>
 
       <figure className={style['time-to-change-is-now__figure']}>
         <div

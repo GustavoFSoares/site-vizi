@@ -1,6 +1,14 @@
 .time-to-change-is-now {
-  &__bg-color {
+  @apply md:flex;
+
+  &__container {
     @apply bg-vizi-azul-100;
+
+    @apply md:py-0 md:pr-0;
+  }
+
+  &__content {
+    @apply grow self-center;
   }
 
   &__title {
@@ -21,22 +29,32 @@
     @apply flex flex-col;
 
     @apply gap-2 pt-5;
+    @apply md:gap-[15px] md:pt-[33px];
   }
 
   &__figure {
     @apply w-full pt-8;
+    @apply md:h-[369px] md:w-[40%] md:pt-0;
 
     &,
     &-image {
-      @apply h-[177px];
+      @apply sm:h-[177px];
     }
 
     &-image {
-      @apply absolute left-0 right-0;
-
       @apply bg-no-repeat;
-      background-size: 165%;
-      background-position: 85% 60%;
+
+      @screen sm {
+        background-size: 165%;
+        background-position: 85% 60%;
+        @apply absolute left-0 right-0;
+      }
+
+      @screen md {
+        background-size: 365%;
+        background-position: 72% 100%;
+        @apply h-full w-full;
+      }
     }
   }
 }

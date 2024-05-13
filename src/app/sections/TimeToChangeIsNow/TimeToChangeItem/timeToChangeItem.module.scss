@@ -34,6 +34,14 @@
 
   &__description {
     @apply mt-[3px] max-w-[209px] text-[9px] font-normal leading-[10px];
+
+    @apply md:max-w-[255px];
     /* @apply mt-[14px] text-base font-normal leading-[24px]; */
+  }
+
+  &:last-child {
+    .time-to-change-item__description {
+      @apply md:max-w-[286px];
+    }
   }
 }
