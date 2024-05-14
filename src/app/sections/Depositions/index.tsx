@@ -55,7 +55,6 @@ export default function Depositions() {
 
       <div className={style['depositions__carousel']}>
         <Carousel
-          dotsNavigation
           gap={10}
           cardSize={90}
           className={style['depositions__carousel-content']}

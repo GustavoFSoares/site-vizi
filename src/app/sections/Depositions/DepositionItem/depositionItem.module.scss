@@ -1,0 +1,32 @@
+.deposition-item {
+  @apply grid h-full bg-red-500;
+
+  grid-template-areas:
+    'profileImage name'
+    'profileImage businessName'
+    'description description';
+
+  @screen lg {
+    grid-template-areas:
+      'profileImage name'
+      'profileImage businessName'
+      'profileImage description';
+  }
+
+  &__profile-image {
+    grid-area: profileImage;
+    @apply size-11;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__business-name {
+    grid-area: businessName;
+  }
+
+  &__descriptions {
+    grid-area: description;
+  }
+}

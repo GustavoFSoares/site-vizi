@@ -1,5 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 
+import style from './depositionItem.module.scss';
+
 export type DepositionItemProps = {
   profileImage: StaticImageData;
   name: string;
@@ -16,14 +18,20 @@ export default function DepositionItem({
   description,
 }: Props) {
   return (
-    <div className='bg-vizi-laranja-30'>
-      <Image src={profileImage} alt={`Image de Perfil de ${name}`} />
+    <div className={style['deposition-item']}>
+      <Image
+        className={style['deposition-item__profile-image']}
+        src={profileImage}
+        alt={`Image de Perfil de ${name}`}
+      />
 
-      <h4>{name}</h4>
+      <h4 className={style['deposition-item__name']}>{name}</h4>
 
-      <h5>{businessName}</h5>
+      <h5 className={style['deposition-item__business-name']}>
+        {businessName}
+      </h5>
 
-      <div>
+      <div className={style['deposition-item__descriptions']}>
         {description.map((paragrath, index) => (
           <p key={index}>{paragrath}</p>
         ))}
