@@ -1,10 +1,21 @@
 .depositions {
   &__title {
+    @apply items-center text-vizi-text-1;
+
+    @apply gap-[21px];
+    @apply lg:gap-[10px];
   }
 
   &__description {
+    @apply mx-auto text-center font-normal text-vizi-text-1;
+
+    @apply mt-3 max-w-[312px] text-xs;
+    @apply lg:mt-6 lg:max-w-[645px] lg:text-base;
   }
 
   &__carousel {
+    @apply mt-6;
+    @apply md:mt-11;
+    @apply lg:mt-[60px];
   }
 }
