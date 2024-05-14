@@ -1,11 +1,13 @@
 import Image, { StaticImageData } from 'next/image';
 
-type Props = {
+export type DepositionItemProps = {
   profileImage: StaticImageData;
   name: string;
   businessName: string;
   description: string[];
 };
+
+type Props = DepositionItemProps & {};
 
 export default function DepositionItem({
   profileImage,
@@ -14,7 +16,7 @@ export default function DepositionItem({
   description,
 }: Props) {
   return (
-    <article>
+    <div className='bg-vizi-laranja-30'>
       <Image src={profileImage} alt={`Image de Perfil de ${name}`} />
 
       <h4>{name}</h4>
@@ -26,6 +28,6 @@ export default function DepositionItem({
           <p key={index}>{paragrath}</p>
         ))}
       </div>
-    </article>
+    </div>
   );
 }
