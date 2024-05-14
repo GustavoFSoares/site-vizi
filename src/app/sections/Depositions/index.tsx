@@ -46,6 +46,7 @@ export default function Depositions() {
       <SectionTitle className={style['depositions__title']} decorator='yellow'>
         Depoimentos
       </SectionTitle>
+
       <SectionSubtitle className={style['depositions__description']}>
         Confira os relatos de quem já contou com a ajuda da Vizi para realizar
         sonhos! Separamos alguns depoimentos de compradores satisfeitos, que
@@ -54,18 +55,15 @@ export default function Depositions() {
       </SectionSubtitle>
 
       <div className={style['depositions__carousel']}>
-        <Carousel
-          gap={10}
-          cardSize={90}
-          className={style['depositions__carousel-content']}
-          disableLoop
-        >
-          {depositions.map((deposition, index) => (
-            <Carousel.Slide key={index}>
-              <DepositionItem {...deposition}></DepositionItem>
-            </Carousel.Slide>
-          ))}
-        </Carousel>
+        <div className={style['depositions__carousel-content']}>
+          <Carousel gap={10} cardSize={90} disableLoop>
+            {depositions.map((deposition, index) => (
+              <Carousel.Slide key={index}>
+                <DepositionItem {...deposition}></DepositionItem>
+              </Carousel.Slide>
+            ))}
+          </Carousel>
+        </div>
       </div>
     </PageSection>
   );

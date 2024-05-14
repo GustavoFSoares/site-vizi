@@ -1,32 +1,51 @@
 .deposition-item {
-  @apply grid h-full bg-red-500;
+  @apply grid h-full gap-x-[9px] gap-y-[10px] rounded-[10px];
+
+  @apply sm:mt-[58px];
+
+  @apply p-[30px] pt-[23px];
+
+  @apply bg-vizi-amarelo-100;
+
+  height: calc(100% - 58px);
+
+  grid-template-columns: auto 1fr;
+  grid-template-rows: min-content;
 
   grid-template-areas:
-    'profileImage name'
-    'profileImage businessName'
+    'profileImage profile'
     'description description';
 
   @screen lg {
     grid-template-areas:
-      'profileImage name'
-      'profileImage businessName'
+      'profileImage profile'
       'profileImage description';
   }
 
   &__profile-image {
     grid-area: profileImage;
-    @apply size-11;
+
+    @apply -mt-[81px] h-[115px] w-[110px] rounded-[10px];
+  }
+
+  &__profile {
+    grid-area: profile;
+
+    @apply flex flex-col justify-between;
   }
 
   &__name {
-    grid-area: name;
-  }
-
-  &__business-name {
-    grid-area: businessName;
+    @apply text-xs font-normal text-vizi-text-70;
   }
 
   &__descriptions {
     grid-area: description;
+
+    @apply flex flex-col gap-[10px] overflow-hidden overflow-ellipsis;
+  }
+
+  &__business-name,
+  &__descriptions p {
+    @apply text-[9px] font-normal leading-[10px] text-vizi-text-70;
   }
 }

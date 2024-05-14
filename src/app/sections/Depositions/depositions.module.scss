@@ -14,12 +14,14 @@
   }
 
   &__carousel {
-    @apply mt-6 h-[244px];
-    @apply md:mt-11 md:h-[258px];
-    @apply lg:mt-[60px] lg:h-[337px];
+    @apply mt-6;
+    @apply md:mt-11;
+    @apply lg:mt-[60px];
 
     &-content {
-      @apply absolute left-0 right-0;
+      @apply -mx-5;
+      @apply md:-mx-9;
+      @apply lg:-mx-12;
 
       > div {
         @apply px-5;

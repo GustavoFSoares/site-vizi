@@ -25,11 +25,13 @@ export default function DepositionItem({
         alt={`Image de Perfil de ${name}`}
       />
 
-      <h4 className={style['deposition-item__name']}>{name}</h4>
+      <div className={style['deposition-item__profile']}>
+        <h4 className={style['deposition-item__name']}>{name}</h4>
 
-      <h5 className={style['deposition-item__business-name']}>
-        {businessName}
-      </h5>
+        <h5 className={style['deposition-item__business-name']}>
+          {businessName}
+        </h5>
+      </div>
 
       <div className={style['deposition-item__descriptions']}>
         {description.map((paragrath, index) => (
