@@ -1,5 +1,6 @@
 'use client';
 
+import { useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -19,6 +20,7 @@ export type Props = {
   cardSize?: number;
   gap?: number;
   className?: string;
+  onSlideChange?: (slideIndex: number) => void;
 };
 
 export default function Carousel({
@@ -31,6 +33,7 @@ export default function Carousel({
   cardSize = 100,
   gap = 0,
   className,
+  onSlideChange,
 }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -39,6 +42,28 @@ export default function Carousel({
     },
     [Autoplay({ playOnInit: autoPlay, delay: 3000 })]
   );
+
+  const handleSetCurrentSlide = useCallback(() => {
+    if (!emblaApi) {
+      return;
+    }
+
+    if (onSlideChange) {
+      onSlideChange(emblaApi.selectedScrollSnap());
+    }
+  }, [emblaApi, onSlideChange]);
+
+  useEffect(() => {
+    if (!emblaApi) {
+      return;
+    }
+
+    handleSetCurrentSlide();
+
+    emblaApi.on('select', () => {
+      handleSetCurrentSlide();
+    });
+  }, [emblaApi, handleSetCurrentSlide]);
 
   const cssVariables = {
     '--card-size': `${cardSize}%`,
