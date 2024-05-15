@@ -1,5 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 
+import bindClass from '@helpers/bindClass';
+
 import style from './depositionItem.module.scss';
 
 export type DepositionItemProps = {
@@ -9,16 +11,24 @@ export type DepositionItemProps = {
   description: string[];
 };
 
-type Props = DepositionItemProps & {};
+type Props = DepositionItemProps & {
+  isChecked?: boolean;
+};
 
 export default function DepositionItem({
   profileImage,
   name,
   businessName,
   description,
+  isChecked,
 }: Props) {
   return (
-    <div className={style['deposition-item']}>
+    <div
+      className={bindClass(
+        style['deposition-item'],
+        isChecked && style['deposition-item--selected']
+      )}
+    >
       <Image
         className={style['deposition-item__profile-image']}
         src={profileImage}
