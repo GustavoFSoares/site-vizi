@@ -24,7 +24,7 @@ export default function DepositionsList() {
     },
     {
       businessName: 'Cliente empreendimento 2',
-      name: 'Nome Sobrenome 2 GRANDE',
+      name: 'Nome Sobrenome GRANDE 2',
       description: [
         'Chuck Norris does not use spell check. If he happens to misspell a word, Oxford will change the spelling. Chuck Norris’ cowboy boots are made from real cowboys. Chuck Norris doesn’t cheat death. He wins fair and square. Chuck Norris tells Simon what to do. Chuck Norris beats rock, paper, scissors. Cannon balls, tanks, super destroyers, exploding stars — I could go on.',
         'When Chuck Norris was born he drove his mom home from the hospital. Chuck Norris once ate at Taco Bell and didn’t get diarrhea. Chuck Norris can sit in the corner of a round room. Chuck Norris can squeeze orange juice out of a lemon. Chuck Norris doesn’t cheat death. He wins fair and square.',

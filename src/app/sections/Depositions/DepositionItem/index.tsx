@@ -36,9 +36,14 @@ export default function DepositionItem({
       />
 
       <div className={style['deposition-item__profile']}>
-        <h4 className={style['deposition-item__name']}>{name}</h4>
+        <h4 className={style['deposition-item__name']} title={name}>
+          {name}
+        </h4>
 
-        <h5 className={style['deposition-item__business-name']}>
+        <h5
+          className={style['deposition-item__business-name']}
+          title={businessName}
+        >
           {businessName}
         </h5>
       </div>
