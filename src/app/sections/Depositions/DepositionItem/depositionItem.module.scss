@@ -1,11 +1,15 @@
 .deposition-item {
   @apply grid h-full gap-x-[9px] gap-y-[10px] rounded-[10px];
+  @apply border border-solid border-vizi-black-10;
+  @apply transition-colors duration-500;
 
   @apply sm:mt-[58px];
 
   @apply p-[30px] pt-[23px];
 
-  @apply bg-vizi-amarelo-100;
+  &--selected {
+    @apply border-transparent bg-vizi-amarelo-100;
+  }
 
   height: calc(100% - 58px);
 
