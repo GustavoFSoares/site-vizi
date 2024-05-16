@@ -8,11 +8,13 @@
   }
 
   &--prev {
-    @apply left-0 justify-start;
+    @apply justify-start;
+    left: var(--navigation-margin);
   }
 
   &--next {
-    @apply right-0 justify-end;
+    @apply justify-end;
+    right: var(--navigation-margin);
   }
 
   &--disabled {
@@ -20,7 +22,7 @@
   }
 
   &__content {
-    @apply border-vizi-white-30 flex items-center justify-center rounded-xl border;
+    @apply flex items-center justify-center rounded-xl border border-solid;
 
     @apply size-4 p-[3px];
 

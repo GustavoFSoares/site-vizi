@@ -30,5 +30,9 @@
         @apply lg:px-48;
       }
     }
+
+    &-navigation-button {
+      @apply text-vizi-gray-40 border-vizi-gray-25;
+    }
   }
 }

@@ -6,9 +6,10 @@ import { PrevButton } from './_PrevButton';
 
 type Props = {
   emblaApi?: EmblaCarouselType;
+  className?: string;
 };
 
-export default function NavigationButtons({ emblaApi }: Props) {
+export default function NavigationButtons({ emblaApi, className }: Props) {
   const [prevButtonDisabled, setPrevButtonDisabled] = useState(false);
   const [nextButtonDisabled, setNextButtonDisabled] = useState(false);
 
@@ -37,9 +38,17 @@ export default function NavigationButtons({ emblaApi }: Props) {
 
   return (
     <div>
-      <PrevButton onClick={handlePrev} disabled={prevButtonDisabled} />
+      <PrevButton
+        className={className}
+        onClick={handlePrev}
+        disabled={prevButtonDisabled}
+      />
 
-      <NextButton onClick={handleNext} disabled={nextButtonDisabled} />
+      <NextButton
+        className={className}
+        onClick={handleNext}
+        disabled={nextButtonDisabled}
+      />
     </div>
   );
 }

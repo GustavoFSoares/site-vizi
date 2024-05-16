@@ -25,10 +25,14 @@ export default function DepositionsList() {
 
     if (isLg) {
       return {
-        cardSize: 80,
+        cardSize: 75,
         gap: 80,
         startIndex: 1,
+        center: true,
         navigation: true,
+        navigationMargin: '15%',
+        baseNavigationClassName:
+          style['depositions__carousel-navigation-button'],
       };
     }
 
