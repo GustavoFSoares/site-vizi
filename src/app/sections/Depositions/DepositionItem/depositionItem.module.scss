@@ -1,26 +1,28 @@
 .deposition-item {
-  @apply grid h-full gap-x-[9px] gap-y-[10px] rounded-[10px];
+  @apply grid h-full;
   @apply border border-solid border-vizi-black-10;
   @apply opacity-50 transition-colors duration-500;
 
-  @apply mt-[58px];
-
-  @apply p-[30px] pt-[23px];
+  @apply mt-[58px] gap-x-[9px] gap-y-[10px] rounded-[10px] p-[30px] pt-[23px];
+  @apply lg:mt-0 lg:gap-x-[36px] lg:gap-y-[49px] lg:rounded-[15px] lg:px-[38px] lg:py-[38px];
 
   &--selected {
     @apply border-transparent bg-vizi-amarelo-100 opacity-100;
   }
 
-  height: calc(100% - 58px);
-
-  grid-template-columns: 110px 1fr;
   grid-template-rows: min-content;
+
+  height: calc(100% - 58px);
+  grid-template-columns: 110px 1fr;
 
   grid-template-areas:
     'profileImage profile'
     'description description';
 
   @screen lg {
+    @apply h-full;
+    grid-template-columns: 250px 1fr;
+
     grid-template-areas:
       'profileImage profile'
       'profileImage description';
@@ -30,6 +32,8 @@
     grid-area: profileImage;
 
     @apply -mt-[81px] h-[115px] w-[110px] rounded-[10px];
+
+    @apply lg:mt-0 lg:h-[260px] lg:w-[250px] lg:rounded-[15px];
   }
 
   &__profile {
@@ -40,21 +44,37 @@
 
   &__name {
     @apply text-xs font-normal text-vizi-text-70;
-  }
-
-  &__descriptions {
-    grid-area: description;
-
-    @apply flex flex-col gap-[10px] overflow-hidden overflow-ellipsis;
+    @apply lg:text-xl lg:font-bold lg:leading-6 lg:text-vizi-text-70;
   }
 
   &__name,
   &__business-name {
-    @apply max-w-[120px] overflow-hidden overflow-ellipsis whitespace-nowrap;
+    @apply overflow-hidden overflow-ellipsis whitespace-nowrap;
+
+    @apply max-w-[120px];
+    @apply md:max-w-[200px];
+    @apply lg:max-w-none;
   }
 
   &__business-name,
   &__descriptions p {
     @apply text-[9px] font-normal leading-[10px] text-vizi-text-70;
+  }
+
+  &__business-name {
+    @apply lg:text-xs lg:font-normal;
+  }
+
+  &__descriptions {
+    grid-area: description;
+
+    @apply flex flex-col overflow-hidden overflow-ellipsis;
+
+    @apply gap-[10px];
+    @apply lg:gap-[22px];
+
+    p {
+      @apply lg:text-base lg:font-normal lg:leading-[22px];
+    }
   }
 }
