@@ -65,6 +65,14 @@ export default function Carousel({
     });
   }, [emblaApi, handleSetCurrentSlide]);
 
+  useEffect(() => {
+    if (!emblaApi) {
+      return;
+    }
+
+    emblaApi.scrollTo(startIndex);
+  }, [startIndex, emblaApi]);
+
   const cssVariables = {
     '--card-size': `${cardSize}%`,
     '--gap': `${gap}px`,

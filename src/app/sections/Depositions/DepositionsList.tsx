@@ -1,15 +1,44 @@
 'use client';
 
+import { useMemo, useState } from 'react';
+
 import depositionProfile from '@assets/deposition-profile.jpeg';
 
-import Carousel from '@organisms/Carousel';
+import Carousel, { CarouselOptions } from '@organisms/Carousel';
 
 import DepositionItem, { DepositionItemProps } from './DepositionItem';
 
 import style from './depositions.module.scss';
-import { useState } from 'react';
+import { useBreakpoints } from '@hooks/useBreakpoints';
 
 export default function DepositionsList() {
+  const { isMd, isLg } = useBreakpoints();
+
+  const carouselOptions = useMemo<CarouselOptions>(() => {
+    if (isMd) {
+      return {
+        cardSize: 55,
+        gap: 20,
+        startIndex: 1,
+      };
+    }
+
+    if (isLg) {
+      return {
+        cardSize: 80,
+        gap: 80,
+        startIndex: 1,
+        navigation: true,
+      };
+    }
+
+    return {
+      cardSize: 90,
+      gap: 10,
+      startIndex: 0,
+    };
+  }, [isMd, isLg]);
+
   const depositions: DepositionItemProps[] = [
     {
       businessName: 'Cliente empreendimento 1',
@@ -42,7 +71,9 @@ export default function DepositionsList() {
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [currentSlide, setCurrentSlide] = useState<number>(
+    carouselOptions.startIndex || 0
+  );
 
   function handleSetCurrentSlide(slideIndex: number) {
     setCurrentSlide(slideIndex);
@@ -52,10 +83,9 @@ export default function DepositionsList() {
     <div className={style['depositions__carousel']}>
       <div className={style['depositions__carousel-content']}>
         <Carousel
-          gap={10}
-          cardSize={90}
           disableLoop
           onSlideChange={handleSetCurrentSlide}
+          {...carouselOptions}
         >
           {depositions.map((deposition, index) => (
             <Carousel.Slide key={index}>

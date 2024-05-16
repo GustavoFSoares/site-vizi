@@ -10,6 +10,7 @@
     @apply mx-auto text-center font-normal text-vizi-text-1;
 
     @apply mt-3 max-w-[312px] text-xs;
+    @apply md:max-w-[479px];
     @apply lg:mt-6 lg:max-w-[645px] lg:text-base;
   }
 
@@ -26,7 +27,7 @@
       > div {
         @apply px-5;
         @apply md:px-9;
-        @apply lg:px-12;
+        @apply lg:px-48;
       }
     }
   }
