@@ -19,6 +19,7 @@ const config: Config = {
         md: { min: '766px', max: '890px' },
         lg: { min: '891px' },
         xl: { min: '1440px' },
+        break: { min: '1730px' },
       },
       colors: {
         'vizi-laranja': {

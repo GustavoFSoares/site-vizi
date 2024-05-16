@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode, StyleHTMLAttributes } from 'react';
 
 import style from './pageSection.module.scss';
 import bindClass from '@helpers/bindClass';
@@ -8,6 +8,7 @@ type Prop = {
   isHero?: boolean;
   className?: string;
   containerClassName?: string;
+  style?: CSSProperties;
 };
 
 export default function PageSection({
@@ -15,6 +16,7 @@ export default function PageSection({
   isHero,
   className,
   containerClassName,
+  style: inlineCssProps,
 }: Prop) {
   return (
     <section
@@ -23,6 +25,7 @@ export default function PageSection({
         isHero && style['page-section--is-hero'],
         containerClassName
       )}
+      style={inlineCssProps}
     >
       <div className={bindClass(style['page-section__content'], className)}>
         {children}
