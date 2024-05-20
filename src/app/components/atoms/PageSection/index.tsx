@@ -24,7 +24,6 @@ export default function PageSection({
 }: Prop) {
   return (
     <Element
-      id={sectionId}
       className={bindClass(
         style['page-section'],
         isHero && style['page-section--is-hero'],
@@ -32,6 +31,8 @@ export default function PageSection({
       )}
       style={inlineCssProps}
     >
+      <div className={style['page-section__anchor']} id={sectionId} />
+
       <div className={bindClass(style['page-section__content'], className)}>
         {children}
       </div>

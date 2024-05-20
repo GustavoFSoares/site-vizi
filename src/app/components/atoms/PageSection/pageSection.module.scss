@@ -1,5 +1,5 @@
 .page-section {
-  @apply px-5 py-12;
+  @apply relative px-5 py-12;
   @apply md:px-9 md:py-14;
   @apply lg:px-12 lg:py-14;
 
@@ -16,5 +16,12 @@
 
   &__content {
     @apply mx-auto max-w-[1730px];
+  }
+
+  &__anchor {
+    @apply invisible absolute;
+
+    @apply -top-[96px];
+    @apply sm:-top-[64px];
   }
 }
