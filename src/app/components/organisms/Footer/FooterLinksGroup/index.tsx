@@ -1,0 +1,52 @@
+import Link from 'next/link';
+import { Url } from 'next/dist/shared/lib/router/router';
+
+import style from './footerLinksGroup.module.scss';
+
+type LinkData = {
+  label: string;
+  target?: string;
+  id?: string;
+};
+
+export type FooterLinkProps = {
+  title: string;
+  page: string;
+  links: LinkData[];
+};
+
+export default function FooterLinksGroup({
+  title,
+  links,
+  page,
+}: FooterLinkProps) {
+  function formatUrl({ target, id }: LinkData): Url {
+    let pathname = page;
+    if (id) {
+      pathname += `/${id}`;
+    }
+
+    return {
+      pathname,
+      hash: target,
+    };
+  }
+
+  return (
+    <div className={style['footer-links-group']}>
+      <h5 className={style['footer-links-group__title']}>{title}</h5>
+
+      <div className={style['footer-links-group__group']}>
+        {links.map((link) => (
+          <Link
+            className={style['footer-links-group__item']}
+            key={link.target}
+            href={formatUrl(link)}
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}

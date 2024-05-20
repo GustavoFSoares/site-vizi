@@ -9,6 +9,7 @@ type Prop = {
   className?: string;
   containerClassName?: string;
   style?: CSSProperties;
+  element?: 'section' | 'footer';
 };
 
 export default function PageSection({
@@ -17,9 +18,10 @@ export default function PageSection({
   className,
   containerClassName,
   style: inlineCssProps,
+  element: Element = 'section',
 }: Prop) {
   return (
-    <section
+    <Element
       className={bindClass(
         style['page-section'],
         isHero && style['page-section--is-hero'],
@@ -30,6 +32,6 @@ export default function PageSection({
       <div className={bindClass(style['page-section__content'], className)}>
         {children}
       </div>
-    </section>
+    </Element>
   );
 }

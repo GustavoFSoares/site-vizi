@@ -6,6 +6,7 @@ import './globals.css';
 import styles from './style.module.scss';
 
 import Navbar from '@organisms/Navbar';
+import Footer from '@organisms/Footer';
 import bindClass from '@helpers/bindClass';
 
 const mulish = Mulish({
@@ -28,6 +29,8 @@ export default function RootLayout({
         <Navbar />
 
         <div className={styles['layout__container']}>{children}</div>
+
+        <Footer />
       </body>
     </html>
   );
