@@ -8,7 +8,7 @@ import style from './depositions.module.scss';
 
 export default function Depositions() {
   return (
-    <PageSection className={style['depositions']}>
+    <PageSection sectionId='depositions' className={style['depositions']}>
       <SectionTitle className={style['depositions__title']} decorator='yellow'>
         Depoimentos
       </SectionTitle>

@@ -6,7 +6,7 @@
   @apply bg-vizi-white-100;
 
   &--is-hero {
-    @apply h-full px-0 py-0;
+    @apply h-[100vh] px-0 py-0;
 
     max-height: calc(100vh - 64px);
     @screen lg {

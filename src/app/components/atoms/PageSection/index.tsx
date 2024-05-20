@@ -5,6 +5,7 @@ import bindClass from '@helpers/bindClass';
 
 type Prop = {
   children: ReactNode;
+  sectionId?: string;
   isHero?: boolean;
   className?: string;
   containerClassName?: string;
@@ -15,6 +16,7 @@ type Prop = {
 export default function PageSection({
   children,
   isHero,
+  sectionId,
   className,
   containerClassName,
   style: inlineCssProps,
@@ -22,6 +24,7 @@ export default function PageSection({
 }: Prop) {
   return (
     <Element
+      id={sectionId}
       className={bindClass(
         style['page-section'],
         isHero && style['page-section--is-hero'],
