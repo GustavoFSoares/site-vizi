@@ -1,0 +1,22 @@
+[
+  {
+    "key": "whatsapp",
+    "link": "https://api.whatsapp.com/send/?phone=%2B554137791190&text=Ol%C3%A1%21+Tenho+interesse+em+saber+mais+sobre+os+produtos+da+Vizi+Lotes%21&type=phone_number&app_absent=0"
+  },
+  {
+    "key": "facebook",
+    "link": "https://www.facebook.com/vizilotes/"
+  },
+  {
+    "key": "instagram",
+    "link": "https://www.instagram.com/vizilotes/"
+  },
+  {
+    "key": "youtube",
+    "link": "https://www.youtube.com/@bairru5789"
+  },
+  {
+    "key": "linkedin",
+    "link": "https://www.linkedin.com/company/bairru/"
+  }
+]
