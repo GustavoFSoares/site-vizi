@@ -1,13 +1,13 @@
 .depositions {
   &__title {
-    @apply items-center text-vizi-text-1 #{!important};
+    @apply text-vizi-main-1 items-center #{!important};
 
     @apply gap-[21px] #{!important};
     @apply lg:gap-[10px] #{!important};
   }
 
   &__description {
-    @apply mx-auto text-center font-normal text-vizi-text-1;
+    @apply text-vizi-main-1 mx-auto text-center font-normal;
 
     @apply mt-3 max-w-[312px] text-xs;
     @apply md:max-w-[479px];

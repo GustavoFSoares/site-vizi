@@ -47,7 +47,7 @@ const config: Config = {
           70: '#FFFFFFB2',
           100: '#ffffff',
         },
-        'vizi-text': {
+        'vizi-main': {
           1: '#3C3C3C',
           70: '#000000B2',
         },

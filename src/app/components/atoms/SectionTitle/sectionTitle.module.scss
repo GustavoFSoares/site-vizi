@@ -1,5 +1,5 @@
 .section-title {
-  @apply flex w-full flex-col text-vizi-text-70;
+  @apply text-vizi-main-70 flex w-full flex-col;
 
   &::before {
     @apply h-[5px] w-[86px] rounded-lg  content-[''];
