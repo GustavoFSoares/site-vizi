@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  important: true,
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -53,6 +54,10 @@ const config: Config = {
           40: '#00000066',
           60: '#00000099',
           100: '#000000',
+        },
+        'vizi-gray': {
+          25: '#85858540',
+          40: '#54545466',
         },
       },
     },

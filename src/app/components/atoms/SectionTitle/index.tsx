@@ -3,7 +3,7 @@ import styles from './sectionTitle.module.scss';
 
 type Props = {
   children: string;
-  decorator?: 'orange' | 'blue' | 'hide';
+  decorator?: 'orange' | 'blue' | 'yellow' | 'hide';
   className?: string;
 };
 

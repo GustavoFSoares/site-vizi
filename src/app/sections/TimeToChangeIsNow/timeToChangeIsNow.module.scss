@@ -5,6 +5,7 @@
   &__container {
     @apply bg-vizi-azul-100;
 
+    @apply sm:pb-0;
     @apply md:py-0 md:pr-0;
     @apply lg:py-0 lg:pr-0;
     @apply break:pr-12;
@@ -12,6 +13,10 @@
 
   &__content {
     @apply grow self-center;
+
+    @apply pb-8;
+    @apply md:pb-0;
+    @apply lg:pb-0;
   }
 
   &__title {
@@ -38,11 +43,11 @@
   }
 
   &__figure {
-    @apply w-full pt-8;
+    @apply w-full;
 
     @apply h-[177px];
-    @apply md:h-[369px] md:w-[40%] md:pt-0;
-    @apply lg:h-[510px] lg:w-[45%] lg:pt-0;
+    @apply md:h-[369px] md:w-[40%];
+    @apply lg:h-[510px] lg:w-[45%];
     @apply xl:h-[798px] xl:w-[52%];
 
     &,

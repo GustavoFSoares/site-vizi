@@ -5,6 +5,7 @@ import bindClass from '@helpers/bindClass';
 export type ButtonProps = {
   disabled?: boolean;
   onClick: () => void;
+  className?: string;
 };
 
 type Props = ButtonProps & {
@@ -17,6 +18,7 @@ export default function BaseButton({
   disabled,
   children,
   onClick,
+  className,
 }: Props) {
   return (
     <div
@@ -30,7 +32,7 @@ export default function BaseButton({
         type='button'
         onClick={onClick}
       >
-        <div className={styles['embla-button__content']}>
+        <div className={bindClass(styles['embla-button__content'], className)}>
           {cloneElement(children, {
             className: styles['embla-button__svg'],
           })}
