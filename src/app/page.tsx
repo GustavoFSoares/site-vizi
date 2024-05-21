@@ -9,13 +9,13 @@ import EmptySection from './sections/EmptySection';
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <WhoWeAre />
       <Enterprises />
       <Benefits />
       <TimeToChangeIsNow />
       <Depositions />
-    </main>
+    </>
   );
 }

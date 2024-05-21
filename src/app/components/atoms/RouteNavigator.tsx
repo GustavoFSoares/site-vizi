@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 export default function RouteNavigator() {
-  const [hash, setHash] = useState(window.location.hash);
+  const [hash, setHash] = useState<string>('');
 
   const scrollToSection = useCallback((id: string) => {
     const element = document.getElementById(id.replace('#', ''));
@@ -22,6 +22,8 @@ export default function RouteNavigator() {
 
       setHash(hash);
     };
+
+    onHashChange();
 
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);

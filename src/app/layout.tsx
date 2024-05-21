@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={bindClass(mulish.className, styles['layout'])}>
         <Navbar />
 
-        <div className={styles['layout__container']}>{children}</div>
+        <main className={styles['layout__container']}>{children}</main>
 
         <Footer />
       </body>
