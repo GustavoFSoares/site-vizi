@@ -11,6 +11,7 @@ import whatsapp from '@assets/socialMedia/whatsapp.svg';
 import SocialMediaData from '@root/social-media.json';
 
 import PageSection from '@atoms/PageSection';
+import Copyright from '@molecules/Copyright';
 
 import FooterLinksList from './FooterLinksList';
 
@@ -26,53 +27,57 @@ export default function Footer() {
   } as any;
 
   return (
-    <PageSection
-      className={style['footer']}
-      containerClassName={style['footer__container']}
-      element='footer'
-    >
-      <FooterLinksList />
+    <footer>
+      <PageSection
+        className={style['footer']}
+        containerClassName={style['footer__container']}
+        element='div'
+      >
+        <FooterLinksList />
 
-      <span className={style['footer__separator']} />
+        <span className={style['footer__separator']} />
 
-      <div className={style['footer__content']}>
-        <Image
-          className={style['footer__logo']}
-          src={Logo}
-          alt='Logo - Vizi Lotes'
-        />
+        <div className={style['footer__content']}>
+          <Image
+            className={style['footer__logo']}
+            src={Logo}
+            alt='Logo - Vizi Lotes'
+          />
 
-        <div className={style['footer__text-content']}>
-          <div className={style['footer__contact']}>
-            <p className={style['footer__contact-first']}>
-              <span>(41) 3779-1190</span>
-              <span>contato@vizi.com.br</span>
-            </p>
+          <div className={style['footer__text-content']}>
+            <div className={style['footer__contact']}>
+              <p className={style['footer__contact-first']}>
+                <span>(41) 3779-1190</span>
+                <span>contato@vizi.com.br</span>
+              </p>
 
-            <p>
-              R.General Mauro Tourinho, 1805 - Sala 1601 Seminário, Curitiba/PR
-              - CEP 80740-000
-            </p>
-          </div>
+              <p>
+                R.General Mauro Tourinho, 1805 - Sala 1601 Seminário,
+                Curitiba/PR - CEP 80740-000
+              </p>
+            </div>
 
-          <div className={style['footer__social-media']}>
-            {SocialMediaData.map((item) => (
-              <Link
-                target='_blank'
-                key={item.key}
-                className={style['social-media-item']}
-                href={item.link}
-              >
-                <Image
-                  className={style['social-media-item__logo']}
-                  src={socialMediaIconsMap[item.key]}
-                  alt={item.key}
-                />
-              </Link>
-            ))}
+            <div className={style['footer__social-media']}>
+              {SocialMediaData.map((item) => (
+                <Link
+                  target='_blank'
+                  key={item.key}
+                  className={style['social-media-item']}
+                  href={item.link}
+                >
+                  <Image
+                    className={style['social-media-item__logo']}
+                    src={socialMediaIconsMap[item.key]}
+                    alt={item.key}
+                  />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </PageSection>
+      </PageSection>
+
+      <Copyright />
+    </footer>
   );
 }

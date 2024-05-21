@@ -10,7 +10,7 @@ type Prop = {
   className?: string;
   containerClassName?: string;
   style?: CSSProperties;
-  element?: 'section' | 'footer';
+  element?: 'section' | 'footer' | 'div';
 };
 
 export default function PageSection({
