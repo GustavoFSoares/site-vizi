@@ -35,8 +35,8 @@
 
     @screen lg {
       grid:
-        'header'
-        'benefits';
+        'header logo'
+        'benefits benefits';
     }
 
     &__header {
@@ -55,7 +55,6 @@
     &__location,
     &__description {
       @apply text-[9px] font-normal leading-[10px] text-vizi-white-70;
-      @apply lg:hidden;
     }
 
     &__logo {
@@ -65,8 +64,6 @@
 
       @apply -mb-[15px] mr-[23px] h-[77px] w-[73px];
       @apply md:-mr-[40px] md:mb-0 md:h-[84px] md:w-[80px];
-
-      @apply lg:hidden;
     }
   }
 
@@ -83,8 +80,7 @@
   }
 
   &__cta {
-    @apply absolute bottom-[22px] right-[23px];
-
-    @apply lg:hidden;
+    @apply absolute bottom-[28px] right-[23px];
+    @apply lg:bottom-[56px] lg:border-vizi-azul-100 lg:bg-vizi-azul-100;
   }
 }
