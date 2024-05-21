@@ -8,7 +8,7 @@ export default function Enterprises() {
   return (
     <PageSection sectionId='enterprise' className={styles['enterprises']}>
       <div className={styles['enterprises__header']}>
-        <SectionTitle>Empreendimentos</SectionTitle>
+        <SectionTitle decorator='blue'>Empreendimentos</SectionTitle>
 
         <p>
           Confira os empreendimentos disponíveis no site da Vizi Lotes e
