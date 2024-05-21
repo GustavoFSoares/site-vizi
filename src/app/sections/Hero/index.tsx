@@ -37,7 +37,11 @@ export default function Hero() {
 
   return (
     <PageSection sectionId='hero' isHero className={style['hero__content']}>
-      <Carousel navigation dotsNavigation={!isXs}>
+      <Carousel
+        navigation
+        dotsNavigation={!isXs}
+        baseNavigationClassName={style['hero__navigators']}
+      >
         {carouselData.map((item, itemIndex) => (
           <Carousel.Slide key={itemIndex}>
             <CarouselItem

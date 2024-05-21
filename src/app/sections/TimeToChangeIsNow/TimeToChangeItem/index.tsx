@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from 'next/image';
 
 import style from './timeToChangeItem.module.scss';
+import bindClass from '@helpers/bindClass';
 
 export type TimeToChangeItemProps = {
   title: string;
@@ -14,7 +15,9 @@ export default function TimeToChangeItem({
   icon,
 }: TimeToChangeItemProps) {
   return (
-    <li className={style['time-to-change-item']}>
+    <li
+      className={bindClass('time-to-change-item', style['time-to-change-item'])}
+    >
       <figure className={style['time-to-change-item__icon']}>
         <div className={style['time-to-change-item__icon-content']}>
           <Image src={icon} alt={title} />

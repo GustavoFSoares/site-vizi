@@ -36,6 +36,7 @@ const config: Config = {
         },
         'vizi-azul': {
           100: '#4B40C5',
+          s: '#1D194A',
         },
         'vizi-white': {
           10: '#FFFFFF1A',

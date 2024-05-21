@@ -32,7 +32,8 @@
     }
 
     &-navigation-button {
-      @apply border-vizi-gray-25 text-vizi-gray-40;
+      @apply border-vizi-gray-25 text-vizi-gray-40 transition-colors;
+      @apply lg:hover:border-vizi-amarelo-100 lg:hover:bg-vizi-amarelo-100 lg:hover:text-vizi-white-100;
     }
   }
 }

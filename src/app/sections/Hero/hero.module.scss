@@ -16,4 +16,8 @@
       @apply lg:size-9;
     }
   }
+
+  &__navigators {
+    @apply transition-colors lg:hover:border-vizi-laranja-100 lg:hover:bg-vizi-laranja-100 lg:hover:text-vizi-white-100;
+  }
 }
