@@ -1,7 +1,9 @@
 .button {
-  @apply w-fit rounded-lg border border-solid;
+  @apply w-fit rounded-lg border border-solid transition-colors;
+
   @apply border-vizi-laranja-100 bg-vizi-laranja-100 text-vizi-white-100;
   @apply lg:border-vizi-laranja-30 lg:bg-transparent lg:text-vizi-laranja-100;
+  @apply hover:lg:border-vizi-laranja-100 hover:lg:bg-vizi-laranja-100 hover:lg:text-vizi-white-100;
 
   @apply px-6 py-2 text-sm leading-6;
   @apply lg:px-5 lg:py-5 lg:text-xl;
@@ -12,5 +14,6 @@
 
   &--outlined {
     @apply lg:border-vizi-laranja-30 lg:bg-transparent lg:text-vizi-laranja-100;
+    @apply lg:hover:border-vizi-laranja-100 lg:hover:bg-vizi-laranja-100 lg:hover:text-vizi-white-100;
   }
 }

@@ -16,7 +16,7 @@
 
     @apply pb-8;
     @apply md:pb-0;
-    @apply lg:pb-0;
+    @apply lg:mr-[21px] lg:pb-0;
   }
 
   &__title {
@@ -37,9 +37,9 @@
   &__items {
     @apply flex flex-col;
 
-    @apply gap-2 pt-5;
-    @apply md:gap-[15px] md:pt-[33px];
-    @apply md:pt-14 lg:gap-[60px];
+    @apply pt-5;
+    @apply md:pt-[33px];
+    @apply lg:pt-[27px];
   }
 
   &__figure {
@@ -47,7 +47,7 @@
 
     @apply h-[177px];
     @apply md:h-[369px] md:w-[40%];
-    @apply lg:h-[510px] lg:w-[45%];
+    @apply lg:h-[570px] lg:w-[45%];
     @apply xl:h-[798px] xl:w-[52%];
 
     &,
@@ -71,7 +71,8 @@
       }
 
       @screen lg {
-        background-size: 365%;
+        background-size: 413%;
+        background-position: 71%;
       }
 
       @screen xl {

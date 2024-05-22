@@ -40,10 +40,7 @@ export default function TimeToChangeIsNow() {
       className={style['time-to-change-is-now']}
     >
       <div className={style['time-to-change-is-now__content']}>
-        <SectionTitle
-          decorator='hide'
-          className={style['time-to-change-is-now__title']}
-        >
+        <SectionTitle className={style['time-to-change-is-now__title']}>
           A hora de mudar é agora
         </SectionTitle>
 

@@ -1,5 +1,5 @@
 .benefit-item {
-  @apply border-vizi-black-10 flex flex-col items-center gap-[9px] rounded-[10px] border border-solid bg-vizi-white-100 pb-4;
+  @apply flex flex-col items-center gap-[9px] rounded-[10px] border border-solid border-vizi-black-10 bg-vizi-white-100 pb-4;
 
   @apply mt-5 max-w-[131px];
   @apply lg:mt-0 lg:max-w-[181px] lg:px-7 lg:py-[42px];
@@ -19,7 +19,7 @@
   }
 
   &__text {
-    @apply text-center text-vizi-text-1;
+    @apply text-vizi-main-1 text-center;
 
     @apply px-4 text-xs font-normal;
     @apply lg:px-0 lg:text-base lg:font-bold;

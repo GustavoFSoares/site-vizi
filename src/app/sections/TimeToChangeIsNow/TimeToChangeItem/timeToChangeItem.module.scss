@@ -1,8 +1,26 @@
 .time-to-change-item {
-  @apply flex items-center gap-6;
+  @apply flex items-center gap-6 rounded-md transition-colors;
+
+  @apply px-[28px] py-[7px];
+  @apply lg:px-8 lg:py-[30px];
+
+  &:hover {
+    @apply lg:bg-vizi-white-100;
+
+    .time-to-change-item {
+      &__icon::before {
+        @apply lg:bg-vizi-azul-100;
+      }
+
+      &__title,
+      &__description {
+        @apply lg:text-vizi-main-70;
+      }
+    }
+  }
 
   &__icon {
-    @apply flex items-center gap-[25px];
+    @apply relative flex items-center gap-[25px];
 
     &-content,
     &::before {
@@ -10,9 +28,9 @@
     }
 
     &::before {
-      @apply h-[25px] w-[3px] content-[''];
+      @apply absolute -left-[25px] h-[25px] w-[3px] content-[''];
 
-      @apply lg:content-none;
+      @apply lg:h-[85px] lg:bg-transparent;
     }
 
     &-content {

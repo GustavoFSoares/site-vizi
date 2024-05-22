@@ -10,7 +10,7 @@ type Props = {
 export default function SectionTitle({
   children,
   className,
-  decorator = 'blue',
+  decorator = 'hide',
 }: Props) {
   return (
     <h1

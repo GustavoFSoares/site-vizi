@@ -10,6 +10,6 @@
   }
 
   &--selected {
-    @apply border-vizi-white-100 text-vizi-white-100;
+    @apply border-vizi-azul-s bg-vizi-azul-s text-vizi-white-100 transition-colors;
   }
 }
