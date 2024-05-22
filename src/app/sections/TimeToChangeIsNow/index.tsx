@@ -35,6 +35,7 @@ export default function TimeToChangeIsNow() {
 
   return (
     <PageSection
+      sectionId='time-to-change-is-now'
       containerClassName={style['time-to-change-is-now__container']}
       className={style['time-to-change-is-now']}
     >

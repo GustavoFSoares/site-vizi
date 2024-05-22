@@ -26,6 +26,7 @@ const config: Config = {
         'vizi-laranja': {
           100: '#DF763E',
           30: '#EA74324D',
+          s: '#97471A',
         },
         'vizi-amarelo': {
           100: '#FFB31C',

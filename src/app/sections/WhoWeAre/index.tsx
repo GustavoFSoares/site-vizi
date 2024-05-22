@@ -9,7 +9,7 @@ import DeliveredList from './DeliveredList';
 export default function WhoWeAre() {
   return (
     <>
-      <PageSection className={style['who-we-are']}>
+      <PageSection sectionId='who-we-are' className={style['who-we-are']}>
         <div className={style['who-we-are__header']}>
           <ShortSectionTitle>Quem somos</ShortSectionTitle>
           <SectionSubtitle>

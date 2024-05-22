@@ -9,14 +9,13 @@ import EmptySection from './sections/EmptySection';
 
 export default function Home() {
   return (
-    <main className='h-[100vh]'>
+    <>
       <Hero />
       <WhoWeAre />
       <Enterprises />
       <Benefits />
       <TimeToChangeIsNow />
       <Depositions />
-      <EmptySection />
-    </main>
+    </>
   );
 }

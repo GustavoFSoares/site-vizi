@@ -21,7 +21,7 @@ export default function Benefits() {
   ];
 
   return (
-    <PageSection className={style['benefits']}>
+    <PageSection sectionId='benefits' className={style['benefits']}>
       <div className={style['benefits__header']}>
         <ShortSectionTitle
           decoratorColor='yellow'

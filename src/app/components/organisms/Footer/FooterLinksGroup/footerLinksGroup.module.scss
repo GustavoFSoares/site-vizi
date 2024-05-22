@@ -1,0 +1,16 @@
+.footer-links-group {
+  &__title {
+    @apply font-bold uppercase leading-[22px];
+
+    @apply text-xs;
+    @apply md:text-base;
+    @apply lg:text-base;
+  }
+  &__group {
+    @apply mt-[15px] flex flex-col gap-[10px];
+  }
+
+  &__item {
+    @apply text-xs font-normal leading-[18px] text-vizi-white-50 underline;
+  }
+}

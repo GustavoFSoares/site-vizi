@@ -6,7 +6,7 @@ import EnterprisesExplorer from './EnterprisesExplorer';
 
 export default function Enterprises() {
   return (
-    <PageSection className={styles['enterprises']}>
+    <PageSection sectionId='enterprise' className={styles['enterprises']}>
       <div className={styles['enterprises__header']}>
         <SectionTitle>Empreendimentos</SectionTitle>
 
