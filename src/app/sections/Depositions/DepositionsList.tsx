@@ -49,9 +49,6 @@ export default function DepositionsList() {
       name: 'Nome Sobrenome 1',
       description: [
         'Chuck Norris has a mug of nails instead of coffee in the morning. Chuck Norris drinks napalm to fight his heartburn. Death once had a near-Chuck-Norris experience. Chuck Norris sleeps with a pillow under his gun. When the Boogeyman goes to sleep every night he checks his closet for Chuck Norris.',
-        'Bigfoot claims he once saw Chuck Norris. A bulletproof vest wears Chuck Norris for protection. Chuck Norris can hear sign language. Chuck Norris does not sleep. He waits. Chuck Norris’ tears cure cancer. Too bad he has never cried.',
-        'A bulletproof vest wears Chuck Norris for protection. Chuck Norris tells Simon what to do. If you spell Chuck Norris in Scrabble, you win. Forever. If it looks like chicken, tastes like chicken, and feels like chicken but Chuck Norris says its beef, then it’s beef. Mission Impossible was originally set in Chuck Norris’s house.',
-        'Chuck Norris once shattered the space-time continuum. He felt so bad, he put it back together. If Chuck Norris were to travel to an alternate dimension in which there was another Chuck Norris and they both fought, they would both win. When Chuck Norris writes, he makes paper bleed. Mission Impossible was originally set in Chuck Norris’s house. Chuck Norris used to beat the shit out of his shadow because it was following to close. It now stands a safe 30 feet behind him.',
       ],
       profileImage: depositionProfile,
     },
@@ -60,7 +57,6 @@ export default function DepositionsList() {
       name: 'Nome Sobrenome GRANDE 2',
       description: [
         'Chuck Norris does not use spell check. If he happens to misspell a word, Oxford will change the spelling. Chuck Norris’ cowboy boots are made from real cowboys. Chuck Norris doesn’t cheat death. He wins fair and square. Chuck Norris tells Simon what to do. Chuck Norris beats rock, paper, scissors. Cannon balls, tanks, super destroyers, exploding stars — I could go on.',
-        'When Chuck Norris was born he drove his mom home from the hospital. Chuck Norris once ate at Taco Bell and didn’t get diarrhea. Chuck Norris can sit in the corner of a round room. Chuck Norris can squeeze orange juice out of a lemon. Chuck Norris doesn’t cheat death. He wins fair and square.',
       ],
       profileImage: depositionProfile,
     },

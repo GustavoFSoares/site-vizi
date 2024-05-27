@@ -13,7 +13,10 @@
     }
   }
 
-  &__cta {
-    @apply w-auto text-nowrap;
+  &__label {
+    @apply w-auto text-nowrap rounded-lg text-center font-bold uppercase text-vizi-white-70;
+
+    @apply px-6 py-2 text-sm leading-6;
+    @apply lg:px-5 lg:py-5 lg:text-xl;
   }
 }

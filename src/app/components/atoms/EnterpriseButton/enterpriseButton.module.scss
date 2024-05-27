@@ -1,5 +1,5 @@
 .enterprise-button {
-  @apply w-full text-nowrap rounded-xl border border-solid border-vizi-white-25 font-normal text-vizi-white-25;
+  @apply w-full text-nowrap rounded-xl border border-solid border-vizi-white-70 font-normal text-vizi-white-70;
 
   @apply p-[9px] text-[9px] leading-[10px];
   @apply text-xs;
@@ -10,6 +10,6 @@
   }
 
   &--selected {
-    @apply border-vizi-azul-s bg-vizi-azul-s text-vizi-white-100 transition-colors;
+    @apply border-vizi-azul-s bg-vizi-azul-s transition-colors;
   }
 }

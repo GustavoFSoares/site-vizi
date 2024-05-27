@@ -25,7 +25,7 @@
 
     @apply flex gap-[22px] pl-[18px] pt-[18px];
     @apply md:grid md:h-full md:w-fit md:gap-14 md:pb-[26px] md:pt-[28px];
-    @apply lg:grid lg:h-full lg:w-fit lg:gap-14 lg:bg-transparent lg:pb-[56px] lg:pl-[32px] lg:pt-[35px] lg:backdrop-blur-none;
+    @apply lg:grid lg:h-full lg:w-fit lg:gap-14 lg:bg-transparent lg:py-[32px] lg:pl-[32px] lg:backdrop-blur-none;
 
     @screen md {
       grid:
@@ -72,7 +72,10 @@
 
     @apply flex flex-col gap-[5px] self-end;
 
-    @apply sm:hidden;
+    @screen sm {
+      @apply absolute;
+      top: calc(310px - 100% - 62px);
+    }
 
     &__item {
       @apply w-fit rounded-[10px] bg-vizi-white-25 px-[10px] py-[12px] text-[9px] font-normal leading-[10px];
@@ -81,6 +84,6 @@
 
   &__cta {
     @apply absolute bottom-[28px] right-[23px];
-    @apply lg:bottom-[56px] lg:border-vizi-azul-100 lg:bg-vizi-azul-100;
+    @apply lg:bottom-[32px] lg:border-vizi-azul-100 lg:bg-vizi-azul-100;
   }
 }
