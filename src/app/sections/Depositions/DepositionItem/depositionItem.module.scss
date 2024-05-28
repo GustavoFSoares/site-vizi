@@ -43,8 +43,8 @@
   }
 
   &__name {
-    @apply text-vizi-main-70 text-xs font-normal;
-    @apply lg:text-vizi-main-70 lg:text-xl lg:font-bold lg:leading-6;
+    @apply text-xs font-normal text-vizi-main-70;
+    @apply lg:text-xl lg:font-bold lg:leading-6 lg:text-vizi-main-70;
   }
 
   &__name,
@@ -58,11 +58,11 @@
 
   &__business-name,
   &__descriptions p {
-    @apply text-vizi-main-70 text-[9px] font-normal leading-[10px];
+    @apply text-xs font-normal text-vizi-main-70;
   }
 
   &__business-name {
-    @apply lg:text-xs lg:font-normal;
+    @apply lg:font-normal;
   }
 
   &__descriptions {

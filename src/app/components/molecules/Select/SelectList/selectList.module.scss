@@ -13,7 +13,7 @@
     @apply hover:bg-vizi-white-10;
 
     &:first-child label {
-      @apply flex italic text-vizi-white-40 before:content-['-'] after:content-['-'];
+      @apply flex italic text-vizi-white-70 before:content-['-'] after:content-['-'];
     }
 
     input {
@@ -23,11 +23,11 @@
     label {
       @apply block w-full overflow-hidden text-ellipsis text-nowrap px-4 py-3;
 
-      @apply text-vizi-white-40;
+      @apply text-vizi-white-70;
     }
 
     &--selected label {
-      @apply text-vizi-white-100;
+      @apply bg-vizi-azul-s text-vizi-white-100;
     }
   }
 }

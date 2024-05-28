@@ -39,7 +39,13 @@ export default function Navbar() {
   return (
     <nav className={styles['navbar']}>
       <div className={styles['navbar__content']}>
-        <Image className={styles['navbar__logo']} src={Logo} alt='Vizi logo' />
+        <Link href={{ href: '/', hash: 'hero' }}>
+          <Image
+            className={styles['navbar__logo']}
+            src={Logo}
+            alt='Vizi logo'
+          />
+        </Link>
 
         {isSm && <NavbarButton isOpen={isOpen} onClick={handleToggle} />}
 

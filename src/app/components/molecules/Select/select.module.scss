@@ -7,7 +7,7 @@
     }
 
     &-label {
-      @apply font-normal text-vizi-white-40;
+      @apply font-normal;
 
       @apply text-[9px];
       @apply md:text-xs;
@@ -21,7 +21,7 @@
       @apply lg:size-[26px];
 
       svg {
-        @apply h-full w-full;
+        @apply h-full w-full text-vizi-white-70;
       }
 
       &--open {

@@ -4,21 +4,6 @@
   @apply px-[28px] py-[7px];
   @apply lg:px-8 lg:py-[30px];
 
-  &:hover {
-    @apply lg:bg-vizi-white-100;
-
-    .time-to-change-item {
-      &__icon::before {
-        @apply lg:bg-vizi-azul-100;
-      }
-
-      &__title,
-      &__description {
-        @apply lg:text-vizi-main-70;
-      }
-    }
-  }
-
   &__icon {
     @apply relative flex items-center gap-[25px];
 
