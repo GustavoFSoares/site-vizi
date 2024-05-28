@@ -9,6 +9,7 @@ export type OptionType = {
 type Props = {
   options: OptionType[];
   isOpen: boolean;
+  isDark?: boolean;
   selected: OptionType | null;
   onSelect?: (item: OptionType) => void;
 };
@@ -16,6 +17,7 @@ type Props = {
 export default function SelectList({
   options,
   isOpen,
+  isDark,
   selected,
   onSelect,
 }: Props) {
@@ -31,6 +33,7 @@ export default function SelectList({
         <ul
           className={bindClass(
             style['select-list'],
+            isDark && style['select-list--is-dark'],
             isOpen && style['select-list--is-open']
           )}
           role='listbox'

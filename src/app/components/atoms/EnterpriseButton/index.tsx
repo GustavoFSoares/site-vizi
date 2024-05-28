@@ -6,6 +6,7 @@ import style from './enterpriseButton.module.scss';
 type Props = {
   children: String | ReactNode;
   selected?: boolean;
+  isDark?: boolean;
   uppercase?: boolean;
   onClick?: () => void;
 };
@@ -13,6 +14,7 @@ type Props = {
 export default function EnterpriseButton({
   children,
   selected,
+  isDark,
   uppercase,
   onClick,
 }: Props) {
@@ -20,6 +22,7 @@ export default function EnterpriseButton({
     <button
       className={bindClass(
         style['enterprise-button'],
+        isDark && style['enterprise-button--is-dark'],
         selected && style['enterprise-button--selected'],
         uppercase && style['enterprise-button--uppercase']
       )}
