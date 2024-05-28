@@ -1,10 +1,24 @@
+import getHost from '@helpers/getHost';
+
 import PageSection from '@atoms/PageSection';
 import SectionTitle from '@atoms/SectionTitle';
+
+import { EnterpriseItemProps } from '@molecules/EnterpriseItem';
 
 import styles from './enterprises.module.scss';
 import EnterprisesExplorer from './EnterprisesExplorer';
 
-export default function Enterprises() {
+export default async function Enterprises() {
+  const { origin } = getHost();
+
+  async function getEnterprises(): Promise<EnterpriseItemProps[]> {
+    const res = await fetch(origin + '/api/enterprises');
+
+    return res.json();
+  }
+
+  const enterprisesList = await getEnterprises();
+
   return (
     <PageSection sectionId='enterprise' className={styles['enterprises']}>
       <div className={styles['enterprises__header']}>
@@ -17,7 +31,7 @@ export default function Enterprises() {
       </div>
 
       <article className={styles['enterprises__content']}>
-        <EnterprisesExplorer />
+        <EnterprisesExplorer list={enterprisesList} />
       </article>
     </PageSection>
   );
