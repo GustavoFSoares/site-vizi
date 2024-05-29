@@ -25,7 +25,7 @@ export default function Select({
   options = [],
   onSelect,
 }: Props) {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selected, setSelected] = useState<OptionType | null>(null);
 
   function handleToggle() {
