@@ -46,7 +46,7 @@
   }
 
   &__contact-button {
-    @apply w-24;
+    @apply min-w-24;
     @apply lg:w-fit;
   }
 

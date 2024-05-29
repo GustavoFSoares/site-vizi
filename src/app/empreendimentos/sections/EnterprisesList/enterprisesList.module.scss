@@ -88,4 +88,8 @@
       }
     }
   }
+
+  &__whatsapp-button {
+    @apply -mt-[13px] flex w-full justify-end px-[21px];
+  }
 }
