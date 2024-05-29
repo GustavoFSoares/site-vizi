@@ -1,53 +1,32 @@
-'use client';
-
 import PageSection from '@atoms/PageSection';
-import WhatsappButton from '@atoms/WhatsappButton';
-import EnterprisesHeader from '@molecules/EnterprisesHeader';
 
-import { useBreakpoints } from '@hooks/useBreakpoints';
+import getHost from '@helpers/getHost';
 
-import backgroundImage from '@assets/enterprises/hero.png';
+import EnterpriseItem, { EnterpriseItemProps } from '@molecules/EnterpriseItem';
+
+import EnterpriseListHeader from './EnterpriseListHeader';
 
 import style from './enterprisesList.module.scss';
 
-export default function EnterprisesList() {
-  const { isSm } = useBreakpoints();
+export default async function EnterprisesList() {
+  const { api } = getHost();
+
+  async function getEnterpriseList(): Promise<EnterpriseItemProps[]> {
+    const res = await fetch(api + '/enterprises');
+    return res.json();
+  }
+
+  const enterpriseList = await getEnterpriseList();
 
   return (
     <PageSection className={style['enterprises-list']}>
-      <div className={style['enterprises-list__header']}>
-        <EnterprisesHeader isDark>
-          {!isSm ? <WhatsappButton wide /> : undefined}
-        </EnterprisesHeader>
+      <EnterpriseListHeader />
 
-        <div className={style['enterprises-list__hero']}>
-          <figure className={style['enterprises-list__hero-background']}>
-            <div
-              className={style['enterprises-list__hero-background-content']}
-              style={{ backgroundImage: `url(${backgroundImage.src})` }}
-            />
-          </figure>
-
-          <article className={style['enterprises-list__hero-content']}>
-            <small>Seu novo lote está aqui</small>
-
-            <h1>Lotes selecionados próximos de você - {isSm.toString()}</h1>
-
-            <h2>
-              Na Vizi Lotes, simplificamos o caminho para que você alcance seu
-              sonho de possuir um terreno próprio. Aqui você encontrará lotes
-              negociados com os principais loteadores do Brasil, garantindo os
-              melhores produtos para você.
-            </h2>
-          </article>
-        </div>
-
-        {isSm && (
-          <div className={style['enterprises-list__whatsapp-button']}>
-            <WhatsappButton />
-          </div>
-        )}
-      </div>
+      <article className={style['enterprises-list__items-list']}>
+        {enterpriseList.map((item) => (
+          <EnterpriseItem key={item.id} {...item} />
+        ))}
+      </article>
     </PageSection>
   );
 }
