@@ -45,7 +45,7 @@ export default function EnterprisesHeader({ children, isDark }: Props) {
     <div
       className={bindClass(
         styles['enterprises-header'],
-        styles['enterprises-header--is-dark']
+        isDark && styles['enterprises-header--is-dark']
       )}
     >
       <div className={styles['enterprises-header__content']}>

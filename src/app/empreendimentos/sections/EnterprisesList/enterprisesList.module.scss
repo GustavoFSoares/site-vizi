@@ -92,4 +92,12 @@
   &__whatsapp-button {
     @apply -mt-[13px] flex w-full justify-end px-[21px];
   }
+
+  &__items-list {
+    @apply grid;
+
+    @apply mt-[35px] grid-cols-1 gap-[10px];
+    @apply md:mt-[75px] md:gap-5;
+    @apply lg:mt-[151px] lg:grid-cols-2 lg:gap-6;
+  }
 }
