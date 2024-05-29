@@ -1,12 +1,15 @@
 import bindClass from '@helpers/bindClass';
 
 import style from './button.module.scss';
+import EventEmitter from 'events';
+import { ReactNode } from 'react';
 
 type Props = {
-  children: string;
+  children: ReactNode;
   className?: string;
   type?: 'solid' | 'outlined';
   uppercase?: boolean;
+  onClick?: (ev: EventEmitter) => void;
 };
 
 export default function Button({
@@ -14,7 +17,16 @@ export default function Button({
   className,
   type,
   uppercase,
+  onClick,
 }: Props) {
+  function handleClick(ev: any) {
+    if (!onClick) {
+      return;
+    }
+
+    onClick(ev);
+  }
+
   return (
     <button
       className={bindClass(
@@ -23,6 +35,7 @@ export default function Button({
         type && style[`button--${type}`],
         uppercase && 'uppercase'
       )}
+      onClick={handleClick}
     >
       {children}
     </button>
