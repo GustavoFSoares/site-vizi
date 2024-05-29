@@ -8,7 +8,7 @@ import backgroundImage from '@assets/enterprises/hero.png';
 import style from './enterprisesList.module.scss';
 import { useBreakpoints } from '@hooks/useBreakpoints';
 
-export default function EnterpriseListHeader() {
+export default function Header() {
   const { isSm } = useBreakpoints();
 
   return (
