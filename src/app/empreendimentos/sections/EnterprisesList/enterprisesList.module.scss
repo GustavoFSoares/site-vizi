@@ -100,4 +100,17 @@
     @apply md:mt-[75px] md:gap-5;
     @apply lg:mt-[151px] lg:grid-cols-2 lg:gap-6;
   }
+
+  &__load-button {
+    @apply sm:border-vizi-azul-100 sm:bg-vizi-azul-100 #{!important};
+    @apply md:border-vizi-azul-100 md:bg-vizi-azul-100 #{!important};
+
+    &-container {
+      @apply flex w-full justify-center;
+
+      @apply mt-[29px];
+      @apply md:mt-[45px];
+      @apply lg:mt-[52px];
+    }
+  }
 }

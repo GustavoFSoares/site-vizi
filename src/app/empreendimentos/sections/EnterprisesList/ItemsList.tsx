@@ -16,6 +16,10 @@ export default function ItemsList({ list }: Props) {
 
   const MAX_ITEMS = 6;
 
+  const showButton = useMemo<Boolean>(() => {
+    return list.length > MAX_ITEMS;
+  }, [list]);
+
   const filteredList = useMemo<EnterpriseItemProps[]>(() => {
     if (showAll) {
       return list;
@@ -29,16 +33,23 @@ export default function ItemsList({ list }: Props) {
   }, [setShowAll]);
 
   return (
-    <article className={style['enterprises-list__items-list']}>
-      {filteredList.map((item) => (
-        <EnterpriseItem key={item.id} {...item} />
-      ))}
+    <article>
+      <div className={style['enterprises-list__items-list']}>
+        {filteredList.map((item) => (
+          <EnterpriseItem key={item.id} {...item} />
+        ))}
+      </div>
 
-      {list.length > MAX_ITEMS && (
-        <Button onClick={handleSeeAll}>
-          {!showAll && <span>Ver mais</span>}
-          {showAll && <span>Ver menos</span>}
-        </Button>
+      {showButton && (
+        <div className={style['enterprises-list__load-button-container']}>
+          <Button
+            className={style['enterprises-list__load-button']}
+            onClick={handleSeeAll}
+          >
+            {!showAll && <span>Ver mais</span>}
+            {showAll && <span>Ver menos</span>}
+          </Button>
+        </div>
       )}
     </article>
   );
