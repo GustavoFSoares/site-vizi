@@ -2,11 +2,12 @@ import PageSection from '@atoms/PageSection';
 
 import getHost from '@helpers/getHost';
 
-import EnterpriseItem, { EnterpriseItemProps } from '@molecules/EnterpriseItem';
+import { EnterpriseItemProps } from '@molecules/EnterpriseItem';
 
-import EnterpriseListHeader from './EnterpriseListHeader';
+import Header from './Header';
 
 import style from './enterprisesList.module.scss';
+import ItemsList from './ItemsList';
 
 export default async function EnterprisesList() {
   const { api } = getHost();
@@ -20,13 +21,9 @@ export default async function EnterprisesList() {
 
   return (
     <PageSection className={style['enterprises-list']}>
-      <EnterpriseListHeader />
+      <Header />
 
-      <article className={style['enterprises-list__items-list']}>
-        {enterpriseList.map((item) => (
-          <EnterpriseItem key={item.id} {...item} />
-        ))}
-      </article>
+      <ItemsList list={enterpriseList} />
     </PageSection>
   );
 }
