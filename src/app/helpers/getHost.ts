@@ -11,16 +11,16 @@ type HostData = {
   };
 };
 
-const h = headers() as any as HostData;
-
-const HOST = {
-  origin: `${h.headers['x-forwarded-proto']}://${h.headers.host}`,
-  api: `${h.headers['x-forwarded-proto']}://${h.headers.host}/api`,
-  host: h.headers.host,
-  port: h.headers['x-forwarded-port'],
-  protocol: h.headers['x-forwarded-proto'],
-};
-
 export default function getHost() {
+  const h = headers() as any as HostData;
+
+  const HOST = {
+    origin: `${h.headers['x-forwarded-proto']}://${h.headers.host}`,
+    api: `${h.headers['x-forwarded-proto']}://${h.headers.host}/api`,
+    host: h.headers.host,
+    port: h.headers['x-forwarded-port'],
+    protocol: h.headers['x-forwarded-proto'],
+  };
+
   return HOST;
 }
