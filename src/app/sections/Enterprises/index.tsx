@@ -9,12 +9,15 @@ import styles from './enterprises.module.scss';
 import EnterprisesExplorer from './EnterprisesExplorer';
 
 export default async function Enterprises() {
+  const MAX_ITEMS = 4;
+
   const { origin } = getHost();
 
   async function getEnterprises(): Promise<EnterpriseItemProps[]> {
     const res = await fetch(origin + '/api/enterprises');
 
-    return res.json();
+    const data: any[] = await res.json();
+    return data.slice(0, MAX_ITEMS);
   }
 
   const enterprisesList = await getEnterprises();
