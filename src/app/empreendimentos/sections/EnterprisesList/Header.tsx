@@ -28,7 +28,7 @@ export default function Header() {
         <article className={style['enterprises-list__hero-content']}>
           <small>Seu novo lote está aqui</small>
 
-          <h1>Lotes selecionados próximos de você - {isSm.toString()}</h1>
+          <h1>Lotes selecionados próximos de você</h1>
 
           <h2>
             Na Vizi Lotes, simplificamos o caminho para que você alcance seu
