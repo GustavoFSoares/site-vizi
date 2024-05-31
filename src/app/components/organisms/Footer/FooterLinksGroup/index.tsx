@@ -33,20 +33,20 @@ export default function FooterLinksGroup({
   }
 
   return (
-    <div className={style['footer-links-group']}>
+    <article className={style['footer-links-group']}>
       <h5 className={style['footer-links-group__title']}>{title}</h5>
 
       <div className={style['footer-links-group__group']}>
-        {links.map((link) => (
+        {links.map((link, index) => (
           <Link
             className={style['footer-links-group__item']}
-            key={link.target}
+            key={index}
             href={formatUrl(link)}
           >
             {link.label}
           </Link>
         ))}
       </div>
-    </div>
+    </article>
   );
 }

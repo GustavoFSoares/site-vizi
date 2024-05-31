@@ -1,3 +1,5 @@
+'use client';
+
 import bindClass from '@helpers/bindClass';
 
 import style from './button.module.scss';
