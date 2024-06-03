@@ -1,0 +1,58 @@
+.life-is-about-change {
+  @apply h-[714px];
+
+  @apply md:flex;
+  @apply lg:flex;
+
+  &__container {
+    @apply bg-vizi-azul-100 bg-cover;
+
+    @apply sm:pb-0;
+    @apply md:py-0 md:pr-0;
+    @apply lg:py-0 lg:pr-0;
+    @apply break:pr-12;
+  }
+
+  &__wrapper {
+    @apply h-full w-full max-w-[60%];
+
+    @apply relative;
+
+    &::before {
+      @apply absolute h-full content-[''];
+      @apply bg-vizi-azul-s opacity-90;
+
+      width: calc(100% + 1000px);
+      left: -1000px;
+    }
+  }
+
+  &__content {
+    @apply relative flex h-full flex-col justify-center;
+  }
+
+  &__title {
+    @apply items-start gap-0  font-extrabold text-vizi-white-100;
+
+    @apply text-[26px]  leading-[26px];
+    @apply lg:text-[38px] lg:leading-[48px];
+    @apply xl:text-[44px] xl:leading-[48px];
+  }
+
+  &__description {
+    @apply flex flex-col gap-6 text-base font-normal;
+    @apply max-w-[725px];
+
+    @apply lg:mt-[15px];
+
+    p:last-child {
+      @apply max-w-[625px];
+    }
+  }
+
+  &__button {
+    @apply border-vizi-azul-100 bg-vizi-azul-100 text-vizi-white-100;
+
+    @apply lg:mt-[34px];
+  }
+}
