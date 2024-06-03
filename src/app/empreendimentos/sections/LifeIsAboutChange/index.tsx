@@ -1,20 +1,30 @@
+'use client';
+
 import Button from '@atoms/Button';
 import PageSection from '@atoms/PageSection';
 import SectionTitle from '@atoms/SectionTitle';
+
+import { useBreakpoints } from '@hooks/useBreakpoints';
 
 import Background from '@assets/life-is-about-change-background.png';
 
 import style from './lifeIsAboutChange.module.scss';
 
 export default function LifeIsAboutChange() {
+  const { isSm } = useBreakpoints();
+
   return (
     <PageSection
       sectionId='life-is-about-change'
       containerClassName={style['life-is-about-change__container']}
       className={style['life-is-about-change']}
-      style={{
-        backgroundImage: `url(${Background.src})`,
-      }}
+      style={
+        !isSm
+          ? {
+              backgroundImage: `url(${Background.src})`,
+            }
+          : undefined
+      }
     >
       <article className={style['life-is-about-change__wrapper']}>
         <div className={style['life-is-about-change__content']}>
@@ -41,6 +51,15 @@ export default function LifeIsAboutChange() {
             Saiba mais
           </Button>
         </div>
+
+        {isSm && (
+          <figure className={style['life-is-about-change__figure']}>
+            <div
+              className={style['life-is-about-change__figure-background']}
+              style={{ backgroundImage: `url(${Background.src})` }}
+            />
+          </figure>
+        )}
       </article>
     </PageSection>
   );

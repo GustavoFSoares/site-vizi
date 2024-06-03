@@ -1,22 +1,46 @@
 .life-is-about-change {
-  @apply h-[714px];
+  @apply md:h-[403px];
+  @apply lg:h-[714px];
+  @apply break:h-[550px];
 
   @apply md:flex;
   @apply lg:flex;
 
   &__container {
-    @apply bg-vizi-azul-100 bg-cover;
+    @apply bg-vizi-azul-s bg-no-repeat;
 
     @apply sm:pb-0;
     @apply md:py-0 md:pr-0;
     @apply lg:py-0 lg:pr-0;
     @apply break:pr-12;
+
+    @screen md {
+      background-position: 80% 100%;
+      background-size: 130%;
+    }
+
+    @screen lg {
+      background-position: 83% 100%;
+      background-size: 170%;
+    }
+
+    @screen xl {
+      background-position: 66% 100%;
+      background-size: 125%;
+    }
+
+    @screen break {
+      background-size: 78%;
+      background-position: center;
+    }
   }
 
   &__wrapper {
-    @apply h-full w-full max-w-[60%];
+    @apply w-full;
 
-    @apply relative;
+    @apply md:relative md:h-full md:max-w-[55%];
+    @apply lg:relative lg:h-full lg:max-w-[45%];
+    @apply xl:relative xl:h-full xl:max-w-[60%];
 
     &::before {
       @apply absolute h-full content-[''];
@@ -24,35 +48,53 @@
 
       width: calc(100% + 1000px);
       left: -1000px;
+
+      @apply sm:content-none;
     }
   }
 
   &__content {
-    @apply relative flex h-full flex-col justify-center;
+    @apply relative z-10 h-full;
+    @apply flex flex-col justify-center;
+
+    @apply sm:-mb-[17px];
   }
 
   &__title {
-    @apply items-start gap-0  font-extrabold text-vizi-white-100;
+    @apply items-start gap-0 font-extrabold text-vizi-white-100;
 
-    @apply text-[26px]  leading-[26px];
-    @apply lg:text-[38px] lg:leading-[48px];
+    @apply max-w-[340px] text-[26px] leading-[26px];
+    @apply lg:max-w-none lg:text-[34px] lg:leading-[44px];
     @apply xl:text-[44px] xl:leading-[48px];
   }
 
   &__description {
-    @apply flex flex-col gap-6 text-base font-normal;
-    @apply max-w-[725px];
+    @apply mt-[15px] flex flex-col font-normal;
 
-    @apply lg:mt-[15px];
+    @apply max-w-[340px] gap-4 text-xs;
+    @apply md:max-w-[300px];
+    @apply lg:max-w-[385px] lg:gap-6 lg:text-sm;
+    @apply xl:max-w-[725px] xl:text-base;
 
     p:last-child {
-      @apply max-w-[625px];
+      @apply lg:max-w-[625px];
     }
   }
 
   &__button {
     @apply border-vizi-azul-100 bg-vizi-azul-100 text-vizi-white-100;
 
+    @apply mt-[15px];
     @apply lg:mt-[34px];
+  }
+
+  &__figure {
+    @apply h-[362px];
+
+    &-background {
+      @apply absolute left-0 h-full w-full;
+      background-size: 268%;
+      background-position: 100% -20%;
+    }
   }
 }
