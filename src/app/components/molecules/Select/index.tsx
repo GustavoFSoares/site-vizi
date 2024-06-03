@@ -12,6 +12,7 @@ import style from './select.module.scss';
 
 type Props = {
   label: string;
+  isDark?: boolean;
   className?: string;
   options?: OptionType[];
   onSelect?: (item: string | null) => void;
@@ -20,6 +21,7 @@ type Props = {
 export default function Select({
   className,
   label,
+  isDark,
   options = [],
   onSelect,
 }: Props) {
@@ -57,7 +59,11 @@ export default function Select({
 
   return (
     <div
-      className={bindClass(style['select'], className)}
+      className={bindClass(
+        style['select'],
+        isDark && style['select--is-dark'],
+        className
+      )}
       onMouseLeave={handleLeave}
     >
       <EnterpriseButton onClick={handleToggle}>
@@ -90,6 +96,7 @@ export default function Select({
       <SelectList
         selected={selected}
         isOpen={isOpen}
+        isDark={isDark}
         options={preparedOptions}
         onSelect={handleSelect}
       />

@@ -1,11 +1,10 @@
 'use client';
 
-import Image from 'next/image';
-
 import BackgroundImage from '@assets/hero-carousel.png';
-import WhatsappLogo from '@assets/whatsapp-logo.svg';
 
 import PageSection from '@atoms/PageSection';
+import WhatsappButton from '@atoms/WhatsappButton';
+
 import Carousel from '@organisms/Carousel';
 
 import CarouselItem from './CarouselItem';
@@ -55,13 +54,7 @@ export default function Hero() {
         ))}
       </Carousel>
 
-      <button className={style['hero__whatsapp-button']}>
-        <Image
-          src={WhatsappLogo}
-          alt='Whatsapp Logo'
-          className={style['hero__whatsapp-button-content']}
-        />
-      </button>
+      <WhatsappButton className={style['hero__whatsapp-button']} />
     </PageSection>
   );
 }

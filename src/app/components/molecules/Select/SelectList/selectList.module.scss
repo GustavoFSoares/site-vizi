@@ -30,4 +30,16 @@
       @apply bg-vizi-azul-s text-vizi-white-100;
     }
   }
+
+  &--is-dark {
+    @apply bg-vizi-azul-s;
+  }
+
+  &--is-dark & {
+    &__item {
+      &--selected label {
+        @apply bg-vizi-black-40;
+      }
+    }
+  }
 }

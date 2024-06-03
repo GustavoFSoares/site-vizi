@@ -1,0 +1,26 @@
+.whatsapp-button {
+  @apply z-10 flex items-center justify-center rounded-lg bg-vizi-whatsapp-100;
+
+  @apply gap-[10px];
+
+  @apply size-7;
+  @apply md:size-10;
+  @apply lg:size-[73px];
+
+  &--wide {
+    @apply size-full px-[25px];
+  }
+
+  &__text {
+    @apply font-bold;
+
+    @apply text-xs;
+    @apply lg:text-xl lg:leading-[26px];
+  }
+
+  &__content {
+    @apply size-4;
+    @apply md:size-6;
+    @apply lg:size-9;
+  }
+}

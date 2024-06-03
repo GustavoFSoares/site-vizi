@@ -8,12 +8,14 @@ import Select from '@molecules/Select';
 import EnterprisesButtonsGroup from '@molecules/EnterprisesButtonsGroup';
 
 import styles from './enterprisesHeader.module.scss';
+import bindClass from '@helpers/bindClass';
 
 type Props = {
   children?: JSX.Element;
+  isDark?: boolean;
 };
 
-export default function EnterprisesHeader({ children }: Props) {
+export default function EnterprisesHeader({ children, isDark }: Props) {
   const { isXl, isLg, isSm } = useBreakpoints();
 
   const [statesButtons] = useState([
@@ -40,7 +42,12 @@ export default function EnterprisesHeader({ children }: Props) {
   function handleSelectStatus(item: string | null) {}
 
   return (
-    <div className={styles['enterprises-header']}>
+    <div
+      className={bindClass(
+        styles['enterprises-header'],
+        isDark && styles['enterprises-header--is-dark']
+      )}
+    >
       <div className={styles['enterprises-header__content']}>
         <div className={styles['enterprises-header__location']}>
           {!isLg && (
@@ -48,6 +55,7 @@ export default function EnterprisesHeader({ children }: Props) {
               className={styles['enterprises-header__location-states']}
               label='Estados'
               options={statesButtons}
+              isDark={isDark}
             />
           )}
 
@@ -56,6 +64,7 @@ export default function EnterprisesHeader({ children }: Props) {
               className={styles['enterprises-header__location-states']}
               uppercase
               options={statesButtons}
+              isDark={isDark}
             />
           )}
 
@@ -63,6 +72,7 @@ export default function EnterprisesHeader({ children }: Props) {
             className={styles['enterprises-header__location-cities']}
             label='Cidades'
             options={cities}
+            isDark={isDark}
           />
         </div>
 
@@ -72,6 +82,7 @@ export default function EnterprisesHeader({ children }: Props) {
               label='Status'
               options={businessStatus}
               onSelect={handleSelectStatus}
+              isDark={isDark}
             />
           )}
 
@@ -79,6 +90,7 @@ export default function EnterprisesHeader({ children }: Props) {
             <EnterprisesButtonsGroup
               options={businessStatus}
               onSelect={handleSelectStatus}
+              isDark={isDark}
             />
           )}
         </div>

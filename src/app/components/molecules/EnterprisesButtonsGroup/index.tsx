@@ -9,6 +9,7 @@ import bindClass from '@helpers/bindClass';
 
 type Props = {
   className?: string;
+  isDark?: boolean;
   options: {
     label: string;
     value: string;
@@ -19,6 +20,7 @@ type Props = {
 
 export default function EnterprisesButtonsGroup({
   className,
+  isDark,
   options,
   onSelect,
   uppercase,
@@ -47,6 +49,7 @@ export default function EnterprisesButtonsGroup({
           onClick={() => handleSelectItem(optionItem.value)}
           uppercase={uppercase}
           selected={optionItem.value === selected}
+          isDark={isDark}
           key={optionItem.value}
         >
           {optionItem.label}

@@ -31,7 +31,9 @@ export default function PageSection({
       )}
       style={inlineCssProps}
     >
-      <div className={style['page-section__anchor']} id={sectionId} />
+      {sectionId && (
+        <div className={style['page-section__anchor']} id={sectionId} />
+      )}
 
       <div className={bindClass(style['page-section__content'], className)}>
         {children}

@@ -5,8 +5,6 @@ import Benefits from './sections/Benefits';
 import TimeToChangeIsNow from './sections/TimeToChangeIsNow';
 import Depositions from './sections/Depositions';
 
-import EmptySection from './sections/EmptySection';
-
 export default function Home() {
   return (
     <>
