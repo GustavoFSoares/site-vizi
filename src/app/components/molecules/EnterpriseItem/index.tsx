@@ -5,7 +5,7 @@ import style from './enterpriseItem.module.scss';
 import Image, { StaticImageData } from 'next/image';
 
 export type EnterpriseItemProps = {
-  id?: string | number;
+  id: string | number;
   background: StaticImageData;
   title: string;
   location: string;
