@@ -10,6 +10,8 @@ import Navbar from '@organisms/Navbar';
 import Footer from '@organisms/Footer';
 import bindClass from '@helpers/bindClass';
 
+import IndexContextProvider from '@contexts/index';
+
 const mulish = Mulish({
   weight: ['400', '700', '800'],
   subsets: ['latin'],
@@ -27,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={bindClass(mulish.className, styles['layout'])}>
-        <Navbar />
+        <IndexContextProvider>
+          <Navbar />
 
-        <main className={styles['layout__container']}>{children}</main>
+          <main className={styles['layout__container']}>{children}</main>
 
-        <Footer />
+          <Footer />
+        </IndexContextProvider>
       </body>
 
       <RouteNavigator />
