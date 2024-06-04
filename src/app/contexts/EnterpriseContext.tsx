@@ -1,5 +1,6 @@
-import { EnterpriseItemProps } from '@molecules/EnterpriseItem';
 import { ReactNode, createContext, useEffect, useState } from 'react';
+
+import { EnterpriseItemProps } from '@molecules/EnterpriseItem';
 
 interface IContextData {
   enterprises: EnterpriseItemProps[];
@@ -25,7 +26,7 @@ export default function EnterpriseContextProvider({ children }: Props) {
     }
 
     getEnterprises();
-  });
+  }, []);
 
   function getLimitedEnterprises(limit: number) {
     return enterprises.slice(0, limit);
