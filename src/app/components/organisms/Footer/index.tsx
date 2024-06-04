@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -17,7 +19,11 @@ import FooterLinksList from './FooterLinksList';
 
 import style from './footer.module.scss';
 
+import { useBackgroundColor } from '@hooks/useBackgroundColor';
+
 export default function Footer() {
+  const backgorundColor = useBackgroundColor();
+
   const socialMediaIconsMap = {
     whatsapp,
     facebook,
@@ -32,6 +38,7 @@ export default function Footer() {
         className={style['footer']}
         containerClassName={style['footer__container']}
         element='div'
+        backgroundColor={backgorundColor.default}
       >
         <FooterLinksList />
 
@@ -77,7 +84,7 @@ export default function Footer() {
         </div>
       </PageSection>
 
-      <Copyright />
+      <Copyright backgroundColor={backgorundColor.dark} />
     </footer>
   );
 }

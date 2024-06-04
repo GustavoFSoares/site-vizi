@@ -10,6 +10,7 @@ type Prop = {
   className?: string;
   containerClassName?: string;
   style?: CSSProperties;
+  backgroundColor?: string;
   element?: 'section' | 'footer' | 'div';
 };
 
@@ -19,6 +20,7 @@ export default function PageSection({
   sectionId,
   className,
   containerClassName,
+  backgroundColor,
   style: inlineCssProps,
   element: Element = 'section',
 }: Prop) {
@@ -29,7 +31,10 @@ export default function PageSection({
         isHero && style['page-section--is-hero'],
         containerClassName
       )}
-      style={inlineCssProps}
+      style={{
+        ...(inlineCssProps ?? undefined),
+        backgroundColor,
+      }}
     >
       {sectionId && (
         <div className={style['page-section__anchor']} id={sectionId} />
