@@ -1,8 +1,10 @@
+import { ReactNode } from 'react';
+
 import bindClass from '@helpers/bindClass';
 import styles from './sectionTitle.module.scss';
 
 type Props = {
-  children: string;
+  children: ReactNode;
   decorator?: 'orange' | 'blue' | 'yellow' | 'hide';
   className?: string;
 };
