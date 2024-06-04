@@ -44,8 +44,11 @@ export function useBackgroundColor(): IUseBackground {
   }, [pathname]);
 
   useEffect(() => {
-    console.log(pathname);
-  }, [pathname]);
+    const body = document.querySelector('body');
+    if (body) {
+      body.style.backgroundColor = currentBackground.default;
+    }
+  }, [currentBackground]);
 
   return currentBackground;
 }
