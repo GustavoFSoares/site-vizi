@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo } from 'react';
-import { usePathname } from 'next/navigation';
+import { useSelectedLayoutSegment } from 'next/navigation';
 import resolveConfig from 'tailwindcss/resolveConfig';
 
 import tailwindConfig, { ColorOptions } from '@root/tailwind.config';
@@ -29,19 +29,19 @@ type PagesTypes = keyof typeof backgroundTypes;
 const pages: {
   [key: string]: PagesTypes;
 } = {
-  '/empreendimentos': 'blue',
+  empreendimentos: 'blue',
 };
 
 export function useBackgroundColor(): IUseBackground {
-  const pathname = usePathname();
+  const layoutSegment = useSelectedLayoutSegment();
 
   const currentBackground = useMemo<IUseBackground>(() => {
-    if (pages[pathname]) {
-      return backgroundTypes[pages[pathname]];
+    if (layoutSegment && pages[layoutSegment]) {
+      return backgroundTypes[pages[layoutSegment]];
     }
 
     return backgroundTypes.default;
-  }, [pathname]);
+  }, [layoutSegment]);
 
   useEffect(() => {
     const body = document.querySelector('body');
