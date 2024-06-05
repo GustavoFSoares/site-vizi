@@ -13,6 +13,7 @@ import NavbarButton from './NavbarButton';
 import styles from './styles.module.scss';
 
 import { useBreakpoints } from '@hooks/useBreakpoints';
+import { useBackgroundColor } from '@hooks/useBackgroundColor';
 
 interface INavOption {
   label: string;
@@ -22,6 +23,7 @@ interface INavOption {
 export default function Navbar() {
   const pathname = usePathname();
   const { isSm } = useBreakpoints();
+  const backgroundColor = useBackgroundColor();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -37,7 +39,12 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={styles['navbar']}>
+    <nav
+      className={styles['navbar']}
+      style={{
+        backgroundColor: backgroundColor.default,
+      }}
+    >
       <div className={styles['navbar__content']}>
         <Link href={{ href: '/', hash: 'hero' }}>
           <Image
@@ -54,6 +61,9 @@ export default function Navbar() {
             styles['nav-options__wrapper'],
             isOpen && styles['nav-options__wrapper--active']
           )}
+          style={{
+            backgroundColor: backgroundColor.default,
+          }}
         >
           {navOptions.map((routeOption) => (
             <Link

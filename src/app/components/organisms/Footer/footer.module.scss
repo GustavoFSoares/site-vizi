@@ -4,10 +4,6 @@
   @apply flex-col items-stretch;
   @apply xl:flex-row xl:justify-between;
 
-  &__container {
-    @apply bg-vizi-laranja-100 #{!important};
-  }
-
   &__separator {
     @apply block bg-vizi-white-100;
 

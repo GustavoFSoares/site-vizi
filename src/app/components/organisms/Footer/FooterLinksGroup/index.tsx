@@ -6,7 +6,7 @@ import style from './footerLinksGroup.module.scss';
 type LinkData = {
   label: string;
   target?: string;
-  id?: string;
+  id?: string | number;
 };
 
 export type FooterLinkProps = {

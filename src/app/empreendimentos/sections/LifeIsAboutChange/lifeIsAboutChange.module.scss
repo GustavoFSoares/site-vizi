@@ -44,7 +44,7 @@
 
     &::before {
       @apply absolute h-full content-[''];
-      @apply bg-vizi-azul-s opacity-90;
+      @apply bg-vizi-azul-s mix-blend-multiply;
 
       width: calc(100% + 1000px);
       left: -1000px;

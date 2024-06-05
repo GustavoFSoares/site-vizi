@@ -1,5 +1,5 @@
 .navbar {
-  @apply z-20 h-16 w-full bg-vizi-laranja-100 px-5 py-1.5;
+  @apply z-20 h-16 w-full px-5 py-1.5;
   @apply fixed top-0;
 
   @apply md:px-14;
@@ -33,7 +33,7 @@
   }
 
   &__wrapper {
-    @apply flex max-w-[90vw] rounded-bl-xl bg-vizi-laranja-100;
+    @apply flex max-w-[90vw] rounded-bl-xl;
 
     @apply md:h-full md:items-center;
     @apply lg:h-full lg:items-center;

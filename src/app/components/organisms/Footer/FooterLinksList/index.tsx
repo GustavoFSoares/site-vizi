@@ -1,8 +1,21 @@
+import { useContext } from 'react';
+
+import { EnterpriseContext } from '@contexts/EnterpriseContext';
+
 import FooterLinksGroup, { FooterLinkProps } from '../FooterLinksGroup';
 
 import style from './footerLinksList.module.scss';
 
 export default function FooterLinksList() {
+  let { getLimitedEnterprises } = useContext(EnterpriseContext);
+
+  const enterprisesLink = getLimitedEnterprises(4).map((item) => {
+    return {
+      id: item.id,
+      label: item.title,
+    };
+  });
+
   const linkGroups: FooterLinkProps[] = [
     {
       page: '/',
@@ -31,10 +44,7 @@ export default function FooterLinksList() {
     {
       page: '/empreendimentos',
       title: 'Empreendimentos',
-      links: [
-        { label: 'Empreendimento 1', id: '1' },
-        { label: 'Empreendimento 2', id: '2' },
-      ],
+      links: enterprisesLink,
     },
     {
       page: '/perguntas-frequentes',
