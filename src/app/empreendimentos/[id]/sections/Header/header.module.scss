@@ -1,0 +1,20 @@
+.header {
+  @apply bg-vizi-azul-s;
+
+  &__container {
+    @apply bg-inherit py-0 #{!important};
+  }
+
+  &__items-wrapper {
+    @apply flex justify-between;
+  }
+
+  &__item {
+    @apply flex items-center px-2 py-[25px];
+    @apply text-[9px] font-normal leading-[10px] text-vizi-white-50;
+
+    &--selected {
+      @apply text-vizi-white-100;
+    }
+  }
+}
