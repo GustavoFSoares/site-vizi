@@ -1,13 +1,18 @@
 'use client';
 
-import { useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useCallback } from 'react';
 
-import PageSection from '@atoms/PageSection';
+import ArrowRight from '@assets/icons/arrow-right.svg';
 
 import bindClass from '@helpers/bindClass';
 
 import { useHash } from '@hooks/useHash';
+import { useBreakpoints } from '@hooks/useBreakpoints';
+
+import PageSection from '@atoms/PageSection';
+import WhatsappButton from '@atoms/WhatsappButton';
 
 import style from './header.module.scss';
 
@@ -16,8 +21,13 @@ type HeaderItem = {
   id: string;
 };
 
-export default function Header() {
+type Props = {
+  businessName: string;
+};
+
+export default function Header({ businessName }: Props) {
   const [hash, setHash] = useHash();
+  const { isSm, isLg } = useBreakpoints();
 
   const items: HeaderItem[] = [
     {
@@ -53,8 +63,22 @@ export default function Header() {
       <PageSection
         element='div'
         containerClassName={style['header__container']}
+        className={style['header__content']}
       >
         <div className={style['header__items-wrapper']}>
+          {!isSm && (
+            <span
+              className={bindClass(
+                style['header__item'],
+                style['header__item--business-name']
+              )}
+            >
+              <span>{businessName}</span>
+
+              <Image src={ArrowRight} alt='arrow-right' />
+            </span>
+          )}
+
           {items.map((link, index) => (
             <Link
               className={bindClass(
@@ -71,6 +95,10 @@ export default function Header() {
             </Link>
           ))}
         </div>
+
+        {isLg && (
+          <WhatsappButton className={style['header__whatsapp-button']} wide />
+        )}
       </PageSection>
     </header>
   );
