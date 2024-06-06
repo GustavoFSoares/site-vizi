@@ -8,7 +8,7 @@
   @apply lg:size-[73px];
 
   &--wide {
-    @apply size-full px-[25px];
+    @apply size-full px-[25px] py-[10px];
   }
 
   &__text {

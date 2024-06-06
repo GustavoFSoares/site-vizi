@@ -5,16 +5,35 @@
     @apply bg-inherit py-0 #{!important};
   }
 
+  &__content {
+    @apply flex items-center justify-between;
+  }
+
   &__items-wrapper {
     @apply flex justify-between;
+
+    @apply sm:w-full;
+    @apply md:gap-[5px];
+    @apply lg:gap-[10px];
   }
 
   &__item {
-    @apply flex items-center px-2 py-[25px];
-    @apply text-[9px] font-normal leading-[10px] text-vizi-white-50;
+    @apply flex items-center font-normal text-vizi-white-50;
+
+    @apply px-2 py-[25px] text-[9px] leading-[10px];
+    @apply lg:px-[15px] lg:py-[36px] lg:text-[12px] lg:leading-[22px];
+    @apply xl:px-[30px] xl:py-[36px] xl:text-[17px] xl:leading-[22px];
 
     &--selected {
       @apply text-vizi-white-100;
     }
+
+    &--business-name {
+      @apply flex gap-[5px];
+    }
+  }
+
+  &__whatsapp-button {
+    @apply max-w-[197px];
   }
 }
