@@ -1,0 +1,17 @@
+.hero-infraestructure {
+  @apply relative;
+
+  &__container {
+    @apply p-0;
+  }
+
+  &__background {
+    @apply h-[349px] w-full;
+  }
+
+  &__content {
+    @apply relative px-5 py-12;
+    @apply md:px-9 md:py-14;
+    @apply lg:px-12 lg:py-14;
+  }
+}
